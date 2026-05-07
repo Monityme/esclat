@@ -15,9 +15,11 @@
 </script>
 
 <template>
-    <div class="bg-blue-800">
+    <div class="bg-blue-200 flex justify-between px-4 py-2">
         <NavigationMenu>
-            <NavigationMenuList>
+
+            <NavigationMenuList class="gap-4">
+
                 <RouterLink to="/">
                     <NavigationMenuItem>
                         <NavigationMenuLink>
@@ -76,11 +78,12 @@
 
             </NavigationMenuList>
 
-            <div>
-                CAS | VAL
-            </div>
-
         </NavigationMenu>
+
+        <div class="self-center">
+            CAS | VAL
+        </div>
+
     </div>
 </template>
 
