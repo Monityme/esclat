@@ -6,8 +6,7 @@
 <template>
     <div>
         <header>
-            <!--Logo / Barra de navegación / Idiomas -->
-            <Navegacion/>
+            <Navegacion/> <!--Barra de navegación + Selección de idiomas-->
         </header>
     </div>
 

@@ -12,6 +12,11 @@
 
     //import { Route } from 'lucide-vue-next';
 
+    
+    import { useI18n } from 'vue-i18n';
+
+    const { t, locale, availableLocales } = useI18n({useScope: 'global'});
+
 </script>
 
 <template>
@@ -31,7 +36,7 @@
                 <RouterLink to="/about">
                 <NavigationMenuItem>
                     <NavigationMenuLink>
-                        ¿Qué es ESCLAT?
+                            ESCLAT
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 </RouterLink>
@@ -47,7 +52,7 @@
                 <RouterLink to="/invitades">
                 <NavigationMenuItem>
                     <NavigationMenuLink>
-                        Invitades
+                        {{ t('navegacion[0]') }}
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 </RouterLink>
@@ -55,7 +60,7 @@
                 <RouterLink to="/espacio">
                 <NavigationMenuItem>
                     <NavigationMenuLink>
-                        Espacio
+                        {{ t('navegacion[1]') }}
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 </RouterLink>
@@ -71,7 +76,7 @@
                 <RouterLink to="/entradas">
                 <NavigationMenuItem>
                     <NavigationMenuLink>
-                        Entradas
+                        {{ t('navegacion[2]') }}
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 </RouterLink>
@@ -80,8 +85,22 @@
 
         </NavigationMenu>
 
-        <div class="self-center">
-            CAS | VAL
+        <div class="self-center flex justify-between gap-3" >
+            <!--
+            <select v-model="locale">
+                <option>{{ availableLocales[0] }}</option>
+                <option>{{ availableLocales[1] }}</option>
+            </select>
+            -->
+            <Button class="hover:underline hover:cursor-pointer"
+                @click="$i18n.locale = 'CAS'"
+            >CAS</Button>
+            |
+            <Button class="hover:underline hover:cursor-pointer"
+                @click="$i18n.locale = 'VAL'"
+            >VAL</Button>
+            
+            <!--CAS | VAL-->
         </div>
 
     </div>
