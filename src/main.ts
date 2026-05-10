@@ -14,13 +14,13 @@ const i18n = createI18n({
         CAS: {
             mensaje: 'esto es un mensaje',
             espacio: 'Espacio',
-            navegacion: ['Invitades','Espacio','Entradas'],
+            navegacion: ['ESCLAT','Programa','Invitades','Espacio','FAQ','Entradas'],
             cuentaAtras: ['Días','Horas','Minutos','Segundos']
         },
         VAL: {
             mensaje: 'això és un missatge',
             espacio: 'Espai',
-            navegacion: ['Convidats','Espai','Entrades'],
+            navegacion: ['ESCLAT','Programa','Convidats','Espai','FAQ','Entrades'],
             cuentaAtras: ['Dies','Hores','Minuts','Segons']
         }
     }
