@@ -9,18 +9,14 @@
         //NavigationMenuTrigger,
         //NavigationMenuViewport,
     } from '@/components/ui/navigation-menu'
-
-    //import { Route } from 'lucide-vue-next';
-
     
     import { useI18n } from 'vue-i18n';
-
     const { t } = useI18n({useScope: 'global'});
 
 </script>
 
 <template>
-    <div id="contenedor" class="static flex justify-between px-4 py-2">
+    <div id="contenedor" class="static top-0 flex justify-between px-4 py-2"> <!-- TODO - Fijar en el top? -->
         <NavigationMenu>
 
             <NavigationMenuList class="gap-4">
@@ -28,7 +24,7 @@
                 <RouterLink to="/">
                     <NavigationMenuItem>
                         <NavigationMenuLink>
-                            Home
+                            Home <!-- TODO - Cambiar por el logo de ESCLAT-->
                         </NavigationMenuLink>
                     </NavigationMenuItem>
                 </RouterLink>
@@ -87,11 +83,12 @@
 
         <div class="self-center flex justify-between gap-3" >
 
-            <Button class="enlace-underline-color"
+            <!-- ?Para cambiar entre castellano y valenciano -->
+            <Button class="enlace-underline2"
                 @click="$i18n.locale = 'CAS'"
             >CAS</Button>
             |
-            <Button class="enlace-underline-color"
+            <Button class="enlace-underline2"
                 @click="$i18n.locale = 'VAL'"
             >VAL</Button>
             
@@ -101,11 +98,5 @@
 </template>
 
 <style scoped>
-
-#contenedor:after {
-    content: "";
-    background-color: blue;
-}
-
-
+    
 </style>

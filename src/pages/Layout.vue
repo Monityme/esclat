@@ -7,7 +7,7 @@
 <template>
     <div>
         <header>
-            <Navegacion class="bg-azulclaro "/> <!--Barra de navegación + Selección de idiomas-->
+            <Navegacion class="bg-azulclaro "/> <!-- ?Barra de navegación + Selección de idiomas-->
         </header>
     </div>
 
@@ -15,8 +15,10 @@
         <RouterView/>
     </main>
 
-    <footer class="bg-amarillo flex fixed bottom-0 w-full px-4 py-2 justify-center">
+    <footer class="bg-amarillo flex fixed bottom-0 w-full px-4 py-2 justify-center"> <!-- TODO - Cambiar a static?-->
         2026 © ESCLAT 2026 - Created by © Miopía
+        <br>
+        Política de Privacidad - Aviso Legal - Política de Cookies
 
         <!--
         Política de privacidad

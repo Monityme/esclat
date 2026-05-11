@@ -1,6 +1,8 @@
 <script setup lang="ts">
 
-    //Para poder usar el plugin de cambio de idioma
+/**
+    ** Para poder usar el plugin de cambio de idioma
+*/ 
     import { useI18n } from 'vue-i18n';
     const { t } = useI18n({useScope: 'global'});
 
@@ -18,14 +20,16 @@
         seg: number;
     }
 
-    //Recibe el valor introducido al añadir el componente en una página
+/**
+    ** Recibe el valor introducido al añadir el componente en una página */
     interface Props {
         fecha: string
     }
     const props = defineProps<Props>();
     const fechaEvento: string = props.fecha;
     
-    //Calcula el tiempo que queda hasta la fecha
+/**
+    ** Calcula el tiempo que queda hasta la fecha */
     function calcularTiempo(fechaObjetivo: string): TiempoRestante {
 
         const hoy: number = new Date().getTime();
@@ -42,7 +46,8 @@
 
     };
 
-    //Actualiza las variables reactivas (dias, horas, min, seg) cada segundo
+/**
+    ** Actualiza las variables reactivas (dias, horas, min, seg) cada segundo */
     function cuentaAtras(fechaObjetivo: string, callback: (tiempo: TiempoRestante) => void): NodeJS.Timeout {
                 //callback: (tiempo: TiempoRestante) => void -> Cada segundo recibe el valor calculado del tiempo restante hasta la fecha
         callback(calcularTiempo(fechaObjetivo));
@@ -56,7 +61,8 @@
 
     }
 
-    // Guarda los valores en las variables de TiempoRestante
+/**
+    ** Guarda los valores en las variables de TiempoRestante */
     cuentaAtras(fechaEvento, (tiempo) => {
         dias.value = tiempo.dias;
         horas.value = tiempo.horas;
@@ -110,7 +116,7 @@
         align-items: center;
         font-weight: 700;
         font-size: 2.5rem;
-        background-color: var(--color-indigo-800);
+        background-color: var(--color-azuloscuro);
         color: var(--color-white);
         padding: 0.25rem 0 1rem 0;
         flex: 1;

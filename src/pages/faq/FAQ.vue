@@ -1,18 +1,17 @@
 <script setup lang="ts">
 
     import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
+        Accordion,
+        AccordionContent,
+        AccordionItem,
+        AccordionTrigger,
     } from '@/components/ui/accordion'
 
 </script>
 
 <template>
-    <div class="bg-azuloscuro">
+        <!-- TODO - Cambiar los textos por las variables de los idiomas -->
         <div class="flex flex-col mx-70 my-10 gap-8 ">
-            <div class="flex flex-col gap-4">
                 <h1 class="text-3xl">Entradas</h1>
                 <div class="min-w-fill">
                     <Accordion type="single" collapsible>
@@ -42,7 +41,6 @@
                         </AccordionItem>
                     </Accordion>
                 </div>
-            </div>
             <div class="flex flex-col gap-4">
                 <h1 class="text-3xl">Adaptaciones</h1>
                 <div class="min-w-fill">
@@ -88,7 +86,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </template>
 
 <style scoped>
