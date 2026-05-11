@@ -15,7 +15,7 @@
     
     import { useI18n } from 'vue-i18n';
 
-    const { t, locale, availableLocales } = useI18n({useScope: 'global'});
+    const { t } = useI18n({useScope: 'global'});
 
 </script>
 
@@ -36,7 +36,7 @@
                 <RouterLink to="/about">
                 <NavigationMenuItem>
                     <NavigationMenuLink>
-                            ESCLAT
+                        {{ t('navegacion[0]') }}
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 </RouterLink>
@@ -44,7 +44,7 @@
                 <RouterLink to="/programa">
                 <NavigationMenuItem>
                     <NavigationMenuLink>
-                        Programa
+                        {{ t('navegacion[1]') }}
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 </RouterLink>
@@ -52,7 +52,7 @@
                 <RouterLink to="/invitades">
                 <NavigationMenuItem>
                     <NavigationMenuLink>
-                        {{ t('navegacion[0]') }}
+                        {{ t('navegacion[2]') }}
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 </RouterLink>
@@ -60,7 +60,7 @@
                 <RouterLink to="/espacio">
                 <NavigationMenuItem>
                     <NavigationMenuLink>
-                        {{ t('navegacion[1]') }}
+                        {{ t('navegacion[3]') }}
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 </RouterLink>
@@ -68,7 +68,7 @@
                 <RouterLink to="/faq">
                 <NavigationMenuItem>
                     <NavigationMenuLink>
-                        FAQ
+                        {{ t('navegacion[4]') }}
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 </RouterLink>
@@ -76,7 +76,7 @@
                 <RouterLink to="/entradas">
                 <NavigationMenuItem>
                     <NavigationMenuLink>
-                        {{ t('navegacion[2]') }}
+                        {{ t('navegacion[5]') }}
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 </RouterLink>
@@ -92,11 +92,11 @@
                 <option>{{ availableLocales[1] }}</option>
             </select>
             -->
-            <Button class="hover:underline hover:cursor-pointer"
+            <Button class="enlace-underline-color"
                 @click="$i18n.locale = 'CAS'"
             >CAS</Button>
             |
-            <Button class="hover:underline hover:cursor-pointer"
+            <Button class="enlace-underline-color"
                 @click="$i18n.locale = 'VAL'"
             >VAL</Button>
             
