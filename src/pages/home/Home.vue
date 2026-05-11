@@ -9,25 +9,18 @@
 </script>
 
 <template>
-    <h1 class="text-3xl text-red-500">
-        {{ t('mensaje') }} <!--El texto cambiará según el idioma escogido-->
-    </h1>
-    <br>
-    <!--Cuenta atrás desde la fecha actual hasta la fecha introducida-->
-    <cuentaAtras fecha="2026-10-29T10:00:00"/>
-    <br><br>
-    <Button class="enlace-underline">
-        enlace-underline
-    </Button> || 
-    <Button class="enlace-underline-color">
-        enlace-underline-color
-    </Button> || 
-    <Button class="enlace-underline-color2">
-        enlace-underline-color2
-    </Button> || 
-    <Button class="enlace-underline-color3">
-        enlace-underline-color3
-    </Button>
+    <div>
+        <h1 class="text-3xl">
+            {{ t('mensaje') }} <!--El texto cambiará según el idioma escogido-->
+        </h1>
+        <br>
+        <!--Cuenta atrás desde la fecha actual hasta la fecha introducida-->
+        <cuentaAtras fecha="2026-10-29T10:00:00"/>
+        <br>
+        <Button class="enlace-underline ml-2">
+            enlace-underline
+        </Button>
+    </div>
 
 </template>
 

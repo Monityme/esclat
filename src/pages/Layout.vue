@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
     import Navegacion from '@/components/Navegacion.vue';
 
 </script>
@@ -6,7 +7,7 @@
 <template>
     <div>
         <header>
-            <Navegacion/> <!--Barra de navegación + Selección de idiomas-->
+            <Navegacion class="bg-azulclaro "/> <!--Barra de navegación + Selección de idiomas-->
         </header>
     </div>
 
@@ -14,9 +15,16 @@
         <RouterView/>
     </main>
 
-    <footer class="bg-amber-500 flex fixed bottom-0 w-full px-4 py-2 justify-center">
-        Esto es un footer :D
+    <footer class="bg-amarillo flex fixed bottom-0 w-full px-4 py-2 justify-center">
+        2026 © ESCLAT 2026 - Created by © Miopía
+
+        <!--
+        Política de privacidad
+        Aviso Legal
+        Política de Cookies
+        -->
     </footer>
+
 </template>
 
 <style scoped>

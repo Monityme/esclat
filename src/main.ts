@@ -18,7 +18,7 @@ const i18n = createI18n({
             cuentaAtras: ['Días','Horas','Minutos','Segundos']
         },
         VAL: {
-            mensaje: 'això és un missatge',
+            mensaje: 'açò és un missatge',
             espacio: 'Espai',
             navegacion: ['ESCLAT','Programa','Convidats','Espai','FAQ','Entrades'],
             cuentaAtras: ['Dies','Hores','Minuts','Segons']

@@ -20,7 +20,7 @@
 </script>
 
 <template>
-    <div class="bg-blue-200 flex justify-between px-4 py-2">
+    <div id="contenedor" class="static flex justify-between px-4 py-2">
         <NavigationMenu>
 
             <NavigationMenuList class="gap-4">
@@ -86,12 +86,7 @@
         </NavigationMenu>
 
         <div class="self-center flex justify-between gap-3" >
-            <!--
-            <select v-model="locale">
-                <option>{{ availableLocales[0] }}</option>
-                <option>{{ availableLocales[1] }}</option>
-            </select>
-            -->
+
             <Button class="enlace-underline-color"
                 @click="$i18n.locale = 'CAS'"
             >CAS</Button>
@@ -100,12 +95,17 @@
                 @click="$i18n.locale = 'VAL'"
             >VAL</Button>
             
-            <!--CAS | VAL-->
         </div>
 
     </div>
 </template>
 
 <style scoped>
+
+#contenedor:after {
+    content: "";
+    background-color: blue;
+}
+
 
 </style>
