@@ -6,6 +6,11 @@ import { router } from './router'
 //? Plugin de vue para cambiar entre idiomas
 import { createI18n } from 'vue-i18n'
 
+//? Iconos de font awesome
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+library.add(fab)
+
 //? Crea las variables con los diferentes textos para cada idioma especificado
 const i18n = createI18n({
     legacy: false,
@@ -15,13 +20,13 @@ const i18n = createI18n({
         CAS: {
             mensaje: 'esto es un mensaje',
             espacio: 'Espacio',
-            navegacion: ['ESCLAT','Programa','Invitades','Espacio','FAQ','Entradas'],
+            navegacion: ['ESCLAT','Programa','Invitades','Info','Entradas'],
             cuentaAtras: ['Días','Horas','Minutos','Segundos']
         },
         VAL: {
             mensaje: 'açò és un missatge',
             espacio: 'Espai',
-            navegacion: ['ESCLAT','Programa','Convidats','Espai','FAQ','Entrades'],
+            navegacion: ['ESCLAT','Programa','Convidats','Info','Entrades'],
             cuentaAtras: ['Dies','Hores','Minuts','Segons']
         }
     }

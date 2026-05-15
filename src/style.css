@@ -30,7 +30,7 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar); my-10
+  --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
@@ -43,11 +43,11 @@
 
 /* ? Colores */
 
-  --color-amarillo: #F4E72D;
-  --color-azuloscuro: #14438D ;
-  --color-azulclaro: #74C8DA ;
-  --color-rosa: #E72583;
-  --color-negro: #000406 ;
+  --color-amarillo: #FFD430;
+  --color-azuloscuro: #08478B;
+  --color-azulclaro: #6EC6D9;
+  --color-rojo: #EA5145;
+  --color-negro: #000406;
 
 /* ? Transiciones */
 
@@ -90,11 +90,6 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-
-  
-
-
-
 }
 
 
@@ -107,6 +102,10 @@
   }
 }
 
+
+:root {
+  font-family: "Outfit", sans-serif;
+}
 
 
 .enlace-underline {
@@ -167,6 +166,40 @@
   width: 0%;
   height: 2px;
   background-color: var(--color-azuloscuro);
+  transition-timing-function: var(--ease-in-out);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+.enlace-underline3 {
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 0px;
+  color: var(--color-amarillo);
+  margin-bottom: 0.5rem;
+  transition-timing-function: var(--ease-in-out);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.enlace-underline3:hover {
+  color: var(--color-amarillo);
+}
+
+.enlace-underline3:hover:after {
+  width: 90%;
+  left: 5%;
+}
+
+.enlace-underline3:after {
+  content: "";
+  pointer-events: none;
+  bottom: -1px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-amarillo);
   transition-timing-function: var(--ease-in-out);
   transition-duration: 400ms;
   transition-property: width, left;

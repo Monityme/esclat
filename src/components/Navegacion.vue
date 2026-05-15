@@ -19,11 +19,11 @@
     <div id="contenedor" class="static top-0 flex justify-between px-4 py-2"> <!-- TODO - Fijar en el top? -->
         <NavigationMenu>
 
-            <NavigationMenuList class="gap-4">
+            <NavigationMenuList class="gap-5">
 
                 <RouterLink to="/">
                     <NavigationMenuItem>
-                        <NavigationMenuLink>
+                        <NavigationMenuLink class="text-lg">
                             Home <!-- TODO - Cambiar por el logo de ESCLAT-->
                         </NavigationMenuLink>
                     </NavigationMenuItem>
@@ -31,7 +31,7 @@
 
                 <RouterLink to="/about">
                 <NavigationMenuItem>
-                    <NavigationMenuLink>
+                    <NavigationMenuLink class="text-lg">
                         {{ t('navegacion[0]') }}
                     </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -39,7 +39,7 @@
 
                 <RouterLink to="/programa">
                 <NavigationMenuItem>
-                    <NavigationMenuLink>
+                    <NavigationMenuLink class="text-lg">
                         {{ t('navegacion[1]') }}
                     </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -47,7 +47,7 @@
 
                 <RouterLink to="/invitades">
                 <NavigationMenuItem>
-                    <NavigationMenuLink>
+                    <NavigationMenuLink class="text-lg">
                         {{ t('navegacion[2]') }}
                     </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -55,7 +55,7 @@
 
                 <RouterLink to="/espacio">
                 <NavigationMenuItem>
-                    <NavigationMenuLink>
+                    <NavigationMenuLink class="text-lg">
                         {{ t('navegacion[3]') }}
                     </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -63,16 +63,8 @@
 
                 <RouterLink to="/faq">
                 <NavigationMenuItem>
-                    <NavigationMenuLink>
+                    <NavigationMenuLink class="text-lg">
                         {{ t('navegacion[4]') }}
-                    </NavigationMenuLink>
-                </NavigationMenuItem>
-                </RouterLink>
-
-                <RouterLink to="/entradas">
-                <NavigationMenuItem>
-                    <NavigationMenuLink>
-                        {{ t('navegacion[5]') }}
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 </RouterLink>
@@ -98,5 +90,7 @@
 </template>
 
 <style scoped>
-    
+    NavigationMenuLink {
+        font-size: largue;
+    }
 </style>

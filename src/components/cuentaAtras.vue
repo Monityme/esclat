@@ -23,7 +23,7 @@
 /**
     ** Recibe el valor introducido al añadir el componente en una página */
     interface Props {
-        fecha: string
+        fecha: string;
     }
     const props = defineProps<Props>();
     const fechaEvento: string = props.fecha;
@@ -58,7 +58,6 @@
         }, 1000); //Se ejecuta cada segundo (1000ms)
 
         return intervalo;
-
     }
 
 /**
@@ -78,22 +77,22 @@
 
         <div class="contador"> <!--class="flex flex-col justify-center items-center gap-1 font-bold text-4xl bg-blue-800 text-white px-5 py-6"-->
             <span class="">{{ dias }} </span>
-            <span class="text-sm font-medium">{{ t('cuentaAtras[0]') }}</span>
+            <span class="text-xs font-medium">{{ t('cuentaAtras[0]') }}</span>
         </div>
         
         <div class="contador">
             <span class="">{{ horas }} </span>
-            <span class="text-sm font-medium">{{ t('cuentaAtras[1]') }}</span>
+            <span class="text-xs font-medium">{{ t('cuentaAtras[1]') }}</span>
         </div>
 
         <div class="contador">
             <span class="">{{ min }} </span>
-            <span class="text-sm font-medium">{{ t('cuentaAtras[2]') }}</span>
+            <span class="text-xs font-medium">{{ t('cuentaAtras[2]') }}</span>
         </div>
 
         <div class="contador">
             <span class="">{{ seg }} </span>
-            <span class="text-sm font-medium">{{ t('cuentaAtras[3]') }}</span>
+            <span class="text-xs font-medium">{{ t('cuentaAtras[3]') }}</span>
         </div>
 
     </div>
@@ -101,7 +100,25 @@
 </template>
 
 <style scoped>
-
+    .contenedor {
+        display: flex;
+        justify-content: center;
+        width: fill;
+        background-color: var(--color-azuloscuro);
+        color: var(--color-amarillo);
+        gap: 4rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.5rem;
+        font-weight: 700;
+    }
+    .contador {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+    }
+/* 
     .contenedor {
         display: flex;
         justify-content: center;
@@ -121,5 +138,5 @@
         padding: 0.25rem 0 1rem 0;
         flex: 1;
     }
-
+*/
 </style>
