@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import LogoMiopia from '@/components/icons/LogoMiopia.vue';
+import LogoMiopia from '@/components/logos/LogoMiopia.vue';
 import Navegacion from '@/components/Navegacion.vue';
 
 </script>
