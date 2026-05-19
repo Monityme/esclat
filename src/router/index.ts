@@ -4,9 +4,8 @@ import Layout from "@/pages/Layout.vue";
 import About from "@/pages/about/About.vue";
 import Programa from "@/pages/programa/Programa.vue";
 import Invitades from "@/pages/invitades/Invitades.vue";
-import Espacio from "@/pages/espacio/Espacio.vue";
-import FAQ from "@/pages/faq/FAQ.vue";
 import Entradas from "@/pages/entradas/Entradas.vue";
+import Info from "@/pages/info/Info.vue";
 
 export const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -40,14 +39,9 @@ export const router = createRouter({
               component: Invitades
             },
             {
-              path: 'espacio',
-              name: 'espacio',
-              component: Espacio
-            },
-            {
-              path: 'faq',
-              name: 'faq',
-              component: FAQ
+              path: 'info',
+              name: 'info',
+              component: Info
             },
             {
               path: 'entradas',

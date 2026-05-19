@@ -16,64 +16,64 @@
 </script>
 
 <template>
-    <div id="contenedor" class="static top-0 flex justify-between px-4 py-2"> <!-- TODO - Fijar en el top? -->
+    <div id="contenedor" class="fixed top-0 w-screen flex justify-between items-center px-4 h-[60px]"> <!-- TODO - Fijar en el top? -->
         <NavigationMenu>
 
-            <NavigationMenuList class="gap-5">
+            <NavigationMenuList class="gap-8">
 
-                <RouterLink to="/">
-                    <NavigationMenuItem>
+                <NavigationMenuItem>
+                    <RouterLink to="/">
+                            <NavigationMenuLink class="text-lg">
+                                Home (logo) <!-- TODO - Cambiar por el logo de ESCLAT-->
+                            </NavigationMenuLink>
+                    </RouterLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                    <RouterLink to="/about" class="enlace-underline3" active-class="enlace-underline3-selected">
                         <NavigationMenuLink class="text-lg">
-                            Home <!-- TODO - Cambiar por el logo de ESCLAT-->
+                            {{ t('navegacion[0]') }}
                         </NavigationMenuLink>
-                    </NavigationMenuItem>
-                </RouterLink>
-
-                <RouterLink to="/about">
-                <NavigationMenuItem>
-                    <NavigationMenuLink class="text-lg">
-                        {{ t('navegacion[0]') }}
-                    </NavigationMenuLink>
+                    </RouterLink>
                 </NavigationMenuItem>
-                </RouterLink>
 
-                <RouterLink to="/programa">
                 <NavigationMenuItem>
-                    <NavigationMenuLink class="text-lg">
-                        {{ t('navegacion[1]') }}
-                    </NavigationMenuLink>
+                    <RouterLink to="/programa" class="enlace-underline3" active-class="enlace-underline3-selected">
+                        <NavigationMenuLink class="text-lg">
+                            {{ t('navegacion[1]') }}
+                        </NavigationMenuLink>
+                    </RouterLink>
                 </NavigationMenuItem>
-                </RouterLink>
+                
+                <NavigationMenuItem>
+                    <RouterLink to="/invitades" class="enlace-underline3" active-class="enlace-underline3-selected">
+                        <NavigationMenuLink class="text-lg">
+                            {{ t('navegacion[2]') }}
+                        </NavigationMenuLink>
+                    </RouterLink>
+                </NavigationMenuItem>
 
-                <RouterLink to="/invitades">
                 <NavigationMenuItem>
-                    <NavigationMenuLink class="text-lg">
-                        {{ t('navegacion[2]') }}
-                    </NavigationMenuLink>
+                    <RouterLink to="/info" class="enlace-underline3" active-class="enlace-underline3-selected">
+                        <NavigationMenuLink class="text-lg">
+                            {{ t('navegacion[3]') }}
+                        </NavigationMenuLink>
+                    </RouterLink>
                 </NavigationMenuItem>
-                </RouterLink>
 
-                <RouterLink to="/espacio">
                 <NavigationMenuItem>
-                    <NavigationMenuLink class="text-lg">
-                        {{ t('navegacion[3]') }}
-                    </NavigationMenuLink>
+                    <RouterLink to="/entradas" class="enlace-underline3" active-class="enlace-underline3-selected">
+                        <NavigationMenuLink class="text-lg">
+                            {{ t('navegacion[4]') }}
+                        </NavigationMenuLink>
+                    </RouterLink>
                 </NavigationMenuItem>
-                </RouterLink>
-
-                <RouterLink to="/faq">
-                <NavigationMenuItem>
-                    <NavigationMenuLink class="text-lg">
-                        {{ t('navegacion[4]') }}
-                    </NavigationMenuLink>
-                </NavigationMenuItem>
-                </RouterLink>
 
             </NavigationMenuList>
 
         </NavigationMenu>
 
-        <div class="self-center flex justify-between gap-3" >
+        <div class="self-center flex justify-between gap-3 text-white" >
 
             <!-- ?Para cambiar entre castellano y valenciano -->
             <Button class="enlace-underline2"

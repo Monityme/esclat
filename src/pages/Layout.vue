@@ -1,38 +1,19 @@
 <script setup lang="ts">
-import LogoMiopia from '@/components/logos/LogoMiopia.vue';
-import Navegacion from '@/components/Navegacion.vue';
+
+    import Navegacion from '@/components/Navegacion.vue';
+    import cuentaAtras from '@/components/cuentaAtras.vue';
 
 </script>
 
 <template>
     <header>
-        <Navegacion class="bg-negro text-white"/> <!-- ?Barra de navegación + Selección de idiomas-->
+        <Navegacion class="bg-black text-white"/> <!-- ?Barra de navegación + Selección de idiomas-->
+        <cuentaAtras fecha="2026-10-29T10:00:00"/> <!-- ?Cuenta atrás desde la fecha actual hasta la fecha introducida -->
     </header>
 
     <main>
-        <RouterView class="min-h-full grow"/>
+        <RouterView class="min-h-full grow mt-[120px]"/>
     </main>
-
-    <footer class="bg-black flex-col flex fixed bottom-0 w-full px-4 py-2 justify-center items-center text-white text-sm"> <!-- TODO - Cambiar a static?-->
-        <div class="flex w-full justify-around my-5">
-            <div class="seccion">
-                2026 © ESCLAT 2026
-                <LogoMiopia />
-            </div>
-            <div class="seccion">
-                Sección 2
-            </div>
-            <div class="seccion">
-                Política de Privacidad<br>Aviso Legal<br>Política de Cookies
-            </div>
-            <div class="seccion">
-                Sección 4
-            </div>
-        </div>
-        <div class="text-gray-400">
-            Web Created by © Miopía
-        </div>
-    </footer>
 
 </template>
 

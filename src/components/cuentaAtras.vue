@@ -73,7 +73,7 @@
 
 <template>
 
-    <div class="contenedor">
+    <div class="contenedor fixed top-[60px] w-screen h-[60px] text-3xl">
 
         <div class="contador"> <!--class="flex flex-col justify-center items-center gap-1 font-bold text-4xl bg-blue-800 text-white px-5 py-6"-->
             <span class="">{{ dias }} </span>
@@ -106,7 +106,7 @@
         width: fill;
         background-color: var(--color-azuloscuro);
         color: var(--color-amarillo);
-        gap: 4rem;
+        gap: 3rem;
         padding-top: 0.25rem;
         padding-bottom: 0.5rem;
         font-weight: 700;
@@ -116,7 +116,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 1.5rem;
     }
 /* 
     .contenedor {

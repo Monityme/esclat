@@ -107,7 +107,7 @@
   font-family: "Outfit", sans-serif;
 }
 
-
+/*
 .enlace-underline {
   cursor: pointer;
   position: relative;
@@ -139,6 +139,7 @@
   transition-duration: 400ms;
   transition-property: width, left;
 }
+  */
 
 .enlace-underline2 {
   cursor: pointer;
@@ -171,11 +172,12 @@
   transition-property: width, left;
 }
 
+/* Barra de Navegación - Animación underline y selected*/
+
 .enlace-underline3 {
-  cursor: pointer;
   position: relative;
   padding-bottom: 0px;
-  color: var(--color-amarillo);
+  color: white;
   margin-bottom: 0.5rem;
   transition-timing-function: var(--ease-in-out);
   transition-duration: 400ms;
@@ -194,7 +196,7 @@
 .enlace-underline3:after {
   content: "";
   pointer-events: none;
-  bottom: -1px;
+  bottom: 5px;
   left: 50%;
   position: absolute;
   width: 0%;
@@ -203,4 +205,35 @@
   transition-timing-function: var(--ease-in-out);
   transition-duration: 400ms;
   transition-property: width, left;
+}
+.enlace-underline3-selected {
+  cursor: default;
+  font-size: var(--text-lg);
+  position: relative;
+  padding-bottom: 0px;
+  color: var(--color-azulclaro);
+  bottom: 2px;
+}
+
+.enlace-underline3-selected:hover {
+  pointer-events: none;
+  color: var(--color-azulclaro);
+}
+
+.enlace-underline3-selected:hover:after {
+  pointer-events: none;
+  transition: none;
+  height: 2px;
+  width: 90%;
+  left: 5%;
+  background-color: var(--color-azulclaro);
+}
+
+.enlace-underline3-selected:after {
+  pointer-events: none;
+  transition: none;
+  height: 2px;
+  width: 90%;
+  left: 5%;
+  background-color: var(--color-azulclaro);
 }
