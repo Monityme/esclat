@@ -78,8 +78,6 @@
             </RouterLink>
         </div>
         
-
-        
     </div>
 
     <WebFooter />
@@ -144,7 +142,7 @@
     }
 
     .botonEntradas:hover svg {
-        margin-left:0rem;
+        margin-left: 0rem;
     }
 
     .seccion3 {
