@@ -10,10 +10,16 @@
     import Flecha from '@/components/iconos/Flecha.vue';
     import Carrusel from '@/components/Carrusel.vue';
 
+    import cuentaAtras from '@/components/cuentaAtras.vue';
+
 
 </script>
 
 <template>
+    <header>
+        <cuentaAtras fecha="2026-10-29T10:00:00"/> <!-- ?Cuenta atrás desde la fecha actual hasta la fecha introducida -->
+    </header>
+    
     <!--<img src="/public/home/fondoHome01.jpg"/>-->
     <div class="fondo w-full max-w-screen">
         <!--<img src="/public/home/fondoHome01.jpg"/>-->
