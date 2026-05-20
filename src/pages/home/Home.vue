@@ -1,11 +1,15 @@
 <script lang="ts" setup>
 
-    import WebFooter from '@/components/WebFooter.vue';
-
 /**
     ** Para poder usar el plugin de cambio de idioma */
     import { useI18n } from 'vue-i18n';
     const { t } = useI18n({useScope: 'global'});
+
+    import WebFooter from '@/components/WebFooter.vue';
+    import { CirclePlay } from '@lucide/vue';
+    import Flecha from '@/components/iconos/Flecha.vue';
+    import Carrusel from '@/components/Carrusel.vue';
+
 
 </script>
 
@@ -14,7 +18,6 @@
     <div class="fondo w-full max-w-screen">
         <!--<img src="/public/home/fondoHome01.jpg"/>-->
         <div class="seccion1 h-full">
-
         
             <div class="pl-10 pt-5 text-amarillo font-bold text-3xl" style="grid-area: logo">
                 <span class="text-9xl">ESCLAT</span><br>
@@ -39,6 +42,45 @@
 
     </div>
     
+    <div class="seccion2 h-full w-full max-w-screen">
+
+        <div style="grid-area: video" class="bg-gray-800 flex justify-center items-center"><CirclePlay class="text-white h-30 w-auto"/></div>
+        <div style="grid-area: texto" class="bg-amarillo flex items-center p-5 text-xl font-bold">AQUÍ VA EL TEXTO</div>
+
+    </div>
+
+    <div class="seccion3">
+        
+        <!--<img src="/home/fondoHome01.jpg" class="absolute -z-2"/>-->
+        <Carrusel/>
+
+        <div style="grid-area: vacio3_1"></div>
+        <div style="grid-area: vacio3_2"></div>
+        <div style="grid-area: vacio3_3"></div>
+        <div style="grid-area: vacio3_4"></div>
+        <div style="grid-area: vacio3_5"></div>
+        <div style="grid-area: vacio3_6"></div>
+        <div style="grid-area: vacio3_7"></div>
+        
+        <div style="grid-area: caja3_1" class="bg-rojo"></div>
+        <div style="grid-area: caja3_2" class="bg-azulclaro"></div>
+        <div style="grid-area: caja3_3" class="bg-rojo"></div>
+        <div style="grid-area: caja3_4" class="bg-azuloscuro"></div>
+
+        
+        <div style="grid-area: texto3_1" class="botonEntradas bg-amarillo text-black flex flex-row items-center font-bold text-4xl">
+            <RouterLink to="/entradas" class="flex flex-row items-center max-w-full">
+                <div class="pl-12">
+                    <span class="">Reserva tus</span>
+                    <span class="flex text-5xl">Entradas</span>
+                </div>
+                <Flecha class="h-20 -ml-10"/>
+            </RouterLink>
+        </div>
+        
+
+        
+    </div>
 
     <WebFooter />
 </template>
@@ -62,6 +104,53 @@
             "logo vacio2 caja1"
             "logo texto2 vacio3"
             "caja2 vacio4 vacio4";
+    }
+
+    .seccion2 {
+        height: calc(100vh - 120px);
+        display: grid;
+        grid-template-columns: 66% 34%;
+        grid-template-areas: "video texto";
+    }
+
+    .seccion3 {
+        height: calc(100vh - 120px);
+        display: grid;
+        grid-template-columns: 33% 33% 24% 10%;
+        grid-template-rows: 12% 30% 28% 30%;
+        grid-template-areas:
+            "caja3_1 caja3_1 vacio3_1 vacio3_1"
+            "vacio3_2 vacio3_3 caja3_2 vacio3_4"
+            "vacio3_2 texto3_1 vacio3_5 caja3_3"
+            "vacio3_2 vacio3_6 caja3_4 vacio3_7"
+    }
+
+    .botonEntradas {
+        cursor: pointer;
+        transition-timing-function: var(--ease-in-out);
+        transition-duration: 400ms;
+        transition-property: all;
+    }
+
+    .botonEntradas:hover {
+        background-color: black;
+        color: var(--color-amarillo);
+    }
+    
+    .botonEntradas svg {
+        transition-timing-function: var(--ease-in-out);
+        transition-duration: 400ms;
+        transition-property: all;
+    }
+
+    .botonEntradas:hover svg {
+        margin-left:0rem;
+    }
+
+    .seccion3 {
+        background-image: url("/fotos/fondoHome01.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
 </style>

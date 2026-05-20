@@ -24,14 +24,16 @@ const i18n = createI18n({
             espacio: 'Espacio',
             navegacion: ['ESCLAT','Programa','Invitades','Info','Entradas'],
             cuentaAtras: ['Días','Horas','Minutos','Segundos'],
-            home_texto1: ['Tu festival ','gratuito ','de música y cultura en Valencia donde ','rompemos la norma']
+            home_texto1: ['Tu festival ','gratuito ','de música y cultura en Valencia donde ','rompemos la norma'],
+            home_texto2: ['Aquí va el texto']
         },
         VAL: {
             mensaje: 'açò és un missatge',
             espacio: 'Espai',
             navegacion: ['ESCLAT','Programa','Convidats','Info','Entrades'],
             cuentaAtras: ['Dies','Hores','Minuts','Segons'],
-            home_texto1: ['El teu festival ','gratuït ','de música i cultura a València on ','esclatem la norma']
+            home_texto1: ['El teu festival ','gratuït ','de música i cultura a València on ','esclatem la norma'],
+            home_texto2: ['Ací va el text']
         }
     }
 });
