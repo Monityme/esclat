@@ -20,13 +20,13 @@
             <Tabs default-value="artistas">
                 <TabsList class="flex gap-5">
                     <TabsTrigger value="artistas">
-                        ARTISTAS
+                        <span class="pl-5 text-4xl">ARTISTAS</span>
                     </TabsTrigger>
                     <TabsTrigger value="talleres">
-                        TALLERES
+                        <span class="pl-10 text-4xl">TALLERES</span>
                     </TabsTrigger>
                     <TabsTrigger value="charlas">
-                        CHARLAS
+                        <span class="pl-10 text-4xl">CHARLAS</span>
                     </TabsTrigger>
                 </TabsList>
                 <TabsContent value="artistas">

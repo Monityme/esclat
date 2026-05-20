@@ -6,7 +6,7 @@
     const { t } = useI18n({useScope: 'global'});
 
     import WebFooter from '@/components/WebFooter.vue';
-    import { CirclePlay } from '@lucide/vue';
+    //import { CirclePlay } from '@lucide/vue';
     import Flecha from '@/components/iconos/Flecha.vue';
     import Carrusel from '@/components/Carrusel.vue';
 
