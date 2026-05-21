@@ -1,3 +1,13 @@
+<script lang="ts">
+    type RGB = `rgb(${number}, ${number}, ${number})`;
+    type RGBA = `rgba(${number}, ${number}, ${number}, ${number})`;
+    type HEX = `#${string}`;
+
+    type Color = RGB | RGBA | HEX;
+    
+    export const colorBarra = ref<Color>();
+</script>
+
 <script setup lang="ts">
 
     import {
@@ -8,6 +18,8 @@
     } from '@/components/ui/tabs'
     
     import { ScrollArea } from '@/components/ui/scroll-area'
+
+    import { ref } from 'vue';
 
 </script>
 
@@ -50,7 +62,7 @@
 
                 <TabsContent value="artistas">
                     
-                    <ScrollArea type="always">
+                    <ScrollArea type="always" class="flex justify-center"">
 
                         <div class="gap-5 w-full h-full grid grid-cols-3">
                             <div class="tarjeta">

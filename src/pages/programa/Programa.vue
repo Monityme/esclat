@@ -4,11 +4,43 @@
 </script>
 
 <template>
+    
+    <div class="main">
 
-<h1 class="text-3xl text-red-500">PROGRAMA</h1>
+        <div style="grid-area: vacio1"></div>
+        <div style="grid-area: vacio2"></div>
+        <div style="grid-area: vacio3"></div>
+        <div style="grid-area: vacio4"></div>
+        <div style="grid-area: vacio5"></div>
+
+        <div style="grid-area: caja1" class="bg-amarillo"></div>
+        <div style="grid-area: caja2" class="bg-azuloscuro"></div>
+        <div style="grid-area: caja3" class="bg-rojo"></div>
+
+        <div style="grid-area: contenido"
+            class="bg-azulclaro pb-5 px-5 h-full flex flex-col">
+
+
+        </div> <!-- final "contenido"-->
+
+    </div> <!--final ".main"-->
 
 </template>
 
 <style scoped>
+    .main {
+        background-image: url("/home/fondoHome01.jpg");
+        background-position: cover;
+        background-position: no-repeat;
+        height: calc(100vh - 60px);
+        display: grid;
+        grid-template-columns: 66% 24% 10%;
+        grid-template-rows: 9% 77% 14%;
+        grid-template-areas:
+            "vacio1 caja1 vacio2"
+            "contenido vacio3 caja2"
+            "vacio4 caja3 vacio5";
+    }
+
 
 </style>

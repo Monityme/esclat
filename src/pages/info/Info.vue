@@ -22,70 +22,70 @@
 
         <div class="main">
         
-        <div style="grid-area: vacio1"></div>
-        <div style="grid-area: vacio2"></div>
-        <div style="grid-area: vacio3"></div>
+            <div style="grid-area: vacio1"></div>
+            <div style="grid-area: vacio2"></div>
+            <div style="grid-area: vacio3"></div>
 
-        <div style="grid-area: caja1" class="bg-azulclaro"></div>
-        <div style="grid-area: caja2" class="bg-rojo"></div>
+            <div style="grid-area: caja1" class="bg-azulclaro"></div>
+            <div style="grid-area: caja2" class="bg-rojo"></div>
 
-        <div style="grid-area: contenido"
-            class="bg-amarillo pb-5 px-5 h-full flex flex-row gap-5">
-            
+            <div style="grid-area: contenido"
+                class="bg-amarillo pb-5 px-5 h-full flex flex-row gap-5">
+                
 
-            <Tabs default-value="normas" class="flex-1">
+                <Tabs default-value="normas" class="flex-1">
 
-                <TabsList>
+                    <TabsList>
 
-                    <TabsTrigger value="normas" class="">
-                        <span>NORMAS</span>
-                    </TabsTrigger>
+                        <TabsTrigger value="normas" class="">
+                            <span>NORMAS</span>
+                        </TabsTrigger>
 
-                    <TabsTrigger value="espacio" class="">
-                        <span>ESPACIO</span>
-                    </TabsTrigger>
+                        <TabsTrigger value="espacio" class="">
+                            <span>ESPACIO</span>
+                        </TabsTrigger>
 
-                    <TabsTrigger value="servicios" class="">
-                        <span>SERVICIOS</span>
-                    </TabsTrigger>
+                        <TabsTrigger value="servicios" class="">
+                            <span>SERVICIOS</span>
+                        </TabsTrigger>
 
-                    <TabsTrigger value="faq" class="">
-                        <span>FAQ</span>
-                    </TabsTrigger>
+                        <TabsTrigger value="faq" class="">
+                            <span>FAQ</span>
+                        </TabsTrigger>
 
-                </TabsList>
+                    </TabsList>
 
-                <!-- TODO - Meter datos en main.ts y agregarlos con v-for -->
+                    <!-- TODO - Meter datos en main.ts y agregarlos con v-for -->
 
-                <TabsContent value="normas">
-                    
-                    Contenido normas
+                    <TabsContent value="normas">
+                        
+                        Contenido normas
 
-                </TabsContent>
+                    </TabsContent>
 
-                <TabsContent value="espacio">
+                    <TabsContent value="espacio">
 
-                    Contenido espacio
+                        Contenido espacio
 
-                </TabsContent>
+                    </TabsContent>
 
-                <TabsContent value="servicios">
+                    <TabsContent value="servicios">
 
-                    Contenido servicios
+                        Contenido servicios
 
-                </TabsContent>
+                    </TabsContent>
 
-                <TabsContent value="faq">
+                    <TabsContent value="faq">
 
-                    Contenido faq
+                        Contenido faq
 
-                </TabsContent>
+                    </TabsContent>
 
-            </Tabs>
+                </Tabs>
+
+            </div>
 
         </div>
-
-    </div>
 
          <!--
         <div class="flex flex-col mx-70 my-10 gap-8 ">

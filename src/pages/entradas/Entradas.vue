@@ -97,7 +97,7 @@
     .form__field {
         width: 100%;
         border: none;
-        border-bottom: 1px solid #000;
+        border-bottom: 2px solid #000;
         outline: 0;
         font-size: 1rem;
         color: #000;
