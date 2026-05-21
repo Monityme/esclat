@@ -171,7 +171,7 @@
         background-image: url("/home/fondoHome01.jpg");
         background-position: cover;
         background-position: no-repeat;
-        height: calc(100vh - 120px);
+        height: calc(100vh - 60px);
         display: grid;
         grid-template-columns: 66% 24% 10%;
         grid-template-rows: 88% 12%;

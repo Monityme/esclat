@@ -12,6 +12,9 @@
     
     import { useI18n } from 'vue-i18n';
     const { t } = useI18n({useScope: 'global'});
+    
+    import { ref } from 'vue';
+    import { mostrarCuentaAtras } from '@/pages/Layout.vue';
 
 </script>
 
@@ -22,7 +25,7 @@
             <NavigationMenuList class="gap-8">
 
                 <NavigationMenuItem>
-                    <RouterLink to="/">
+                    <RouterLink to="/" @click="mostrarCuentaAtras = true">
                             <NavigationMenuLink class="text-lg">
                                 Home (logo) <!-- TODO - Cambiar por el logo de ESCLAT-->
                             </NavigationMenuLink>
@@ -30,7 +33,7 @@
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                    <RouterLink to="/about" class="enlace-underline3" active-class="enlace-underline3-selected">
+                    <RouterLink to="/about" @click="mostrarCuentaAtras = false" class="enlace-underline3" active-class="enlace-underline3-selected">
                         <NavigationMenuLink class="text-lg">
                             {{ t('navegacion[0]') }}
                         </NavigationMenuLink>
@@ -38,7 +41,7 @@
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                    <RouterLink to="/programa" class="enlace-underline3" active-class="enlace-underline3-selected">
+                    <RouterLink to="/programa" @click="mostrarCuentaAtras = false" class="enlace-underline3" active-class="enlace-underline3-selected">
                         <NavigationMenuLink class="text-lg">
                             {{ t('navegacion[1]') }}
                         </NavigationMenuLink>
@@ -46,7 +49,7 @@
                 </NavigationMenuItem>
                 
                 <NavigationMenuItem>
-                    <RouterLink to="/invitades" class="enlace-underline3" active-class="enlace-underline3-selected">
+                    <RouterLink to="/invitades" @click="mostrarCuentaAtras = false" class="enlace-underline3" active-class="enlace-underline3-selected">
                         <NavigationMenuLink class="text-lg">
                             {{ t('navegacion[2]') }}
                         </NavigationMenuLink>
@@ -54,7 +57,7 @@
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                    <RouterLink to="/info" class="enlace-underline3" active-class="enlace-underline3-selected">
+                    <RouterLink to="/info" @click="mostrarCuentaAtras = false" class="enlace-underline3" active-class="enlace-underline3-selected">
                         <NavigationMenuLink class="text-lg">
                             {{ t('navegacion[3]') }}
                         </NavigationMenuLink>
@@ -62,7 +65,7 @@
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                    <RouterLink to="/entradas" class="enlace-underline3" active-class="enlace-underline3-selected">
+                    <RouterLink to="/entradas" @click="mostrarCuentaAtras = false" class="enlace-underline3" active-class="enlace-underline3-selected">
                         <NavigationMenuLink class="text-lg">
                             {{ t('navegacion[4]') }}
                         </NavigationMenuLink>

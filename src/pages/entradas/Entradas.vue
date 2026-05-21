@@ -6,7 +6,6 @@
         TabsList,
         TabsTrigger
     } from '@/components/ui/tabs'
-    import { ScrollArea } from '@/components/ui/scroll-area'
 
 </script>
 
@@ -59,8 +58,10 @@
             </Tabs>
 
             <div class="datos flex-1 mt-5">
-                Nombre
-                Apellidos
+                <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="Name" required=true>
+                    <label for="name" class="form__label">Nombre</label>
+                </div>
             </div>
 
 
@@ -76,7 +77,7 @@
         background-image: url("/home/fondoHome01.jpg");
         background-position: cover;
         background-position: no-repeat;
-        height: calc(100vh - 120px);
+        height: calc(100vh - 60px);
         display: grid;
         grid-template-columns: 66% 24% 10%;
         grid-template-rows: 12% 63% 25%;
@@ -85,5 +86,60 @@
             "contenido vacio3 caja2"
             "vacio4 caja3 vacio5";
     }
+
+    .form__group {
+        position: relative;
+        padding: 20px 0 0;
+        width: 100%;
+        max-width: 180px;
+    }
+
+    .form__field {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #000;
+        outline: 0;
+        font-size: 1rem;
+        color: #000;
+        padding: 0.2rem 0;
+        background: transparent;
+        transition: border-color 400ms;
+    }
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 200ms;
+  color: rgba(0,0,0,0.5);
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 0.2rem;
+  padding-left: 6px;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  color: var(--color-);
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
 
 </style>

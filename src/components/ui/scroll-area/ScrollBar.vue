@@ -24,7 +24,7 @@
          orientation === 'vertical'
            && 'h-full w-3',
          orientation === 'horizontal'
-           && 'h-2.5 flex-col border-t border-t-transparent',
+           && 'h-2.5 flex-col border-t ',
          props.class)"
   >
 

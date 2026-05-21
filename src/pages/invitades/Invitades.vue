@@ -6,6 +6,7 @@
         TabsList,
         TabsTrigger
     } from '@/components/ui/tabs'
+    
     import { ScrollArea } from '@/components/ui/scroll-area'
 
 </script>
@@ -49,9 +50,9 @@
 
                 <TabsContent value="artistas">
                     
-                    <ScrollArea>
+                    <ScrollArea type="always">
 
-                        <div class="w-full h-full grid grid-cols-3">
+                        <div class="gap-5 w-full h-full grid grid-cols-3">
                             <div class="tarjeta">
                                 <div class="nombres">
                                     Nombre Artista
@@ -200,7 +201,7 @@
         background-image: url("/home/fondoHome01.jpg");
         background-position: cover;
         background-position: no-repeat;
-        height: calc(100vh - 120px);
+        height: calc(100vh - 60px);
         display: grid;
         grid-template-columns: 66% 24% 10%;
         grid-template-rows: 12% 76% 12%;
@@ -214,8 +215,7 @@
         cursor: pointer;
         display: flex;
         align-items: end;
-        margin: 2rem;
-        height: 250px;
+        aspect-ratio: 1;
         background-color: var(--color-gray-400);
     }
 
@@ -235,12 +235,14 @@
     .tarjeta:hover .nombres {
         height: 80px;
         background: rgba(0,0,0,1);
-        border-top: 2px solid var(--color-rojo);
+        /*border-top: 2px solid var(--color-rojo);*/
     }
-    
+
+    /*
     .tarjeta:hover {
         border: 2px solid var(--color-rojo);
     }
+    */
 
 
 </style>
