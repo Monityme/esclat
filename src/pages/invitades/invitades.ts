@@ -1,3 +1,8 @@
+/**
+    ** Para poder usar el plugin de cambio de idioma */
+    import { useI18n } from 'vue-i18n';
+    const { t } = useI18n({useScope: 'global'});
+
 export interface Invitade {
   id: number;
   nombre: string;

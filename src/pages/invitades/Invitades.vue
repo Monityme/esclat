@@ -1,13 +1,3 @@
-<script lang="ts">
-    type RGB = `rgb(${number}, ${number}, ${number})`;
-    type RGBA = `rgba(${number}, ${number}, ${number}, ${number})`;
-    type HEX = `#${string}`;
-
-    type Color = RGB | RGBA | HEX;
-    
-    export const colorBarra = ref<Color>();
-</script>
-
 <script setup lang="ts">
 
     import {
@@ -19,7 +9,6 @@
     
     import { ScrollArea } from '@/components/ui/scroll-area'
 
-    import { ref } from 'vue';
 
 </script>
 
@@ -60,143 +49,7 @@
 
                 <!-- TODO - Meter datos en main.ts y agregarlos con v-for -->
 
-                <TabsContent value="artistas">
-                    
-                    <ScrollArea type="always" class="flex justify-center"">
-
-                        <div class="gap-5 w-full h-full grid grid-cols-3">
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Nombre Artista
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Nombre Artista
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Nombre Artista
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Nombre Artista
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Nombre Artista
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Nombre Artista
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Nombre Artista
-                                </div>
-                            </div>
-                        </div>
-
-                    </ScrollArea>
-
-                </TabsContent>
-
-                <TabsContent value="talleres">
-
-                    <ScrollArea>
-
-                        <div class="w-full h-full grid grid-cols-3">
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Taller
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Taller
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Taller
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Taller
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Taller
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Taller
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Taller
-                                </div>
-                            </div>
-                        </div>
-
-                    </ScrollArea>
-
-                </TabsContent>
-
-                <TabsContent value="charlas">
-                    
-                    <ScrollArea>
-
-                        <div class="w-full h-full grid grid-cols-3">
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Charla
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Charla
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Charla
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Charla
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Charla
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Charla
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Charla
-                                </div>
-                            </div>
-                        </div>
-
-                    </ScrollArea>
-
-                </TabsContent>
+                
 
             </Tabs>
 
