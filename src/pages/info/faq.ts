@@ -1,6 +1,8 @@
 // ARRAY DE PREGUNTAS Y OTRO DE RESPUESTAS
 //
 
+
+
 export interface Info {
   id: number,
   value: string;
@@ -48,6 +50,8 @@ export const faqs: Info[] = [
         id:8,
         value: "item-8",
     },
+
+    
     // {
     //     id:1,
     //     value: "item-1",
