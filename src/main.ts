@@ -24,44 +24,58 @@ const i18n = createI18n({
             cuentaAtras: ['Días','Horas','Minutos','Segundos'],
             home_texto1: ['Tu festival ','gratuito ','de música y cultura en Valencia donde ','rompemos la norma'],
             home_texto2: ['Aquí va el texto'],
+            
+            //?FAQ - INFO
+            faq_apartados: ['Entradas','Adaptaciones','Servicios'],
             preguntas:['¿Cuánto cuesta la entrada al festival?','¿Cuándo podré adquirir mis entradas?','He recibido el email de confirmación pero no encuentro mi entrada',
                 '¿Pueden entrar menores de edad?','¿Está el festival adaptado para personas con movilidad reducida?','¿Hay algún lugar o plataforma para que las personas con movilidad reducida puedan ver los conciertos?',
                 '¿Habrá comida en el festival?','¿Pregunta 2?','¿Pregunta 3?'],
-
+            respuestas:['Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta'],
             
+            //?ENTRADAS
             entradas_seleccion: ['HAZ TU SELECCIÓN', 'CONCIERTOS', 'TALLERES'],
+            entradas_dias:['Viernes','Sábado','Domingo'],
             entradas_aviso: ['Te recordamos que la entrada al evento es','GRATUITA',
                 'Rellenar este formulario nos permite llevar un control del aforo para garantiar una experiencia óptima y segura para todes les asistentes del festival.'],
-            entradas_datos: ['RELLENA TUS DATOS','Nombre','Apellidos','Correo electrónico','Fecha de nacimiento'],
+            entradas_datos: ['RELLENA TUS DATOS','Nombre y apellidos','Correo electrónico','Fecha de nacimiento'],
             entradas_menores: ['Menores de 16 años',
                 'Los', 'menores de 14 a 16 años', 'deberán presentar a la entrada del concierto la siguiente autorización', 'firmada', 'por sus progenitores o tutores legales',
                 'Los', 'menores de 14 años', 'deberán ir acompañades obligatoriamente por una', 'persona adulta responsable', '(progenitores o tutores) para poder acceder a talleres y/o conciertos',
-                'Más informacion', 'en las secciones de', 'Normas y FAQ','en nuestra página de','información'],
+                'Más información', 'en las secciones de', 'Normas y FAQ','en nuestra página de','información'],
             entradas_confirma: ['CONFIRMA Y ENVÍA', 'Confirmo que los CONCIERTOS y/o TALLERES seleccionados son correctos',
                 'He leído y acepto las','Normas del evento',
-                'He leído y acepto la', 'Política de privacidad'],
-            //respuestas:[,,,,,,,,],
+                'He leído y acepto la', 'Política de privacidad',
+                'Enviar'],
+            //
             
-            // faq1: ['¿Cuánto cuesta la entrada al festival?','Respuesta'],
-            // faq2: ['¿Cuándo podré adquirir mis entradas?','Respuesta'],
-            // faq3: ['He recibido el email de confirmación pero no encuentro mi entrada','Respuesta'],
-            // faq4: ['¿Pueden entrar menores de edad?','Respuesta'],
-            // faq5: ['¿Está el festival adaptado para personas con movilidad reducida?','Respuesta'],
-            // faq6: ['¿Hay algún lugar o plataforma para que las personas con movilidad reducida puedan ver los conciertos?','Respuesta'],
-            // faq7: ['¿Habrá comida en el festival?','Respuesta'],
-            // faq8: ['¿Pregunta 2?','Respuesta'],
-            // faq9: ['¿Pregunta 3?','Respuesta'],
         },
         VAL: {
             navegacion: ['ESCLAT','Programa','Convidats','Info','Entrades'],
             cuentaAtras: ['Dies','Hores','Minuts','Segons'],
             home_texto1: ['El teu festival ','gratuït ','de música i cultura a València on ','esclatem la norma'],
             home_texto2: ['Ací va el text'],
-            preguntas:['Falta la traducción','Falta la traducción','Falta la traducción',
-                'Falta la traducción','Falta la traducción','Falta la traducción',
-                'Falta la traducción','Falta la traducción','Falta la traducción'],
-
             
+            //?FAQ - INFO
+            faq_apartados: ['Entrades','Adaptacions','Servicis'],
+            preguntas:["Quant costa l'entrada al festival?",'Quan podré adquirir les meues entrades?',"He rebut l'email de confirmació però no trobe la meua entrada",
+                "Poden entrar menors d'edat?",'Està el festival adaptat per a persones amb mobilitat reduïda?','Hi ha algun lloc o plataforma perquè les persones amb mobilitat reduïda puguen veure els concerts?',
+                'Hi haurà menjada en el festival?','Pregunta 2?','Pregunta 3?'],
+            respuestas:['Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta'],
+            
+            //?ENTRADAS
+            entradas_seleccion: ['FES LA TEUA SELECCIÓ', 'CONCERTS', 'TALLERS'],
+            entradas_dias:['Divendres','Dissabte','Diumenge'],
+            entradas_aviso: ["Et recordem que l'entrada a l'esdeveniment és",'GRATUÏTA',
+                "Emplenar este formulari ens permet portar un control de l'aforament per a garantir una experiència òptima i segura per a tots els assistents del festival."],
+            entradas_datos: ['EMPLENA LES TEUES DADES','Nom i cognoms','Correu electrònic','Data de naixement'],
+            entradas_menores: ['Menors de 16 anys',
+                'Els', 'menors de 14 a 16 anys', "hauran de presentar a l'entrada del concert la següent autorització firmada", 'firmada', 'pels seus progenitors o tutors legals',
+                'Els', 'menors de 14 anys', "hauran d'anar acompanyats obligatòriament per", 'persona adulta responsable', '(progenitors o tutors legals) per a poder accedir a tallers i/o concerts',
+                'Més informació', 'en les seccions de', 'Normes i FAQ','en la nostra pàgina de','informació'],
+            entradas_confirma: ['CONFIRMA I ENVIA', 'Confirme que els CONCERTS i/o TALLERS seleccionats són correctes',
+                'He llegit i accepte les',"Normes de l'esdeveniment",
+                'He llegit i accepte la', 'Política de privacitat',
+                'Enviar'],
         }
     }
 });

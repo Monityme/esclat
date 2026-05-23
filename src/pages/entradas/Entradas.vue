@@ -12,6 +12,9 @@
     } from '@/components/ui/tabs'
 
     import ScrollArea from '@/components/ui/scroll-area/ScrollArea.vue';
+    import Button from '@/components/ui/button/Button.vue';
+
+
 
 </script>
 
@@ -43,11 +46,11 @@
                         <div>
                             <h1 class="font-bold text-2xl">{{ t('entradas_seleccion[1]') }}</h1>
                             
-                            <div class="bg-white/35 w-70 h-75 border-3 border-black mt-2">
+                            <div class="bg-white/35 w-70 h-80 border-3 border-black mt-2">
                                 <ScrollArea type="always">
                                     <div class="pt-2 pl-3 pb-2 flex border-b-2 border-black/20">
                                         <div class="w-14">
-                                            <p class="text-sm">Viernes</p>
+                                            <p class="text-sm">{{ t('entradas_dias[0]') }}</p>
                                             <p class="text-lg -mt-1">23</p>
                                         </div>
 
@@ -71,7 +74,7 @@
 
                                     <div class="p-2 pl-3 pb-2 flex border-b-2 border-black/20">
                                         <div class="w-14">
-                                            <p class="text-sm">Sábado</p>
+                                            <p class="text-sm">{{ t('entradas_dias[1]') }}</p>
                                             <p class="text-lg -mt-1">24</p>
                                         </div>
 
@@ -110,7 +113,7 @@
 
                                     <div class="p-2 pl-3 pb-2 flex border-b-2 border-black/20">
                                         <div class="w-14">
-                                            <p class="text-sm">Domingo</p>
+                                            <p class="text-sm">{{ t('entradas_dias[2]') }}</p>
                                             <p class="text-lg -mt-1">25</p>
                                         </div>
 
@@ -153,7 +156,7 @@
                         <div class="ml-4">
                             <h1 class="font-bold text-2xl">{{ t('entradas_seleccion[2]') }}</h1>
                             
-                            <div class="bg-white/35 w-70 h-75 border-3 border-black mt-2">
+                            <div class="bg-white/35 w-70 h-80 border-3 border-black mt-2">
                                 <ScrollArea type="always" >
                                     <div class="pt-2 pl-3 pb-2 flex border-b-2 border-black/20">
                                         <div class="w-14">
@@ -278,44 +281,37 @@
                 <!-- 
                 ?LADO DERECHO    
                 -->
-                <div class="flex flex-col ml-5">
+                <form class="flex flex-col ml-10">
                     <h1 class="text-3xl font-bold">2. {{ t('entradas_datos[0]') }}:</h1>
 
                     <div class="text-sm pl-5">
                         <div class="datos flex-1">
-                            <div class="form__group field">
-                                <input type="input" class="form__field" placeholder="Name" required=true>
-                                <label for="name" class="form__label">{{ t('entradas_datos[1]') }}</label>
-                            </div>
-                        </div>
-
-                        <div class="datos flex-2">
-                            <div class="form__group field">
-                                <input type="input" class="form__field" placeholder="Apellidos" required=true>
-                                <label for="apellidos" class="form__label">{{ t('entradas_datos[2]') }}</label>
+                            <div class="textInputWrapper mt-1">
+                                <label for="nombre"></label>
+                                <input id="nombre" :placeholder="$t('entradas_datos[1]')" type="text" class="textInput" required> </input>
                             </div>
                         </div>
                         
                         <div class="datos flex-3">
-                            <div class="form__group field">
-                                <input type="input" class="form__field" placeholder="Correo" required=true>
-                                <label for="email" class="form__label">{{ t('entradas_datos[3]') }}</label>
+                            <div class="textInputWrapper mt-1">
+                                <label for="email"></label>
+                                <input id="email" :placeholder="$t('entradas_datos[2]')" type="text" class="textInput" required>
                             </div>
                         </div>
                         
 
                         <div class="flex flex-row justify-between">
-                            <div class="datos flex-2">
-                                <div class="form__group field">
-                                    <input type="input" class="form__field" placeholder="Apellidos" required=true>
-                                    <label for="cumple" class="form__label">{{ t('entradas_datos[4]') }}</label>
+                            <div class="datos flex-2 ">
+                                <div class="textInputWrapper mr-5 mt-1">
+                                    <label for="fechaNacimiento"></label>
+                                    <input id="fechaNacimiento" :placeholder="$t('entradas_datos[3]')" type="text" class="textInput" required>
                                 </div>
                             </div>
 
                             <div class="datos flex-1">
-                                <div class="form__group field">
-                                    <input type="input" class="form__field" placeholder="Apellidos" required=true>
-                                    <label for="dni" class="form__label">DNI</label>
+                                <div class="textInputWrapper w-30 mt-1">
+                                    <label for="dni"></label>
+                                    <input id="dni" placeholder="DNI" type="text" class="textInput" required>
                                 </div>
                             </div>
                         </div>  
@@ -337,21 +333,29 @@
                     <h1 class="text-3xl font-bold">3. {{ t('entradas_confirma[0]') }}:</h1>
 
                     <label class="cyberpunk-checkbox-label">
-                        <input type="checkbox" class="cyberpunk-checkbox">
+                        <input type="checkbox" class="cyberpunk-checkbox" required>
                         <p class="text-sm">{{ t('entradas_confirma[1]') }}.</p>
                     </label>
 
 
                     <label class="cyberpunk-checkbox-label">
-                        <input type="checkbox" class="cyberpunk-checkbox">
+                        <input type="checkbox" class="cyberpunk-checkbox" required>
                         <p class="text-sm">{{ t('entradas_confirma[2]') }} <span class="underline underline-offset-2 cursor-pointer" @click="$router.push('/info')">{{ t('entradas_confirma[3]') }}</span>.</p>
                     </label>
 
                     <label class="cyberpunk-checkbox-label">
-                        <input type="checkbox" class="cyberpunk-checkbox">
+                        <input type="checkbox" class="cyberpunk-checkbox" required>
                         <p class="text-sm">{{ t('entradas_confirma[4]') }} <span class="underline underline-offset-2 cursor-pointer" @click="$router.push('/info')">{{ t('entradas_confirma[5]') }}</span>.</p>
                     </label>
-                </div>
+                
+                    <div class="flex justify-end mt-3">
+                        <Button class="bg-(--color-negro) rounded-none text-md text-(--color-azulclaro) font-black w-30 cursor-pointer active:scale-90">
+                            {{ t('entradas_confirma[6]') }}
+                        </Button>
+                    </div>
+
+
+                </form>
                 
             </div>
                 
@@ -374,7 +378,7 @@
         height: calc(100vh - 60px);
         display: grid;
         grid-template-columns: 66% 24% 10%;
-        grid-template-rows: 8% 84% 8%;
+        grid-template-rows: 4% 92% 4%;
         grid-template-areas:
             "vacio1 caja1 vacio2"
             "contenido vacio3 caja2"
@@ -435,6 +439,98 @@
 .form__field:required, .form__field:invalid {
   box-shadow: none;
 }
+
+.textInputWrapper {
+  position: relative;
+  
+  --accent-color: #000;
+}
+
+.textInputWrapper:before {
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+}
+
+.textInputWrapper:before,
+.textInputWrapper:after {
+  content: "";
+  left: 0;
+  right: 0;
+  position: absolute;
+  pointer-events: none;
+  bottom: -1px;
+  z-index: 4;
+  width: 100%;
+}
+
+.textInputWrapper:focus-within:before {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.textInputWrapper:before {
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+}
+
+.textInputWrapper:focus-within:before {
+  border-bottom: 1px solid var(--accent-color);
+  transform: scaleX(1);
+}
+
+.textInputWrapper:focus-within:after {
+  border-bottom: 2px solid var(--accent-color);
+  transform: scaleX(1);
+}
+
+.textInputWrapper:after {
+  content: "";
+  transform: scaleX(0);
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  will-change: transform;
+  border-bottom: 2px solid var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+.textInput::placeholder {
+  transition: opacity 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  opacity: 1;
+  user-select: none;
+  color: rgba(0, 0, 0, 0.582);
+}
+
+.textInputWrapper .textInput {
+ max-height: 36px;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 200ms;
+  transition-property: background-color;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  padding-left: 3px;
+  padding-top: 5px;
+
+  width: 100%;
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+}
+
+.textInputWrapper .textInput:focus,
+.textInputWrapper .textInput:active {
+  outline: none;
+}
+
+.textInputWrapper:focus-within .textInput,
+.textInputWrapper .textInput:focus,
+.textInputWrapper .textInput:active {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.textInputWrapper:focus-within .textInput::placeholder {
+  opacity: 0;
+}
+
+
 
 .cyberpunk-checkbox {
   appearance: none;
