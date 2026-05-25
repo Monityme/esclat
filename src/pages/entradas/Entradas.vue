@@ -281,7 +281,7 @@
                 <!-- 
                 ?LADO DERECHO    
                 -->
-                <form class="flex flex-col ml-10">
+                <form class="flex flex-col ml-7">
                     <h1 class="text-3xl font-bold">2. {{ t('entradas_datos[0]') }}:</h1>
 
                     <div class="text-sm pl-5">

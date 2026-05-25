@@ -63,11 +63,11 @@ const i18n = createI18n({
             respuestas:['Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta'],
             
             //?ENTRADAS
-            entradas_seleccion: ['FES LA TEUA SELECCIÓ', 'CONCERTS', 'TALLERS'],
+            entradas_seleccion: ['FES LA SELECCIÓ', 'CONCERTS', 'TALLERS'],
             entradas_dias:['Divendres','Dissabte','Diumenge'],
             entradas_aviso: ["Et recordem que l'entrada a l'esdeveniment és",'GRATUÏTA',
                 "Emplenar este formulari ens permet portar un control de l'aforament per a garantir una experiència òptima i segura per a tots els assistents del festival."],
-            entradas_datos: ['EMPLENA LES TEUES DADES','Nom i cognoms','Correu electrònic','Data de naixement'],
+            entradas_datos: ['EMPLENA LES DADES','Nom i cognoms','Correu electrònic','Data de naixement'],
             entradas_menores: ['Menors de 16 anys',
                 'Els', 'menors de 14 a 16 anys', "hauran de presentar a l'entrada del concert la següent autorització firmada", 'firmada', 'pels seus progenitors o tutors legals',
                 'Els', 'menors de 14 anys', "hauran d'anar acompanyats obligatòriament per", 'persona adulta responsable', '(progenitors o tutors legals) per a poder accedir a tallers i/o concerts',
