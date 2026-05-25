@@ -1,14 +1,14 @@
-<script lang="ts">
-    type RGB = `rgb(${number}, ${number}, ${number})`;
-    type RGBA = `rgba(${number}, ${number}, ${number}, ${number})`;
-    type HEX = `#${string}`;
-
-    type Color = RGB | RGBA | HEX;
-    
-    export const colorBarra = ref<Color>();
-</script>
-
 <script setup lang="ts">
+
+    import { mostrarGaleria } from '@/pages/Layout.vue';
+
+    import Carruselinvitades from '@/components/Carruselinvitades.vue';
+    import WebFooter from '@/components/WebFooter.vue';
+
+    /**
+    ** Para poder usar el plugin de cambio de idioma */
+    import { useI18n } from 'vue-i18n';
+    const { t } = useI18n({useScope: 'global'});
 
     import {
         Tabs,
@@ -19,201 +19,191 @@
     
     import { ScrollArea } from '@/components/ui/scroll-area'
 
-    import { ref } from 'vue';
+    import { mostrarCuentaAtras } from '../Layout.vue';
+    mostrarCuentaAtras.value = false;
+    
+    import { invitades } from './invitades';
+
+    let artistas = invitades.slice(0,15);
 
 </script>
 
 <template>
+    <div class="principal">
+        <div class="main">
 
-    <div class="main">
+            <Carruselinvitades v-if="mostrarGaleria"/>
 
-        <div style="grid-area: vacio1"></div>
-        <div style="grid-area: vacio2"></div>
-        <div style="grid-area: vacio3"></div>
-        <div style="grid-area: vacio4"></div>
-        <div style="grid-area: vacio5"></div>
+            <div style="grid-area: vacio1"></div>
+            <div style="grid-area: vacio2"></div>
+            <div style="grid-area: vacio3"></div>
+            <div style="grid-area: vacio4"></div>
+            <div style="grid-area: vacio5"></div>
 
-        <div style="grid-area: caja1" class="bg-amarillo"></div>
-        <div style="grid-area: caja2" class="bg-rojo"></div>
-        <div style="grid-area: caja3" class="bg-azulclaro"></div>
+            <div style="grid-area: caja1" class="bg-amarillo"></div>
+            <div style="grid-area: caja2" class="bg-rojo"></div>
+            <div style="grid-area: caja3" class="bg-azulclaro"></div>
 
-        <div style="grid-area: contenido"
-            class="bg-azuloscuro pb-5 px-5 h-full flex flex-col">
+            <div style="grid-area: contenido"
+                class="bg-azuloscuro pb-5 px-5 h-full flex flex-col">
 
-            <Tabs default-value="artistas">
+                <Tabs default-value="artistas">
 
-                <TabsList>
+                    <TabsList>
 
-                    <TabsTrigger value="artistas" class="text-amarillo">
-                        <span>ARTISTAS</span>
-                    </TabsTrigger>
+                        <TabsTrigger value="artistas" class="text-amarillo">
+                            <span>{{ t('invitades.tabs[0]') }}</span>
+                        </TabsTrigger>
 
-                    <TabsTrigger value="talleres" class="text-amarillo">
-                        <span>TALLERES</span>
-                    </TabsTrigger>
+                        <TabsTrigger value="talleres" class="text-amarillo">
+                            <span>{{ t('invitades.tabs[1]') }}</span>
+                        </TabsTrigger>
 
-                    <TabsTrigger value="charlas" class="text-amarillo">
-                        <span>CHARLAS</span>
-                    </TabsTrigger>
+                        <TabsTrigger value="charlas" class="text-amarillo">
+                            <span>{{ t('invitades.tabs[2]') }}</span>
+                        </TabsTrigger>
 
-                </TabsList>
+                    </TabsList>
 
-                <!-- TODO - Meter datos en main.ts y agregarlos con v-for -->
+                    <!-- TODO - Meter datos en main.ts y agregarlos con v-for -->
 
-                <TabsContent value="artistas">
-                    
-                    <ScrollArea type="always" class="flex justify-center"">
+                    <TabsContent value="artistas">
+                        
+                        <ScrollArea type="always">
 
-                        <div class="gap-5 w-full h-full grid grid-cols-3">
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Nombre Artista
+                            <div class="gap-5 w-full h-full grid grid-cols-3">
+                                <div v-for="artista in artistas"
+                                    class="tarjeta bg-cover bg-center flex"
+                                    :style="{backgroundImage:`url(${artista.icono})`}"
+                                    @click="mostrarGaleria = true"
+                                >
+                                    <div class="tarjeta_texto flex flex-col overflow-y-hidden text-xl gap-1">
+                                        <span class="tarjeta_nombre text-white">{{ artista.nombre }}</span>
+                                        <span class="oculto hidden text-white text-sm">
+                                            {{ t(artista.diaSemana) }} {{ artista.dia }} a las {{ artista.horaI }}h
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Nombre Artista
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Nombre Artista
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Nombre Artista
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Nombre Artista
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Nombre Artista
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Nombre Artista
-                                </div>
-                            </div>
-                        </div>
 
-                    </ScrollArea>
+                        </ScrollArea>
 
-                </TabsContent>
+                    </TabsContent>
 
-                <TabsContent value="talleres">
+                    <TabsContent value="talleres">
 
-                    <ScrollArea>
+                        <ScrollArea>
 
-                        <div class="w-full h-full grid grid-cols-3">
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Taller
+                            <div class="w-full h-full grid grid-cols-3">
+                                <div class="tarjeta">
+                                    <div class="nombres">
+                                        Taller
+                                    </div>
+                                </div>
+                                <div class="tarjeta">
+                                    <div class="nombres">
+                                        Taller
+                                    </div>
+                                </div>
+                                <div class="tarjeta">
+                                    <div class="nombres">
+                                        Taller
+                                    </div>
+                                </div>
+                                <div class="tarjeta">
+                                    <div class="nombres">
+                                        Taller
+                                    </div>
+                                </div>
+                                <div class="tarjeta">
+                                    <div class="nombres">
+                                        Taller
+                                    </div>
+                                </div>
+                                <div class="tarjeta">
+                                    <div class="nombres">
+                                        Taller
+                                    </div>
+                                </div>
+                                <div class="tarjeta">
+                                    <div class="nombres">
+                                        Taller
+                                    </div>
                                 </div>
                             </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Taller
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Taller
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Taller
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Taller
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Taller
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Taller
-                                </div>
-                            </div>
-                        </div>
 
-                    </ScrollArea>
+                        </ScrollArea>
 
-                </TabsContent>
+                    </TabsContent>
 
-                <TabsContent value="charlas">
-                    
-                    <ScrollArea>
+                    <TabsContent value="charlas">
+                        
+                        <ScrollArea>
 
-                        <div class="w-full h-full grid grid-cols-3">
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Charla
+                            <div class="w-full h-full grid grid-cols-3">
+                                <div class="tarjeta">
+                                    <div class="nombres">
+                                        Charla
+                                    </div>
+                                </div>
+                                <div class="tarjeta">
+                                    <div class="nombres">
+                                        Charla
+                                    </div>
+                                </div>
+                                <div class="tarjeta">
+                                    <div class="nombres">
+                                        Charla
+                                    </div>
+                                </div>
+                                <div class="tarjeta">
+                                    <div class="nombres">
+                                        Charla
+                                    </div>
+                                </div>
+                                <div class="tarjeta">
+                                    <div class="nombres">
+                                        Charla
+                                    </div>
+                                </div>
+                                <div class="tarjeta">
+                                    <div class="nombres">
+                                        Charla
+                                    </div>
+                                </div>
+                                <div class="tarjeta">
+                                    <div class="nombres">
+                                        Charla
+                                    </div>
                                 </div>
                             </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Charla
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Charla
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Charla
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Charla
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Charla
-                                </div>
-                            </div>
-                            <div class="tarjeta">
-                                <div class="nombres">
-                                    Charla
-                                </div>
-                            </div>
-                        </div>
 
-                    </ScrollArea>
+                        </ScrollArea>
 
-                </TabsContent>
+                    </TabsContent>
 
-            </Tabs>
+                </Tabs>
 
-        </div> <!-- final "contenido"-->
+            </div> <!-- final "contenido"-->
 
-    </div> <!--final ".main"-->
-
-    
+        </div> <!--final ".main"-->
+        
+    </div>
 </template>
 
 <style scoped>
+
+    .principal {
+        height: calc(100vh - 60px);
+        width: 100%;
+    }
 
     .main {
         background-image: url("/home/fondoHome01.jpg");
         background-position: cover;
         background-position: no-repeat;
-        height: calc(100vh - 60px);
+        height: 100%;
+        width: 100%;
         display: grid;
         grid-template-columns: 66% 24% 10%;
         grid-template-rows: 12% 76% 12%;
@@ -231,23 +221,48 @@
         background-color: var(--color-gray-400);
     }
 
-    .nombres {
+    .tarjeta_texto {
         width: 100%;
-        height: 50px;
+        height: 20%;
         background: rgba(0,0,0,0.8);
         color: white;
         display: flex;
         align-items: center;
-        padding: 1rem;
+        justify-content: center;
         transition-timing-function: var(--ease-in-out);
         transition-duration: 600ms;
-        transition-property: height, background;
+        transition-property: all;
     }
 
-    .tarjeta:hover .nombres {
-        height: 80px;
+    .tarjeta:hover .tarjeta_texto {
+        height: 40%;
         background: rgba(0,0,0,1);
         /*border-top: 2px solid var(--color-rojo);*/
+    }
+
+    .tarjeta_nombre {
+        color: white;
+        transition-timing-function: var(--ease-in-out);
+        transition-duration: 600ms;
+        transition-property: all;
+    }
+
+    .tarjeta:hover .tarjeta_nombre {
+        color: var(--color-amarillo)
+    }
+
+    .tarjeta > .oculto {
+        opacity: 0;
+        display: none;
+        transition-timing-function: var(--ease-in-out);
+        transition-duration: 600ms;
+        transition: all;
+        
+    }
+
+    .tarjeta:hover .oculto {
+        opacity: 1;
+        display: inline;
     }
 
     /*

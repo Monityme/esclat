@@ -1,11 +1,17 @@
 <script setup lang="ts">
+    import WebFooter from '@/components/WebFooter.vue';
+
+    import { mostrarCuentaAtras } from '../Layout.vue';
+    mostrarCuentaAtras.value = false;
 
 </script>
 
 <template>
-    <div>
+
+    <div class="principal">
+
         <div class="main">
-        
+            
             <div style="grid-area: vacio1"></div>
             <div style="grid-area: vacio2"></div>
             <div style="grid-area: vacio3"></div>
@@ -17,12 +23,18 @@
                 class="bg-amarillo pb-5 px-5 h-full flex flex-row gap-5">
 
             </div>
-
+        
         </div>
+
     </div>
 </template>
 
 <style scoped>
+
+    .principal {
+        height: calc(100vh - 60px);
+    }
+    
     .main {
         background-image: url("/home/fondoHome01.jpg");
         background-position: cover;

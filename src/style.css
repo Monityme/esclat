@@ -95,6 +95,10 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
 }
 
 
@@ -155,7 +159,7 @@
 }
 
 .enlace-underline2:hover {
-  color: var(--color-azuloscuro);
+  color: var(--color-amarillo);
 }
 
 .enlace-underline2:hover:after {
@@ -171,7 +175,7 @@
   position: absolute;
   width: 0%;
   height: 2px;
-  background-color: var(--color-azuloscuro);
+  background-color: var(--color-amarillo);
   transition-timing-function: var(--ease-in-out);
   transition-duration: 400ms;
   transition-property: width, left;

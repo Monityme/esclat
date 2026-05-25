@@ -1,4 +1,6 @@
 <script setup lang="ts">
+    import LogoEsclatNoSubs from './logos/organiza/LogoEsclatNoSubs.vue';
+
     import {
         NavigationMenu,
         //NavigationMenuContent,
@@ -13,21 +15,20 @@
     import { useI18n } from 'vue-i18n';
     const { t } = useI18n({useScope: 'global'});
     
-    import { ref } from 'vue';
-    import { mostrarCuentaAtras } from '@/pages/Layout.vue';
+    import { mostrarCuentaAtras } from '@/pages/Layout.vue';   
 
 </script>
 
 <template>
-    <div id="contenedor" class="fixed top-0 w-screen flex justify-between items-center px-4 h-[60px]"> <!-- TODO - Fijar en el top? -->
+    <div id="contenedor" class="fixed top-0 z-50 w-screen flex justify-between items-center pl-4 pr-8 h-[60px]"> <!-- TODO - Fijar en el top? -->
         <NavigationMenu>
 
             <NavigationMenuList class="gap-8">
 
                 <NavigationMenuItem>
                     <RouterLink to="/" @click="mostrarCuentaAtras = true">
-                            <NavigationMenuLink class="text-lg">
-                                Home (logo) <!-- TODO - Cambiar por el logo de ESCLAT-->
+                            <NavigationMenuLink>
+                                <LogoEsclatNoSubs class="h-8 fill-white stroke-white hover:fill-amarillo transition-all duration-200 animation-ease-in-out"/> <!-- TODO - Cambiar por el logo de ESCLAT-->
                             </NavigationMenuLink>
                     </RouterLink>
                 </NavigationMenuItem>

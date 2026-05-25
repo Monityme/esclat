@@ -1,10 +1,19 @@
 <script lang="ts">
-    export const mostrarCuentaAtras = ref<boolean>(true);
+    export let mostrarCuentaAtras = ref<boolean>(true);
+    export let mostrarGaleria = ref<boolean>(false);
+
+    /*
+    export const switchCuentaAtras = (a: boolean) => {
+        return mostrarCuentaAtras.value = a;
+    }
+    */
+
 </script>
 
 <script setup lang="ts">
 
     import Navegacion from '@/components/Navegacion.vue';
+import WebFooter from '@/components/WebFooter.vue';
     import cuentaAtras from '@/components/cuentaAtras.vue';
     import { ref } from 'vue';
 
@@ -19,6 +28,8 @@
     <main>
         <RouterView class="min-h-full grow mt-[60px]"/>
     </main>
+
+    <WebFooter class="m-w-[100%]" />
 
 </template>
 

@@ -1,33 +1,44 @@
 <script lang="ts" setup>
+    import WebFooter from '@/components/WebFooter.vue';
 
+    import { mostrarCuentaAtras } from '../Layout.vue';
+    mostrarCuentaAtras.value = false;
 
 </script>
 
 <template>
+    <div class="principal">
+
+        <div class="main">
+
+            <div style="grid-area: vacio1"></div>
+            <div style="grid-area: vacio2"></div>
+            <div style="grid-area: vacio3"></div>
+            <div style="grid-area: vacio4"></div>
+            <div style="grid-area: vacio5"></div>
+
+            <div style="grid-area: caja1" class="bg-amarillo"></div>
+            <div style="grid-area: caja2" class="bg-azuloscuro"></div>
+            <div style="grid-area: caja3" class="bg-rojo"></div>
+
+            <div style="grid-area: contenido"
+                class="bg-azulclaro pb-5 px-5 h-full flex flex-col">
+
+
+            </div> <!-- final "contenido"-->
+
+        </div> <!--final ".main"-->
+
+    </div>
     
-    <div class="main">
-
-        <div style="grid-area: vacio1"></div>
-        <div style="grid-area: vacio2"></div>
-        <div style="grid-area: vacio3"></div>
-        <div style="grid-area: vacio4"></div>
-        <div style="grid-area: vacio5"></div>
-
-        <div style="grid-area: caja1" class="bg-amarillo"></div>
-        <div style="grid-area: caja2" class="bg-azuloscuro"></div>
-        <div style="grid-area: caja3" class="bg-rojo"></div>
-
-        <div style="grid-area: contenido"
-            class="bg-azulclaro pb-5 px-5 h-full flex flex-col">
-
-
-        </div> <!-- final "contenido"-->
-
-    </div> <!--final ".main"-->
-
 </template>
 
 <style scoped>
+
+    .principal {
+        height: calc(100vh - 60px);
+    }
+
     .main {
         background-image: url("/home/fondoHome01.jpg");
         background-position: cover;
@@ -41,6 +52,5 @@
             "contenido vacio3 caja2"
             "vacio4 caja3 vacio5";
     }
-
 
 </style>

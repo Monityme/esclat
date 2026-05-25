@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+    import LogoEsclat from '@/components/logos/organiza/LogoEsclat.vue';
 
 /**
     ** Para poder usar el plugin de cambio de idioma */
@@ -10,6 +11,9 @@
     import Flecha from '@/components/iconos/Flecha.vue';
     import Carrusel from '@/components/Carrusel.vue';
 
+    import { mostrarCuentaAtras } from '../Layout.vue';
+    mostrarCuentaAtras.value = true;
+
 
 </script>
 
@@ -20,9 +24,10 @@
         <div class="seccion1 h-full">
         
             <div class="pl-10 pt-5 text-amarillo font-bold text-3xl" style="grid-area: logo">
-                <span class="text-9xl">ESCLAT</span><br>
+                <LogoEsclat class="fill-amarillo h-60" />
+                <!-- <span class="text-9xl">ESCLAT</span><br>
                 <span class="pl-2">FESTIVAL DE MÚSICA,</span><br>
-                <span class="pl-2">PENSAMENT I CREATIVITAT</span>
+                <span class="pl-2">PENSAMENT I CREATIVITAT</span> -->
             </div>
             <div style="grid-area: vacio1"></div>
             <div style="grid-area: vacio2"></div>
@@ -33,8 +38,8 @@
                 <span>Octubre 2026</span>
             </div>
             <div class="bg-rojo" style="grid-area: caja1"></div>
-            <div class="bg-azulclaro flex flex-wrap text-xl p-5 items-center" style="grid-area: texto2">
-                <span>{{ t('home_texto1[0]') }}<span class="font-bold">{{ t('home_texto1[1]') }}</span>{{ t('home_texto1[2]') }}<span class="font-bold">{{ t('home_texto1[3]') }}</span></span>
+            <div class="bg-azulclaro flex flex-wrap text-xl items-center px-5 items-center" style="grid-area: texto2">
+                <span>{{ t('home.texto1[0]') }}<span class="font-bold">{{ t('home.texto1[1]') }}</span>{{ t('home.texto1[2]') }}<span class="font-bold">{{ t('home.texto1[3]') }}</span></span>
             </div>
             <div class="bg-azuloscuro" style="grid-area: caja2"></div>
 
@@ -45,7 +50,9 @@
     <div class="seccion2 h-full w-full max-w-screen">
 
         <div style="grid-area: video" class="bg-gray-800 flex justify-center items-center"><CirclePlay class="text-white h-30 w-auto"/></div>
-        <div style="grid-area: texto" class="bg-amarillo flex items-center p-5 text-xl font-bold">AQUÍ VA EL TEXTO</div>
+        <div style="grid-area: texto" class="bg-amarillo flex items-center p-5 text-xl font-bold">
+            {{ t('home.texto2[0]') }}
+        </div>
 
     </div>
 
@@ -71,16 +78,15 @@
         <div style="grid-area: texto3_1" class="botonEntradas bg-amarillo text-black flex flex-row items-center font-bold text-4xl">
             <RouterLink to="/entradas" class="flex flex-row items-center max-w-full">
                 <div class="pl-12">
-                    <span class="">Reserva tus</span>
-                    <span class="flex text-5xl">Entradas</span>
+                    <span class="">{{ t('home.texto3[0]') }}</span>
+                    <span class="flex text-5xl">{{ t('home.texto3[1]') }}</span>
                 </div>
                 <Flecha class="h-20 -ml-10"/>
             </RouterLink>
         </div>
         
     </div>
-
-    <WebFooter />
+    
 </template>
 
 <style scoped>
