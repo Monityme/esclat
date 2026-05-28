@@ -22,7 +22,7 @@
     :class="
       cn('flex touch-none p-px select-none',
          orientation === 'vertical'
-           && 'h-full w-3',
+           && 'h-full w-3 bg-negro/30 rounded-full',
          orientation === 'horizontal'
            && 'h-2.5 flex-col border-t ',
          props.class)"

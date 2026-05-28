@@ -10,6 +10,16 @@
     import { mostrarCuentaAtras } from '../Layout.vue';
     mostrarCuentaAtras.value = false;
 
+    import { conciertos } from './actividades.ts';
+    let concisViernes = conciertos.slice(0,3);
+    let concisSabado = conciertos.slice(3,9);
+    let concisDomingo = conciertos.slice(9,15);
+    
+    import { activs } from '../entradas/actividades.ts';
+    let tallViernes = activs.slice(0,1);
+    let tallSabado = activs.slice(1,6);
+    let tallDomingo = activs.slice(6,10);
+
 
 </script>
 
@@ -45,103 +55,47 @@
                                 <ScrollArea type="always">
                                     <div class="pt-2 pl-3 pb-2 flex border-b-2 border-black/20">
                                         <div class="w-14">
-                                            <p class="text-sm">{{ t('entradas.dias[0]') }}</p>
+                                            <p class="text-sm">{{ t('dias[0]') }}</p>
                                             <p class="text-lg -mt-1">23</p>
                                         </div>
 
                                         <div class="flex flex-col ml-3">
-                                            <label class="cyberpunk-checkbox-label">
+                                            <label class="cyberpunk-checkbox-label" v-for="artista in concisViernes">
                                                 <input type="checkbox" class="cyberpunk-checkbox">
-                                                Rita Payés - 18:00
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Samantha Margret - 19:15
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Papá Topo - 22:00
+                                                {{ artista.artista }} - {{ artista.hora }}
                                             </label>
                                         </div>           
                                     </div>
 
                                     <div class="p-2 pl-3 pb-2 flex border-b-2 border-black/20">
                                         <div class="w-14">
-                                            <p class="text-sm">{{ t('entradas.dias[1]') }}</p>
+                                            <p class="text-sm">{{ t('dias[1]') }}</p>
                                             <p class="text-lg -mt-1">24</p>
                                         </div>
 
                                         <div class="flex flex-col ml-3">
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Emil et il - 17:00
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Sandra Monfort - 18:15
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Abril - 19:30
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Lisasinson - 20:45
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Au d'astí - 22:45
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Petunias - 00:00
-                                            </label>
+                                            <div class="flex flex-col ml-3">
+                                                <label class="cyberpunk-checkbox-label" v-for="artista in concisSabado">
+                                                    <input type="checkbox" class="cyberpunk-checkbox">
+                                                    {{ artista.artista }} - {{ artista.hora }}
+                                                </label>
+                                            </div>
                                         </div>           
                                     </div>
 
                                     <div class="p-2 pl-3 pb-2 flex border-b-2 border-black/20">
                                         <div class="w-14">
-                                            <p class="text-sm">{{ t('entradas.dias[2]') }}</p>
+                                            <p class="text-sm">{{ t('dias[2]') }}</p>
                                             <p class="text-lg -mt-1">25</p>
                                         </div>
 
                                         <div class="flex flex-col ml-3">
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Ixeya - 17:00
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Mimosas - 18:15
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Tronkas - 19:30
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Ojete Calor - 20:45
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Svetlana - 22:45
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Delilah Bon - 00:00
-                                            </label>
+                                            <div class="flex flex-col ml-3">
+                                                <label class="cyberpunk-checkbox-label" v-for="artista in concisDomingo">
+                                                    <input type="checkbox" class="cyberpunk-checkbox">
+                                                    {{ artista.artista }} - {{ artista.hora }}
+                                                </label>
+                                            </div>
                                         </div>           
                                     </div>
                                 </ScrollArea>
@@ -155,102 +109,42 @@
                                 <ScrollArea type="always" >
                                     <div class="pt-2 pl-3 pb-2 flex border-b-2 border-black/20">
                                         <div class="w-14">
-                                            <p class="text-sm">Viernes</p>
+                                            <p class="text-sm">{{ t('dias[0]') }}</p>
                                             <p class="text-lg -mt-1">23</p>
                                         </div>
 
                                         <div class="flex flex-col ml-3">
-                                            <label class="cyberpunk-checkbox-label">
+                                            <label class="cyberpunk-checkbox-label" v-for="taller in tallViernes">
                                                 <input type="checkbox" class="cyberpunk-checkbox">
-                                                Rita Payés - 18:00
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Samantha Margret - 19:15
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Papá Topo - 22:00
+                                                {{ t(taller.nombre) }} - {{ taller.hora }}
                                             </label>
                                         </div>           
                                     </div>
 
                                     <div class="p-2 pl-3 pb-2 flex border-b-2 border-black/20">
                                         <div class="w-14">
-                                            <p class="text-sm">Sábado</p>
+                                            <p class="text-sm">{{ t('dias[1]') }}</p>
                                             <p class="text-lg -mt-1">24</p>
                                         </div>
 
                                         <div class="flex flex-col ml-3">
-                                            <label class="cyberpunk-checkbox-label">
+                                            <label class="cyberpunk-checkbox-label" v-for="taller in tallSabado">
                                                 <input type="checkbox" class="cyberpunk-checkbox">
-                                                Emil et il - 17:00
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Sandra Monfort - 18:15
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Abril - 19:30
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Lisasinson - 20:45
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Au d'astí - 22:45
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Petunias - 00:00
+                                                {{ t(taller.nombre) }} - {{ taller.hora }}
                                             </label>
                                         </div>           
                                     </div>
 
                                     <div class="p-2 pl-3 pb-2 flex border-b-2 border-black/20">
                                         <div class="w-14">
-                                            <p class="text-sm">Domingo</p>
+                                            <p class="text-sm">{{ t('dias[2]') }}</p>
                                             <p class="text-lg -mt-1">25</p>
                                         </div>
 
                                         <div class="flex flex-col ml-3">
-                                            <label class="cyberpunk-checkbox-label">
+                                            <label class="cyberpunk-checkbox-label" v-for="taller in tallDomingo">
                                                 <input type="checkbox" class="cyberpunk-checkbox">
-                                                Ixeya - 17:00
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Mimosas - 18:15
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Tronkas - 19:30
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Ojete Calor - 20:45
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Svetlana - 22:45
-                                            </label>
-
-                                            <label class="cyberpunk-checkbox-label">
-                                                <input type="checkbox" class="cyberpunk-checkbox">
-                                                Delilah Bon - 00:00
+                                                {{ t(taller.nombre) }} - {{ taller.hora }}
                                             </label>
                                         </div>           
                                     </div>
@@ -261,9 +155,7 @@
 
                     <div>
                         <div class="flex py-3 w-xl">
-                            <p class="font-black text-7xl">!</p>
-
-                            <div class="pl-5 pt-1 flex flex-col justify-between">
+                            <div class="pt-1 flex flex-col justify-between">
                                 <p>{{ t('entradas.aviso[0]') }} <span class="font-black">{{ t('entradas.aviso[1]') }}</span>.</p>
 
                                 <p class="text-sm/4 pb-1">{{ t('entradas.aviso[2]')}}</p>
@@ -313,8 +205,8 @@
                     </div>
 
                     <div class="pl-5 pt-3 pb-5">
-                        <h1 class=" font-black text-lg">{{ t('entradas.menores[0]') }}:</h1>
-                        <div class="text-sm/4 pt-1">
+                        <h1 class=" font-black text-sm">{{ t('entradas.menores[0]') }}:</h1>
+                        <div class="text-xs/4 pt-1">
                             <p>{{ t('entradas.menores[1]') }} <span class="font-black">{{ t('entradas.menores[2]') }}</span> {{ t('entradas.menores[3]') }} <span class="font-black">{{ t('entradas.menores[4]') }}</span> {{ t('entradas.menores[5]') }}.</p>
                         
                             <p class="underline underline-offset-3 pl-5 py-2 cursor-pointer">Autorizacion_Menores16.pdf</p>

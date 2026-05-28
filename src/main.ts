@@ -61,7 +61,7 @@ const i18n = createI18n({
             entradas: {
                 seleccion: ['HAZ TU SELECCIÓN','CONCIERTOS','TALLERES'],
                 aviso: ['Te recordamos que la entrada al evento es','GRATUITA',
-                'Rellenar este formulario nos permite llevar un control del aforo para garantiar una experiencia óptima y segura para todes les asistentes del festival.'],
+                'Rellenar este formulario nos permite llevar un control del aforo para garantizar una experiencia óptima y segura para todes les asistentes del festival.'],
                 datos: ['RELLENA TUS DATOS','Nombre y apellidos','Correo electrónico','Fecha de nacimiento'],
                 menores: ['Menores de 16 años',
                 'Los', 'menores de 14 a 16 años', 'deberán presentar a la entrada del concierto la siguiente autorización', 'firmada', 'por sus progenitores o tutores legales',
@@ -71,6 +71,9 @@ const i18n = createI18n({
                 'He leído y acepto las','Normas del evento',
                 'He leído y acepto la', 'Política de privacidad',
                 'Enviar'],
+                talleres: ['Taller de binders',
+                'Charla de Paco Roca', 'Sesión de Ojo Garabato', 'Charlas sobre literatura LGTBIQ+', 'Taller Zero Waste','Charla de Melani Llenoart',
+                'Taller de grabado', 'Charla de Estudio Graffica', 'Taller los plantas', 'Charla de Elena Yuuste: "Redes sociales y Creatividad"'],
             }   
         },
         VAL: {

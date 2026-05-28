@@ -145,8 +145,6 @@
         background-position: no-repeat;
         height: calc(100vh - 60px);
         width: 100%;
-        height: 100%;
-        width: 100%;
         display: grid;
         grid-template-columns: 66% 24% 10%;
         grid-template-rows: 12% 76% 12%;
