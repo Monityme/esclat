@@ -33,7 +33,11 @@ TODO: Mirar como cambiar de color la scrollbar dependiendo de la pagina... hmm
     :class="
       cn('flex touch-none p-px select-none',
          orientation === 'vertical'
+<<<<<<< Updated upstream
            && 'h-full w-3 rounded-full bg-negro/25',
+=======
+           && 'h-full w-3 bg-negro/30 rounded-full ',
+>>>>>>> Stashed changes
          orientation === 'horizontal'
            && 'h-2.5 flex-col border-t ',
          props.class)"

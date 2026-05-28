@@ -20,7 +20,17 @@ const i18n = createI18n({
     fallbackLocale: 'CAS', //? Si algo no existe en el idioma escogido, se pondrá por defecto el valor en castellano
     messages: {
         CAS: {
+<<<<<<< Updated upstream
             navegacion: ['ESCLAT','Programa','Invitades','Info','Entradas'],
+=======
+            home: {
+                texto1: ['Tu festival ','gratuito ','de música y cultura en Valencia donde ','rompemos la norma'],
+                texto2: ['Durante estos tres días os invitamos de forma gratuita a disfrutar de los conciertos, podréis asistir a las distintas charlas y talleres que se organizarán por la mañana, pasaros por el mercadillo de ropa de segunda mano y el intercambio de libros, o echar un vistazo a los stands de artistas.'],
+                texto3: ['Reserva tus', 'ENTRADAS'],
+            },
+            dias: ['Viernes','Sábado','Domingo'],
+            navegacion: ['Quienes somos','Programa','Invitades','Info','Entradas'],
+>>>>>>> Stashed changes
             cuentaAtras: ['Días','Horas','Minutos','Segundos'],
             home_texto1: ['Tu festival ','gratuito ','de música y cultura en Valencia donde ','rompemos la norma'],
             home_texto2: ['Aquí va el texto'],
@@ -30,6 +40,7 @@ const i18n = createI18n({
             preguntas:['¿Cuánto cuesta la entrada al festival?','¿Cuándo podré adquirir mis entradas?','He recibido el email de confirmación pero no encuentro mi entrada',
                 '¿Pueden entrar menores de edad?','¿Está el festival adaptado para personas con movilidad reducida?','¿Hay algún lugar o plataforma para que las personas con movilidad reducida puedan ver los conciertos?',
                 '¿Habrá comida en el festival?','¿Pregunta 2?','¿Pregunta 3?'],
+<<<<<<< Updated upstream
             respuestas:['Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta'],
             
             //?ENTRADAS
@@ -39,6 +50,17 @@ const i18n = createI18n({
                 'Rellenar este formulario nos permite llevar un control del aforo para garantiar una experiencia óptima y segura para todes les asistentes del festival.'],
             entradas_datos: ['RELLENA TUS DATOS','Nombre y apellidos','Correo electrónico','Fecha de nacimiento'],
             entradas_menores: ['Menores de 16 años',
+=======
+                respuestas:['Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta'],
+            },
+
+            entradas: {
+                seleccion: ['HAZ TU SELECCIÓN','CONCIERTOS','TALLERES'],
+                aviso: ['Te recordamos que la entrada al evento es','GRATUITA',
+                'Rellenar este formulario nos permite llevar un control del aforo para garantizar una experiencia óptima y segura para todes les asistentes del festival.'],
+                datos: ['RELLENA TUS DATOS','Nombre y apellidos','Correo electrónico','Fecha de nacimiento'],
+                menores: ['Menores de 16 años',
+>>>>>>> Stashed changes
                 'Los', 'menores de 14 a 16 años', 'deberán presentar a la entrada del concierto la siguiente autorización', 'firmada', 'por sus progenitores o tutores legales',
                 'Los', 'menores de 14 años', 'deberán ir acompañades obligatoriamente por una', 'persona adulta responsable', '(progenitores o tutores) para poder acceder a talleres y/o conciertos',
                 'Más información', 'en las secciones de', 'Normas y FAQ','en nuestra página de','información'],
@@ -46,11 +68,28 @@ const i18n = createI18n({
                 'He leído y acepto las','Normas del evento',
                 'He leído y acepto la', 'Política de privacidad',
                 'Enviar'],
+<<<<<<< Updated upstream
             //
             
         },
         VAL: {
             navegacion: ['ESCLAT','Programa','Convidats','Info','Entrades'],
+=======
+                talleres: ['Taller de binders',
+                'Charla de Paco Roca', 'Sesión de Ojo Garabato', 'Charlas sobre literatura LGTBIQ+', 'Taller Zero Waste','Charla de Melani Llenoart',
+                'Taller de grabado', 'Charla de Estudio Graffica', 'Taller los plantas', 'Charla de Elena Yuuste: "Redes sociales y Creatividad"']
+            }   
+        },
+        VAL: {
+            home: {
+                texto1: ['El teu festival ','gratuït ','de música i cultura a València on ','esclatem la norma'],
+                texto2: ["Durant estos tres dies us convidem de manera gratuïta a gaudir dels concerts, podreu assistir a les diferents xarrades i tallers que s'organitzaran al matí, passar-vos pel mercat de roba de segona mà i l'intercanvi de llibres, o donar una ullada als estands d'artistes. "],
+                texto3: ['Reserva les', 'ENTRADES'],
+            },
+            
+            dias: ['Divendres','Dissabte','Diumenge'],
+            navegacion: ['Qui som','Programa','Convidats','Info','Entrades'],
+>>>>>>> Stashed changes
             cuentaAtras: ['Dies','Hores','Minuts','Segons'],
             home_texto1: ['El teu festival ','gratuït ','de música i cultura a València on ','esclatem la norma'],
             home_texto2: ['Ací va el text'],

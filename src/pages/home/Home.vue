@@ -45,7 +45,13 @@
     <div class="seccion2 h-full w-full max-w-screen">
 
         <div style="grid-area: video" class="bg-gray-800 flex justify-center items-center"><CirclePlay class="text-white h-30 w-auto"/></div>
+<<<<<<< Updated upstream
         <div style="grid-area: texto" class="bg-amarillo flex items-center p-5 text-xl font-bold">{{ t('home_texto2[0]') }}</div>
+=======
+        <div style="grid-area: texto" class="bg-amarillo flex items-center p-5 text-3xl font-bold">
+            {{ t('home.texto2[0]') }}
+        </div>
+>>>>>>> Stashed changes
 
     </div>
 

@@ -9,6 +9,28 @@
     
     import { ScrollArea } from '@/components/ui/scroll-area'
 
+<<<<<<< Updated upstream
+=======
+    import { mostrarGaleria } from '@/pages/Layout.vue';
+
+    import { mostrarCuentaAtras } from '../Layout.vue'; 
+    mostrarCuentaAtras.value = false;
+    
+
+    import { invitades } from './invitades';
+    let artistas = invitades.slice(0,15);
+
+    
+
+    import { ref } from 'vue';
+
+    const invitadeSelect = ref(0)
+
+    function abrirGaleria(indice: number) {
+        invitadeSelect.value = indice;
+        mostrarGaleria.value = true;
+    }
+>>>>>>> Stashed changes
 
 </script>
 
@@ -67,6 +89,10 @@
         background-position: cover;
         background-position: no-repeat;
         height: calc(100vh - 60px);
+<<<<<<< Updated upstream
+=======
+        width: 100%;
+>>>>>>> Stashed changes
         display: grid;
         grid-template-columns: 66% 24% 10%;
         grid-template-rows: 12% 76% 12%;
