@@ -5,15 +5,25 @@
     import LogoCocaCola from './logos/colabora/LogoCocaCola.vue';
     import LogoTuria from './logos/colabora/LogoTuria.vue';
 
-    import { MapPin, Phone } from 'lucide-vue-next';
+    import { ChevronRight, MapPin, Phone } from 'lucide-vue-next';
 </script>
 
 <template>
     <footer class="bg-black bottom-0 flex flex-col w-fill py-5 justify-center text-white text-xs gap-5">
-        <div class="flex w-full justify-center">
+        <div class="flex w-full justify-center px-5">
             <div class="flex-1 flex flex-col gap-3">
                 <LogoEsclat class="h-20 fill-white stroke-white"/>
                 <span class="text-center">2026 © ESCLAT Festival</span>
+            </div>
+            <div class="flex-1 flex flex-col gap-2 justify-center">
+                <span class="hover:cursor-pointer flex items-center underline hover:text-amarillo"><ChevronRight class="h-4"/>Política de Privacidad</span>
+                <span class="hover:cursor-pointer flex items-center underline hover:text-amarillo"><ChevronRight class="h-4"/>Aviso Legal</span>
+                <span class="hover:cursor-pointer flex items-center underline hover:text-amarillo"><ChevronRight class="h-4"/>Política de Cookies</span>
+            </div>
+            <div class="flex-1 flex flex-col gap-2">
+                <div>
+                    <span>CONTACTO</span><hr class="border-gray-500 mt-2 mb-4 w-[70%] ml-[-3%]">
+                </div>
             </div>
         </div>
         <div class="text-amarillo opacity-80 flex justify-center">

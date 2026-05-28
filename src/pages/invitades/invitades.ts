@@ -32,7 +32,8 @@ export const invitades: Invitade[] = [
         horaF: "19:00",
         sala: "Mutant",
         descripcion: "invitades.descripcion[0]",
-        icono: "public/fotos/artistas/iconos/01ritaPayes.jpeg",
+        icono: "public/fotos/artistas/01ritaPayes/ritapayes01.jpg",
+        fotos: ["public/fotos/artistas/01ritaPayes/ritaPayes02.jpg","public/fotos/artistas/01ritaPayes/ritaPayes03.jpg"]
     },
     {
         id:1,
@@ -43,7 +44,7 @@ export const invitades: Invitade[] = [
         horaF: "20:15",
         sala: "Mutant",
         descripcion: "invitades.descripcion[1]",
-        icono: "public/fotos/artistas/iconos/02samanthaMargret.JPG",
+        icono: "public/fotos/artistas/02samanthaMargret/samanthaMargret01.jpg",
     },
     {
         id:2,
@@ -54,7 +55,7 @@ export const invitades: Invitade[] = [
         horaF: "23:00",
         sala: "Mutant",
         descripcion: "invitades.descripcion[2]",
-        icono: "public/fotos/artistas/iconos/03papaTopo.jpg",
+        icono: "public/fotos/artistas/03papaTopo/papaTopo01.jpg",
     },
     {
         id:3,
@@ -65,7 +66,7 @@ export const invitades: Invitade[] = [
         horaF: "18:00",
         sala: "Mutant",
         descripcion: "invitades.descripcion[3]",
-        icono: "public/fotos/artistas/iconos/04emiletil.jpg",
+        icono: "public/fotos/artistas/11emilEtil/emiletil01.jpg",
     },
     {
         id:4,
@@ -76,7 +77,7 @@ export const invitades: Invitade[] = [
         horaF: "19:15",
         sala: "Mutant",
         descripcion: "invitades.descripcion[4]",
-        icono: "public/fotos/artistas/iconos/05sandraMonfort.jpg",
+        icono: "public/fotos/artistas/12sandraMonfort/sandraMonfort01.jpg",
     },
     {
         id:5,
@@ -87,7 +88,7 @@ export const invitades: Invitade[] = [
         horaF: "20:30",
         sala: "Mutant",
         descripcion: "invitades.descripcion[5]",
-        icono: "public/fotos/artistas/iconos/06abril.jpg",
+        icono: "public/fotos/artistas/13abril/abril01.jpg",
     },
     {
         id:6,
@@ -98,7 +99,7 @@ export const invitades: Invitade[] = [
         horaF: "21:45",
         sala: "Mutant",
         descripcion: "invitades.descripcion[6]",
-        icono: "public/fotos/artistas/iconos/07lisasinson.png",
+        icono: "public/fotos/artistas/14lisasinson/lisasinson01.jpg",
     },
     {
         id:7,
@@ -109,7 +110,7 @@ export const invitades: Invitade[] = [
         horaF: "23:45",
         sala: "Mutant",
         descripcion: "invitades.descripcion[7]",
-        icono: "public/fotos/artistas/iconos/",
+        icono: "public/fotos/artistas/15auDasti/audasti01.jpg",
     },
     {
         id:8,
@@ -120,7 +121,7 @@ export const invitades: Invitade[] = [
         horaF: "1:00",
         sala: "Mutant",
         descripcion: "invitades.descripcion[8]",
-        icono: "public/fotos/artistas/iconos/",
+        icono: "public/fotos/artistas/16petunias/petunias01.jpg",
     },
     {
         id:9,
@@ -131,7 +132,7 @@ export const invitades: Invitade[] = [
         horaF: "18:00",
         sala: "Mutant",
         descripcion: "invitades.descripcion[9]",
-        icono: "public/fotos/artistas/iconos/",
+        icono: "public/fotos/artistas/21ixeya/ixeya01.jpg",
     },
     {
         id:10,
@@ -142,7 +143,7 @@ export const invitades: Invitade[] = [
         horaF: "19:15",
         sala: "Mutant",
         descripcion: "invitades.descripcion[10]",
-        icono: "public/fotos/artistas/iconos/",
+        icono: "public/fotos/artistas/22mimosas/mimosas01.jpg",
     },
     {
         id:11,
@@ -153,7 +154,7 @@ export const invitades: Invitade[] = [
         horaF: "20:30",
         sala: "Mutant",
         descripcion: "invitades.descripcion[11]",
-        icono: "public/fotos/artistas/iconos/",
+        icono: "public/fotos/artistas/23tronkas/tronkas01.jpg",
     },
     {
         id:12,
@@ -164,7 +165,7 @@ export const invitades: Invitade[] = [
         horaF: "21:45",
         sala: "Mutant",
         descripcion: "invitades.descripcion[12]",
-        icono: "public/fotos/artistas/iconos/",
+        icono: "public/fotos/artistas/24ojeteCalor/ojeteCalor01.jpg",
     },
     {
         id:13,
@@ -175,7 +176,7 @@ export const invitades: Invitade[] = [
         horaF: "23:45",
         sala: "Mutant",
         descripcion: "invitades.descripcion[13]",
-        icono: "public/fotos/artistas/iconos/",
+        icono: "public/fotos/artistas/25svetlana/svetlana01.jpg",
     },
     {
         id:14,
@@ -186,7 +187,7 @@ export const invitades: Invitade[] = [
         horaF: "1:00",
         sala: "Mutant",
         descripcion: "invitades.descripcion[14]",
-        icono: "public/fotos/artistas/iconos/",
+        icono: "public/fotos/artistas/26delilahBon/delilahBon01.jpg",
     },
 
 

@@ -1,38 +1,53 @@
 <script setup lang="ts">
 
-    import { mostrarGaleria } from '@/pages/Layout.vue';
-
+/**
+** Componentes */
     import Carruselinvitades from '@/components/Carruselinvitades.vue';
-    import WebFooter from '@/components/WebFooter.vue';
-
-    /**
-    ** Para poder usar el plugin de cambio de idioma */
-    import { useI18n } from 'vue-i18n';
-    const { t } = useI18n({useScope: 'global'});
-
+    import { ScrollArea } from '@/components/ui/scroll-area'
     import {
         Tabs,
         TabsContent,
         TabsList,
         TabsTrigger
     } from '@/components/ui/tabs'
-    
-    import { ScrollArea } from '@/components/ui/scroll-area'
 
-    import { mostrarCuentaAtras } from '../Layout.vue';
+/**
+** Para poder usar el plugin de cambio de idioma */
+    import { useI18n } from 'vue-i18n';
+    const { t } = useI18n({useScope: 'global'});
+    
+/**
+** Variables y funciones */
+
+    import { mostrarGaleria } from '@/pages/Layout.vue';
+
+    import { mostrarCuentaAtras } from '../Layout.vue'; 
     mostrarCuentaAtras.value = false;
     
-    import { invitades } from './invitades';
 
+    import { invitades } from './invitades';
     let artistas = invitades.slice(0,15);
+
+    import { ref } from 'vue';
+
+    const invitadeSelect = ref(0)
+
+    function abrirGaleria(indice: number) {
+        invitadeSelect.value = indice;
+        mostrarGaleria.value = true;
+    }
 
 </script>
 
 <template>
-    <div class="principal">
+    
         <div class="main">
 
-            <Carruselinvitades v-if="mostrarGaleria"/>
+            <Carruselinvitades
+                v-if="mostrarGaleria"
+                :invitades="artistas"
+                :inicio="invitadeSelect"
+            />
 
             <div style="grid-area: vacio1"></div>
             <div style="grid-area: vacio2"></div>
@@ -72,10 +87,10 @@
                         <ScrollArea type="always">
 
                             <div class="gap-5 w-full h-full grid grid-cols-3">
-                                <div v-for="artista in artistas"
+                                <div v-for="(artista, index) in artistas"
                                     class="tarjeta bg-cover bg-center flex"
                                     :style="{backgroundImage:`url(${artista.icono})`}"
-                                    @click="mostrarGaleria = true"
+                                    @click="abrirGaleria(index)"
                                 >
                                     <div class="tarjeta_texto flex flex-col overflow-y-hidden text-xl gap-1">
                                         <span class="tarjeta_nombre text-white">{{ artista.nombre }}</span>
@@ -95,41 +110,7 @@
                         <ScrollArea>
 
                             <div class="w-full h-full grid grid-cols-3">
-                                <div class="tarjeta">
-                                    <div class="nombres">
-                                        Taller
-                                    </div>
-                                </div>
-                                <div class="tarjeta">
-                                    <div class="nombres">
-                                        Taller
-                                    </div>
-                                </div>
-                                <div class="tarjeta">
-                                    <div class="nombres">
-                                        Taller
-                                    </div>
-                                </div>
-                                <div class="tarjeta">
-                                    <div class="nombres">
-                                        Taller
-                                    </div>
-                                </div>
-                                <div class="tarjeta">
-                                    <div class="nombres">
-                                        Taller
-                                    </div>
-                                </div>
-                                <div class="tarjeta">
-                                    <div class="nombres">
-                                        Taller
-                                    </div>
-                                </div>
-                                <div class="tarjeta">
-                                    <div class="nombres">
-                                        Taller
-                                    </div>
-                                </div>
+                                
                             </div>
 
                         </ScrollArea>
@@ -141,41 +122,7 @@
                         <ScrollArea>
 
                             <div class="w-full h-full grid grid-cols-3">
-                                <div class="tarjeta">
-                                    <div class="nombres">
-                                        Charla
-                                    </div>
-                                </div>
-                                <div class="tarjeta">
-                                    <div class="nombres">
-                                        Charla
-                                    </div>
-                                </div>
-                                <div class="tarjeta">
-                                    <div class="nombres">
-                                        Charla
-                                    </div>
-                                </div>
-                                <div class="tarjeta">
-                                    <div class="nombres">
-                                        Charla
-                                    </div>
-                                </div>
-                                <div class="tarjeta">
-                                    <div class="nombres">
-                                        Charla
-                                    </div>
-                                </div>
-                                <div class="tarjeta">
-                                    <div class="nombres">
-                                        Charla
-                                    </div>
-                                </div>
-                                <div class="tarjeta">
-                                    <div class="nombres">
-                                        Charla
-                                    </div>
-                                </div>
+                                
                             </div>
 
                         </ScrollArea>
@@ -188,20 +135,16 @@
 
         </div> <!--final ".main"-->
         
-    </div>
 </template>
 
 <style scoped>
-
-    .principal {
-        height: calc(100vh - 60px);
-        width: 100%;
-    }
 
     .main {
         background-image: url("/home/fondoHome01.jpg");
         background-position: cover;
         background-position: no-repeat;
+        height: calc(100vh - 60px);
+        width: 100%;
         height: 100%;
         width: 100%;
         display: grid;
