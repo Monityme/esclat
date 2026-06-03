@@ -20,7 +20,7 @@
     data-slot="scroll-area-scrollbar"
     v-bind="delegatedProps"
     :class="
-      cn('flex touch-none p-px select-none',
+      cn('flex touch-none p-px select-none bg-black/20 rounded-full',
          orientation === 'vertical'
            && 'h-full w-3',
          orientation === 'horizontal'

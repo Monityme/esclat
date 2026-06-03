@@ -25,8 +25,9 @@
     mostrarCuentaAtras.value = false;
     
 
-    import { invitades } from './invitades';
-    let artistas = invitades.slice(0,15);
+    import { artistas } from './invitades';
+    import { talleres } from './invitades';
+    import { charlas } from './invitades';
 
     import { ref } from 'vue';
 
@@ -37,6 +38,14 @@
         mostrarGaleria.value = true;
     }
 
+    /**
+    **Para cambiar entre artistas-talleres-charlas */
+    let tipoInvitades = artistas;
+
+    function selectTipo(tipo:any) {
+        tipoInvitades = tipo;
+    }
+
 </script>
 
 <template>
@@ -45,7 +54,7 @@
 
             <Carruselinvitades
                 v-if="mostrarGaleria"
-                :invitades="artistas"
+                :invitades="tipoInvitades"
                 :inicio="invitadeSelect"
             />
 
@@ -55,32 +64,32 @@
             <div style="grid-area: vacio4"></div>
             <div style="grid-area: vacio5"></div>
 
-            <div style="grid-area: caja1" class="bg-amarillo"></div>
-            <div style="grid-area: caja2" class="bg-rojo"></div>
-            <div style="grid-area: caja3" class="bg-azulclaro"></div>
+            <div style="grid-area: caja1" class="bg-[url('/texturas/color/amarillo02.jpg')] bg-size-[170%]"></div>
+            <div style="grid-area: caja2" class="bg-[url('/texturas/color/rojo01.jpg')]"></div>
+            <div style="grid-area: caja3" class="bg-[url('/texturas/color/azulclaro03.jpg')]"></div>
 
             <div style="grid-area: contenido"
-                class="bg-azuloscuro pb-5 px-5 h-full flex flex-col">
+                class="bg-[url('/texturas/color/azuloscuro03.jpg')] bg-bottom-right pb-5 px-5 h-full flex flex-col">
 
                 <Tabs default-value="artistas">
 
                     <TabsList>
 
                         <TabsTrigger value="artistas" class="text-amarillo">
-                            <span>{{ t('invitades.tabs[0]') }}</span>
+                            <span @click="selectTipo(artistas)">{{ t('invitades.tabs[0]') }}</span>
                         </TabsTrigger>
 
                         <TabsTrigger value="talleres" class="text-amarillo">
-                            <span>{{ t('invitades.tabs[1]') }}</span>
+                            <span @click="selectTipo(talleres)">{{ t('invitades.tabs[1]') }}</span>
                         </TabsTrigger>
 
                         <TabsTrigger value="charlas" class="text-amarillo">
-                            <span>{{ t('invitades.tabs[2]') }}</span>
+                            <span @click="selectTipo(charlas)">{{ t('invitades.tabs[2]') }}</span>
                         </TabsTrigger>
 
                     </TabsList>
 
-                    <!-- TODO - Meter datos en main.ts y agregarlos con v-for -->
+                <!-- ** ARTISTAS -->
 
                     <TabsContent value="artistas">
                         
@@ -105,24 +114,50 @@
 
                     </TabsContent>
 
+                <!-- ** TALLERES -->
+
                     <TabsContent value="talleres">
 
                         <ScrollArea>
 
-                            <div class="w-full h-full grid grid-cols-3">
-                                
+                            <div class="gap-5 w-full h-full grid grid-cols-3">
+                                <div v-for="(taller, index) in talleres"
+                                    class="tarjeta bg-cover bg-center flex"
+                                    :style="{backgroundImage:`url(${taller.icono})`}"
+                                    @click="abrirGaleria(index)"
+                                >
+                                    <div class="tarjeta_texto flex flex-col overflow-y-hidden text-xl gap-1">
+                                        <span class="tarjeta_nombre text-white">{{ taller.nombre }}</span>
+                                        <span class="oculto hidden text-white text-sm">
+                                            {{ t(taller.diaSemana) }} {{ taller.dia }} a las {{ taller.horaI }}h
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
 
                         </ScrollArea>
 
                     </TabsContent>
+                    
+                <!-- ** CHARLAS -->
 
                     <TabsContent value="charlas">
                         
                         <ScrollArea>
 
-                            <div class="w-full h-full grid grid-cols-3">
-                                
+                            <div class="gap-5 w-full h-full grid grid-cols-3">
+                                <div v-for="(charla, index) in charlas"
+                                    class="tarjeta bg-cover bg-center flex"
+                                    :style="{backgroundImage:`url(${charla.icono})`}"
+                                    @click="abrirGaleria(index)"
+                                >
+                                    <div class="tarjeta_texto flex flex-col overflow-y-hidden text-xl gap-1">
+                                        <span class="tarjeta_nombre text-white">{{ charla.nombre }}</span>
+                                        <span class="oculto hidden text-white text-sm">
+                                            {{ t(charla.diaSemana) }} {{ charla.dia }} a las {{ charla.horaI }}h
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
 
                         </ScrollArea>
@@ -140,12 +175,11 @@
 <style scoped>
 
     .main {
-        background-image: url("/home/fondoHome01.jpg");
+        background-image: url("/fondos/fondo02.jpg");
+        background-size: 100%;
         background-position: cover;
         background-position: no-repeat;
         height: calc(100vh - 60px);
-        width: 100%;
-        height: 100%;
         width: 100%;
         display: grid;
         grid-template-columns: 66% 24% 10%;

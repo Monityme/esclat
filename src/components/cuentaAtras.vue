@@ -73,7 +73,7 @@
 
 <template>
 
-    <div class="contenedor fixed top-[60px] w-screen h-[60px] text-3xl">
+    <div class="contenedor fixed top-[60px] w-screen h-[60px] text-3xl bg-[url('/texturas/color/azuloscuro03.jpg')] bg-bottom">
 
         <div class="contador"> <!--class="flex flex-col justify-center items-center gap-1 font-bold text-4xl bg-blue-800 text-white px-5 py-6"-->
             <span class="">{{ dias }} </span>

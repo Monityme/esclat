@@ -6,7 +6,6 @@
     import { useI18n } from 'vue-i18n';
     const { t } = useI18n({useScope: 'global'});
 
-    import WebFooter from '@/components/WebFooter.vue';
     import { CirclePlay } from '@lucide/vue';
     import Flecha from '@/components/iconos/Flecha.vue';
     import Carrusel from '@/components/Carrusel.vue';
@@ -14,34 +13,31 @@
     import { mostrarCuentaAtras } from '../Layout.vue';
     mostrarCuentaAtras.value = true;
 
-
 </script>
 
 <template>
-    <!--<img src="/public/home/fondoHome01.jpg"/>-->
     <div class="fondo w-full max-w-screen">
-        <!--<img src="/public/home/fondoHome01.jpg"/>-->
         <div class="seccion1 h-full">
         
             <div class="pl-10 pt-5 text-amarillo font-bold text-3xl" style="grid-area: logo">
                 <LogoEsclat class="fill-amarillo h-60" />
-                <!-- <span class="text-9xl">ESCLAT</span><br>
-                <span class="pl-2">FESTIVAL DE MÚSICA,</span><br>
-                <span class="pl-2">PENSAMENT I CREATIVITAT</span> -->
             </div>
             <div style="grid-area: vacio1"></div>
             <div style="grid-area: vacio2"></div>
             <div style="grid-area: vacio3"></div>
             <div style="grid-area: vacio4"></div>
-            <div class="fecha bg-amarillo text-4xl flex flex-col gap-2 justify-center items-center" style="grid-area: texto1">
+
+            <div style="grid-area: caja1" class="bg-[url('/texturas/color/rojo04.jpg')]"></div>
+            <div style="grid-area: caja2" class="bg-[url('/texturas/color/azuloscuro03.jpg')] bg-center"></div>
+
+            <div style="grid-area: texto1" class="fecha bg-[url('/texturas/color/amarillo01.jpg')] inset-shadow-black text-4xl flex flex-col gap-2 justify-center items-center">
                 <span class=" font-bold text-5xl">23, 24 y 25</span>
                 <span>Octubre 2026</span>
             </div>
-            <div class="bg-rojo" style="grid-area: caja1"></div>
-            <div class="bg-azulclaro flex flex-wrap text-xl items-center px-5 items-center" style="grid-area: texto2">
+            <div style="grid-area: texto2" class="bg-[url('/texturas/color/azulclaro01.jpg')] bg-center flex flex-wrap text-xl items-center px-5">
                 <span>{{ t('home.texto1[0]') }}<span class="font-bold">{{ t('home.texto1[1]') }}</span>{{ t('home.texto1[2]') }}<span class="font-bold">{{ t('home.texto1[3]') }}</span></span>
             </div>
-            <div class="bg-azuloscuro" style="grid-area: caja2"></div>
+            
 
         </div>
 
@@ -50,15 +46,14 @@
     <div class="seccion2 h-full w-full max-w-screen">
 
         <div style="grid-area: video" class="bg-gray-800 flex justify-center items-center"><CirclePlay class="text-white h-30 w-auto"/></div>
-        <div style="grid-area: texto" class="bg-amarillo flex items-center p-5 text-xl font-bold">
-            {{ t('home.texto2[0]') }}
+        <div style="grid-area: texto" class="bg-[url('/texturas/color/amarillo03.jpg')] flex flex-col justify-center items-start gap-5 p-5 text-xl ">
+            <span class="font-bold">{{ t('home.texto2[0]') }}</span><span>{{ t('home.texto2[1]') }}</span><span class="font-bold flex flex-col w-full">{{ t('home.texto2[2]') }} <span class="self-end font-bold">{{ t('home.texto2[3]') }}</span></span>
         </div>
 
     </div>
 
     <div class="seccion3">
         
-        <!--<img src="/home/fondoHome01.jpg" class="absolute -z-2"/>-->
         <Carrusel/>
 
         <div style="grid-area: vacio3_1"></div>
@@ -69,13 +64,13 @@
         <div style="grid-area: vacio3_6"></div>
         <div style="grid-area: vacio3_7"></div>
         
-        <div style="grid-area: caja3_1" class="bg-rojo"></div>
-        <div style="grid-area: caja3_2" class="bg-azulclaro"></div>
-        <div style="grid-area: caja3_3" class="bg-rojo"></div>
-        <div style="grid-area: caja3_4" class="bg-azuloscuro"></div>
+        <div style="grid-area: caja3_1" class="bg-[url('/texturas/color/rojo04.jpg')]  bg-bottom"></div>
+        <div style="grid-area: caja3_2" class="bg-[url('/texturas/color/azulclaro04.jpg')]"></div>
+        <div style="grid-area: caja3_3" class="bg-[url('/texturas/color/rojo02.jpg')] bg-size-[700%] bg-bottom-right"></div>
+        <div style="grid-area: caja3_4" class="bg-[url('/texturas/color/azuloscuro03.jpg')] bg-bottom-right"></div>
 
         
-        <div style="grid-area: texto3_1" class="botonEntradas bg-amarillo text-black flex flex-row items-center font-bold text-4xl">
+        <div style="grid-area: texto3_1" class="botonEntradas text-black flex flex-row items-center font-bold text-4xl">
             <RouterLink to="/entradas" class="flex flex-row items-center max-w-full">
                 <div class="pl-12">
                     <span class="">{{ t('home.texto3[0]') }}</span>
@@ -115,6 +110,7 @@
         display: grid;
         grid-template-columns: 66% 34%;
         grid-template-areas: "video texto";
+        white-space: pre-line;
     }
 
     .seccion3 {
@@ -131,13 +127,15 @@
 
     .botonEntradas {
         cursor: pointer;
+        background-color: black;
+        background-image: url("/texturas/color/amarillo01.jpg");
         transition-timing-function: var(--ease-in-out);
         transition-duration: 400ms;
         transition-property: all;
     }
 
     .botonEntradas:hover {
-        background-color: black;
+        background-image: none;
         color: var(--color-amarillo);
     }
     

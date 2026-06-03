@@ -167,7 +167,8 @@
 
 <style scoped>
     .main {
-        background-image: url("/home/fondoHome01.jpg");
+        background-image: url("/fondos/fondo03.jpg");
+        background-size: 100%;
         background-position: cover;
         background-position: no-repeat;
         height: calc(100vh - 60px);

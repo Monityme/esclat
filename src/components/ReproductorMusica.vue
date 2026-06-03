@@ -1,23 +1,61 @@
 <script setup lang="ts">
 
-    import { Play, Pause } from '@lucide/vue';
-    import { useSound } from '@vueuse/sound'
+    import { Play, Pause, Square } from '@lucide/vue';
+    import { useSound } from '@vueuse/sound';
+    import { ref, onUnmounted } from 'vue';
+    
+    import { playMusica } from './Carruselinvitades.vue';
+    import { musicBus } from '@/composables/EventoMusica'
     
     const props = defineProps<{
         cancion: string;
+        artista: string;
+        titulo: string;
+        foto: string;
     }>()
-
-    let audio = null
 
     const { play, pause, stop } = useSound(props.cancion)
 
+    const discoKey = ref(0);
+
+
+    function isPlay() {
+        play()
+        playMusica.value = true;
+    }
+
+    function isPause() {
+        pause()
+        playMusica.value = false;
+    }
+
+    function isStop() {
+        stop()
+        playMusica.value = false;
+        discoKey.value++;
+    }
+
+    onUnmounted(() => {
+        stop()
+    })
+
+    musicBus.on(() => {
+        stop()
+        playMusica.value = false;
+        discoKey.value++;
+    })
+    
 </script>
 
 <template>
     <div class="w-full h-full flex justify-center items-center gap-3">
         <div class="container">
             <div class="plate">
-                <div class="black">
+                <div
+                    :key="discoKey"
+                    class="black bg-cover bg-center"
+                    :style="{backgroundImage:`url(${props.foto})`, animationPlayState: playMusica ? 'running' : 'paused'}"
+                >
                     <div class="border">
                         <div class="white">
                             <div class="center"></div>
@@ -26,16 +64,20 @@
                 </div>
             </div>
 
-            <div class="player">
+            <div class="player" :style="{rotate: playMusica ? '-45deg' : '0deg'}">
                 <div class="rect"></div>
                 <div class="circ"></div>
             </div>
 
         </div>
-        <Play class="text-white fill-white"
-            @click="play()"
+        <Play class="text-white fill-white hover:text-amarillo hover:fill-amarillo cursor-pointer"
+            @click="isPlay"
         />
-        <Pause class="text-white fill-white"/>
+        <Pause class="text-white fill-white hover:text-amarillo hover:fill-amarillo cursor-pointer"
+            @click="isPause"
+        />
+        <Square class="text-white fill-white hover:text-amarillo hover:fill-amarillo cursor-pointer"
+            @click="isStop"/>
         
     </div>
 </template>
@@ -43,8 +85,8 @@
 <style scoped>
 
     .container {
-        width: 175px;
-        height: 175px;
+        width: 7rem;
+        height: 7rem;
         background-color: var(--color-azulclaro);
         border-radius: 10px;
         position: relative;
@@ -72,10 +114,11 @@
     }
 
     .plate .black {
-        width: 150px;
-        height: 150px;
+        width: 6.5rem;
+        height: 6.5rem;
         background-color: black;
         animation: rotation 2s infinite linear;
+        animation-play-state: paused;
     }
 
     @keyframes rotation {
@@ -89,25 +132,26 @@
     }
 
     .plate .white {
-        width: 70px;
-        height: 70px;
-        background-color: var(--color-amarillo);
+        width: 2rem;
+        height: 2rem;
+        background-color: var(--color-rojo);
     }
 
     .plate .center {
-        width: 20px;
-        height: 20px;
+        width: 0.7rem;
+        height: 0.7rem;
         background-color: black;
     }
-
+    
     .plate .border {
-        width: 111px;
-        height: 111px;
-        border-top: 3px solid rgba(255,255,255,0.3);
-        border-bottom: 3px solid rgba(255,255,255,0.3);
+        width: 4rem;
+        height: 4rem;
+        border-top: 3px solid rgba(255,255,255,0);
+        border-bottom: 3px solid rgba(255,255,255,0);
         border-left: 3px solid rgba(0,0,0,0);
         border-right: 3px solid rgba(0,0,0,0);
     }
+    
 
     .player {
         display: flex;
@@ -118,25 +162,25 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        margin-bottom: 8px;
-        margin-right: 8px;
+        margin-bottom: 0.3rem;
+        margin-right: 0.3rem;
         rotate: -45deg;
     }
 
     .player .circ {
-        width: 25px;
-        height: 25px;
-        background-color: var(--color-rojo);
+        width: 1rem;
+        height: 1rem;
+        background-color: var(--color-amarillo);
         border-radius: 100%;
         z-index: 1;
     }
 
     .player .rect {
-        width: 10px;
-        height: 55px;
-        background-color: var(--color-rojo);
+        width: 0.5rem;
+        height: 2.5rem;
+        background-color: var(--color-amarillo);
         position: absolute;
         bottom: 0;
-        margin-bottom: 5px;
+        margin-bottom: 0.2rem;
     }
 </style>
