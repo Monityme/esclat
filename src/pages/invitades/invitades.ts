@@ -108,7 +108,7 @@ export const artistas: Invitade[] = [
         descripcion: "invitades.descripcion[3]",
         icono: "fotos/artistas/emiletil01.jpg",
         fotos: ["fotos/artistas/emiletil02.jpg","fotos/artistas/emiletil03.jpg"],
-        cancion: "/musica/04emilEtIl-marques.mp3",
+        cancion: "/musica/04emilEtil-marques.mp3",
         titulo: "MARQUÉS",
         
         spotify: "https://open.spotify.com/intl-es/artist/3poQdkeqk19dPqWL28yj8C?si=k2NNrXw6QEWk6B-eZ_N0_Q",
@@ -401,66 +401,73 @@ export interface Taller {
     descripcion: string;
     icono: string;
     fotos: string[];
+    web?: string;
+    instagram?: string;
+    facebook?: string;
+    tiktok?: string;
+    twitter?: string;
+    threads?: string;
+    youtube?: string;
 }
 
 export const talleres: Taller[] = [
     {
         id: 0,
-        nombre: "Taller DIY: Crea tu propio binder",
+        nombre: "invitades.talleres.nombres[0]",
         dia: 23,
         diaSemana: "Viernes",
         horaI: "16:45",
         horaF: "17:45",
         sala: "",
-        descripcion: "",
+        descripcion: "invitades.talleres.descripciones[0]",
         icono: "",
         fotos: ["",""],
     },
     {
         id: 1,
-        nombre: "Ojo Garabato",
+        nombre: "invitades.talleres.nombres[1]",
         dia: 24,
         diaSemana: "Sábado",
         horaI: "11:15",
         horaF: "12:15",
         sala: "",
-        descripcion: "",
+        descripcion: "invitades.talleres.descripciones[1]",
         icono: "",
         fotos: ["",""],
     },
     {
         id: 2,
-        nombre: "Taller zero waste",
+        nombre: "invitades.talleres.nombres[2]",
         dia: 24,
         diaSemana: "Sábado",
         horaI: "13:30",
         horaF: "14:30",
         sala: "",
-        descripcion: "",
+        descripcion: "invitades.talleres.descripciones[2]",
         icono: "",
         fotos: ["",""],
     },
     {
         id: 3,
-        nombre: "Grabado",
+        nombre: "invitades.talleres.nombres[3]",
         dia: 25,
         diaSemana: "Domingo",
         horaI: "11:00",
         horaF: "12:00",
         sala: "",
-        descripcion: "",
+        descripcion: "invitades.talleres.descripciones[3]",
         icono: "",
         fotos: ["",""],
     },
     {
         id: 4,
-        nombre: "Plantas",
+        nombre: "invitades.talleres.nombres[4]",
         dia: 25,
         diaSemana: "Domingo",
         horaI: "13:15",
         horaF: "14:15",
         sala: "",
-        descripcion: "",
+        descripcion: "invitades.talleres.descripciones[4]",
         icono: "",
         fotos: ["",""],
     },

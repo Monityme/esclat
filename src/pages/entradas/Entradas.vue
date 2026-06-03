@@ -10,6 +10,10 @@
     import { mostrarCuentaAtras } from '../Layout.vue';
     mostrarCuentaAtras.value = false;
 
+    import { conciertos } from './actividades.ts';
+    let concisViernes = conciertos.slice(0,3);
+    let concisSabado = conciertos.slice(3,9);
+    let concisDomingo = conciertos.slice(9,15);
 
 </script>
 
@@ -50,21 +54,11 @@
                                     </div>
 
                                     <div class="flex flex-col ml-3">
-                                        <label class="cyberpunk-checkbox-label">
+                                        <label class="cyberpunk-checkbox-label" v-for="artista in concisViernes">
                                             <input type="checkbox" class="cyberpunk-checkbox">
-                                            Rita Payés - 18:00
+                                            {{ artista.artista }} - {{ artista.hora }}
                                         </label>
-
-                                        <label class="cyberpunk-checkbox-label">
-                                            <input type="checkbox" class="cyberpunk-checkbox">
-                                            Samantha Margret - 19:15
-                                        </label>
-
-                                        <label class="cyberpunk-checkbox-label">
-                                            <input type="checkbox" class="cyberpunk-checkbox">
-                                            Papá Topo - 22:00
-                                        </label>
-                                    </div>           
+                                    </div>
                                 </div>
 
                                 <div class="p-2 pl-3 flex border-b-2 border-black/20">
@@ -74,36 +68,11 @@
                                     </div>
 
                                     <div class="flex flex-col ml-3">
-                                        <label class="cyberpunk-checkbox-label">
+                                        <label class="cyberpunk-checkbox-label" v-for="artista in concisSabado">
                                             <input type="checkbox" class="cyberpunk-checkbox">
-                                            Emil et il - 17:00
+                                            {{ artista.artista }} - {{ artista.hora }}
                                         </label>
-
-                                        <label class="cyberpunk-checkbox-label">
-                                            <input type="checkbox" class="cyberpunk-checkbox">
-                                            Sandra Monfort - 18:15
-                                        </label>
-
-                                        <label class="cyberpunk-checkbox-label">
-                                            <input type="checkbox" class="cyberpunk-checkbox">
-                                            Abril - 19:30
-                                        </label>
-
-                                        <label class="cyberpunk-checkbox-label">
-                                            <input type="checkbox" class="cyberpunk-checkbox">
-                                            Lisasinson - 20:45
-                                        </label>
-
-                                        <label class="cyberpunk-checkbox-label">
-                                            <input type="checkbox" class="cyberpunk-checkbox">
-                                            Au d'astí - 22:45
-                                        </label>
-
-                                        <label class="cyberpunk-checkbox-label">
-                                            <input type="checkbox" class="cyberpunk-checkbox">
-                                            Petunias - 00:00
-                                        </label>
-                                    </div>           
+                                    </div>
                                 </div>
 
                                 <div class="p-2 pl-3 flex border-b-2 border-black/20">
@@ -113,36 +82,11 @@
                                     </div>
 
                                     <div class="flex flex-col ml-3">
-                                        <label class="cyberpunk-checkbox-label">
+                                        <label class="cyberpunk-checkbox-label" v-for="artista in concisDomingo">
                                             <input type="checkbox" class="cyberpunk-checkbox">
-                                            Ixeya - 17:00
+                                            {{ artista.artista }} - {{ artista.hora }}
                                         </label>
-
-                                        <label class="cyberpunk-checkbox-label">
-                                            <input type="checkbox" class="cyberpunk-checkbox">
-                                            Mimosas - 18:15
-                                        </label>
-
-                                        <label class="cyberpunk-checkbox-label">
-                                            <input type="checkbox" class="cyberpunk-checkbox">
-                                            Tronkas - 19:30
-                                        </label>
-
-                                        <label class="cyberpunk-checkbox-label">
-                                            <input type="checkbox" class="cyberpunk-checkbox">
-                                            Ojete Calor - 20:45
-                                        </label>
-
-                                        <label class="cyberpunk-checkbox-label">
-                                            <input type="checkbox" class="cyberpunk-checkbox">
-                                            Svetlana - 22:45
-                                        </label>
-
-                                        <label class="cyberpunk-checkbox-label">
-                                            <input type="checkbox" class="cyberpunk-checkbox">
-                                            Delilah Bon - 00:00
-                                        </label>
-                                    </div>           
+                                    </div>
                                 </div>
                             </ScrollArea>
 

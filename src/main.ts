@@ -47,7 +47,39 @@ const i18n = createI18n({
                     /*Ojete Calor*/'Ojete Calor es un dúo de música tecnopop creado en 2005 por Carlos Areces y Aníbal Gómez. Sus canciones se caracterizan por poseer una base de música electrónica, con letras irónicas o de humor absurdo dentro de una estructura pop sencilla.\nEl dúo identifica su género como "subnoop", un estilo basado en la música de la movida madrileña y con letras donde tratan temas como la extrema derecha y el racismo.',
                     /*Svetlana*/'Svetlana es el dúo barcelonés que no sabíamos que necesitábamos, pero ya están aquí y han llegado para quedarse y que pase lo que pase. Nacidas en 2020, después de noches infinitas de fiesta que terminaban juntas en casa de una u otra componiendo canciones, han pasado de ser una broma interna a convertirse en uno de los nombres más frescos de la escena alternativa. Con su álbum debut MARRANA publicado en la primavera de 2023, Svetlana han salido a hacer ruido con una gira de presentación de más de 30 fechas, dejando claro que han venido para quedarse.',
                     /*Delilah Bon*/'Brat Punk. Riot Grrrl Rap. Feminist Rage.\nDelilah Bon es el alias de la cantante, compositora, rapera y productora británica Lauren Tate, anteriormente líder del grupo ya disuelto "Hands Off Gretel".\nFusionando nu-metal, el espíritu libre del movimiento feminista "riot grrrl" y el fuego lírico del hip-hop, Delilah define su música como "Brat Punk", creando temas que buscan destrozar el patriarcado, luchar contra la masculinidad tóxica y celebrar el poder del "female rage".'
-                ]
+                ],
+                talleres: {
+                    nombres: [
+                        'Taller DIY: Crea tu propio binder',
+                        'Jornada de Ilustración con Ojo Garabato',
+                        'Zero Waste: Haz tu propio jabón natural',
+                        'Taller Creativo de Grabado',
+                        'Cuidados de Huerto y Plantas de Interior'
+                    ],
+                    descripciones: [
+                        'Un taller de la mano de la marca Híbride para crear y decorar tu binder que quiere que jóvenes trans se expresen con total libertad en un sitio seguro. Mario, creadore de la marca, confecciona binders a medida altamente personalizables con licra reciclada.',
+                        'Ojo Garabato es una iniciativa para crear una comunidad de artistas donde se promueven las quedadas al aire libre rompiendo con la soledad que asola a la profesión al trabajar cada uno en su casa. Aquí queremos que todes les participantes dejen llevar su imaginación y prueben a dibujar fuera de su zona de confort.',
+                        'Con este taller queremos ayudar a comprender nuestro impacto en el medio ambiente y cómo podemos cambiarlo con nuestras acciones de la mano de la fundación One More Tree. Mostrarán diferentes formas de romper hábitos perjudiciales y enseñaremos como hacer un jabón ecológico y como reutilizar los desechos de nuestras casas para darles una segunda vida.',
+                        'El taller de grabado nos enseña esta técnica a partir de la creación de una obra por los participantes con la guía de Cuca Balaguer, una artesana profesional. Contaremos con papel reciclado que fabrica la propia Cuca, que nos invita a reutilizar, reciclar e impulsar nuestra creatividad.',
+                        'El taller, de la mano de Marta, creadora del proyecto Plantea, tratará como cuidar propiamente una planta en un ámbito de ciudad y se hablara de los efectos positivos de flora en el mundo y los efectos negativos que la intervención humana ha tenido sobre ellas. Los participantes podrán plantar y llevarse a casa sus propios geranios.'
+                    ]
+                },
+                charlas: {
+                    nombres: [
+                        'La Arquitectura del Cómic',
+                        'Mesa Redonda: la Comunidad LGTBIQ+ en la Lectura',
+                        '',
+                        '',
+                        'Redes Sociales y Creatividad',
+                    ],
+                    descripciones: [
+                        'Mikel Herrán es doctor en Arqueología y divulgador de historia en redes sociales a través de su perfil @putoMikel. Durante más de cuatro años ha trabajado en medios de radio como Carne cruda o RNE, y en YouTube cuenta con cientos de miles de suscriptores. El suyo es un canal de divulgación con un toque millennial, riguroso, provocador y atento a la inclusión de voces diversas en el discurso histórico.',
+                        'Iria G. Parente, Selene M. Pascual, Myriam M. Lejardi, Clara Cortes, Esther López Vera, Virginia Petro De León y Alana S. Portero son autoras de la comunidad LGBT que nos hablaran sobre como rompieron en la industria y trajeron su punto de vista y vivencias a los libros en nuestras librerías. ',
+                        'Licenciada por la Facultad de Bellas Artes de la Universidad de Barcelona, compagina el oficio de dibujante de cómics con su trabajo como profesora de un Grado Superior de Animación y 3D en y en los cursos y talleres de cómic e ilustración que imparte junto al poeta e ilustrador Josema Carrasco. Dará una charla sobre como es el trabajo de la industria del comic americano y europeo y como se puede empezar en estas.',
+                        'Una charla de Víctor Palau y Ana Gea, fundadores de Gràffica, un medio dedicado en exclusiva al mundo del diseño, y en especial al ámbito del diseño gráfico, la creatividad y la cultura visual. Su vocación es crear un espacio donde los profesionales tengan un punto de información y referencia de lo que acontece en su sector. Así mismo, su interés es crear una plataforma que genere actividades complementarias, tanto en el ámbito de la información y divulgación, como en el ámbito de la formación, para ayudar a los profesionales a mejorar y reforzar su actividad.',
+                        'Diseñadora gráfica y amante de desarrollar hobbies creativos cada vez que quiere cambiar su vida radicalmente. En este espacio quiere dejar su huellita sobre diseño gráfico y arte. En esta charla contara su perspectiva como profesional y como rompe las normas de la industria. ',
+                    ],
+                }
             },
 
             faq: {
@@ -103,7 +135,40 @@ const i18n = createI18n({
                     /*Ojete Calor*/'Ojete Calor és un duo de música tecnopop creat al 2005 per Carlos Areces i Anníbal Gómez. Les seues cançons es caracteritzen per posseir una base de música electrònica, amb lletres iròniques o d\'humor absurd dins d\'una estructura pop senzilla.\nEl duo identifica el seu gènere com a "subnoop", un estil basat en la música de la movida madrilenya i amb lletres que tracten temes com l\'extrema dreta i el racisme.',
                     /*Svetlana*/'Svetlana és el duet barceloní que no sabíem que necessitàvem, però ja són aquí i han arribat per quedar-s\'hi i peti qui peti. Nascudes el 2020, després de nits infinites de festa que remataven juntes a casa l\'una o l\'altre component cançons, han passat de ser una broma interna a convertir-se en un dels noms més frescos de l\'escena alternativa. Amb el seu àlbum debut MARRANA publicat la primavera de 2023 Svetlana han sortit a fer soroll amb una gira de presentació de més de 30 dates, deixant clar que han vingut per quedar-se.',
                     /*Delilah Bon*/'Brat Punk. Riot Grrrl Rap. Feminist Rage.\nDelilah Bon és l\'àlies de la cantant, compositora, rapera i productora britànica Lauren Tate, anteriorment líder del grup ja dissolt Hands Off Gretel.\n Fusionant nu-metal, l\'esperit lliure del moviment feminista "riot grrrl" i el foc líric del hip-hop, Delilah definix la seua música com a "Brat Punk", creant temes que busquen destrossar el patriarcat, lluitar contra la masculinitat tòxica i celebrar el poder del "female rage".'
-                ]
+                ],
+                
+                talleres: {
+                    nombres: [
+                        'Taller DIY: Crea tu propio binder',
+                        'Jornada de Ilustración con Ojo Garabato',
+                        'Zero Waste: Haz tu propio jabón natural',
+                        'Taller Creativo de Grabado',
+                        'Cuidados de Huerto y Plantas de Interior'
+                    ],
+                    descripciones: [
+                        'Un taller de la mà de la marca Híbride per a crear i decorar el teu binder, que vol que jóvens trans s\'expressen amb total llibertat en un lloc segur. Mario, creador de la marca, confecciona binders a mesura altament personalitzables amb licra reciclada.',
+                        'Ojo Garabato és una iniciativa per a crear una comunitat d\'artistes on es promouen les quedades a l\'aire lliure trencant amb la soledat que assola a la professió en treballar cada un a la seua casa. Ací volem que todes els participants deixen portar la seua imaginació i proven de dibuixar fora de la seua zona de confort.',
+                        'Amb este taller volem ajudar a comprendre el nostre impacte en el medi ambient i com podem canviar-lo amb les nostres accions de la mà de la fundació One Habite Tree. Mostraran diferents maneres de trencar hàbits perjudicials i ensenyarem com fer un sabó ecològic i com reutilitzar les deixalles de les nostres cases per a donar-los una segona vida.',
+                        'El taller de gravat ens ensenya esta tècnica a partir de la creació d\'una obra pels participants amb la guia de Bufona Balaguer, una artesana professional. Comptarem amb paper reciclat que fabrica la pròpia Bufona, que ens convida a reutilitzar, reciclar i impulsar la nostra creativitat.',
+                        'El taller, de la mà de Marta, creadora del projecte Plantea, tractarà com cuidar pròpiament una planta en un àmbit de ciutat i es parlara dels efectes positius de flora en el món i els efectes negatius que la intervenció humana ha tingut sobre elles. Els participants podran plantar i emportar-se a casa els seus propis geranis.'
+                    ]
+                },
+                charlas: {
+                    nombres: [
+                        'L\'Arquitectura del Còmic',
+                        'Taula Redona: la Comunitat LGTBIQ+ a la Lectura',
+                        '',
+                        '',
+                        'Xarxes Socials y Creativitat',
+                    ],
+                    descripciones: [
+                        'Mikel Herrán és doctor en Arqueologia i divulgador d\'història en xarxes socials a través del seu perfil @putomikel. Durant més de quatre anys ha treballat en mitjans de radi com a Carn crua o RNE, i en YouTube compta amb centenars de milers de subscriptors. El seu és un canal de divulgació amb un toc millennial, rigorós, provocador i atent a la inclusió de veus diverses en el discurs històric.',
+                        'Iria G. Parente, Selene M. Pascual, Myriam M. Lejardi, Clara Cortes, Esther López Vera, Virginia Petro De León y Alana S. Portero són autores de la comunitat LGBT que ens parlaren sobre com van trencar en la indústria i van portar el seu punt de vista i vivències als llibres en les nostres llibreries.',
+                        'Llicenciada per la Facultat de Belles Arts de la Universitat de Barcelona, compagina l\'ofici de dibuixant de còmics amb el seu treball com a professora d\'un Grau Superior d\'Animació i 3D en i en els cursos i tallers de còmic i il·lustració que impartix al costat del poeta i il·lustrador Josema Carrasco. Donarà una xarrada sobre com és el treball de la indústria del comic americà i europeu i com es pot començar en estes. ',
+                        'Una xarrada de Víctor Palau i Ana Gea, fundadors de Gràffica, un mitjà dedicat en exclusiva al món del disseny, i especialment a l\'àmbit del disseny gràfic, la creativitat i la cultura visual. La seua vocació és crear un espai on els professionals tinguen un punt d\'informació i referència del que esdevé en el seu sector. Així mateix, el seu interés és crear una plataforma que genere activitats complementàries, tant en l\'àmbit de la informació i divulgació, com en l\'àmbit de la formació, per a ajudar els professionals a millorar i reforçar la seua activitat.',
+                        'Dissenyadora gràfica i amant de desenrotllar entreteniments creatius cada vegada que vol canviar la seua vida radicalment. En este espai vol deixar el seu huellita sobre dissenye gràfic i art. En esta xarrada comptara la seua perspectiva com a professional i com trenca les normes de la indústria.'
+                    ]
+                }
             },
             
             faq: {
