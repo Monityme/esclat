@@ -1,6 +1,7 @@
 <script lang="ts">
     export let mostrarCuentaAtras = ref<boolean>(true);
     export let mostrarGaleria = ref<boolean>(false);
+    export let mostrarGaleriaArtistas = ref<boolean>(false);
 
     /*
     export const switchCuentaAtras = (a: boolean) => {

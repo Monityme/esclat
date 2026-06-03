@@ -20,7 +20,7 @@
 </script>
 
 <template>
-    <div id="contenedor" class="fixed top-0 z-50 w-screen flex justify-between items-center pl-4 pr-8 h-[60px]"> <!-- TODO - Fijar en el top? -->
+    <div id="contenedor" class="fixed top-0 z-50 w-screen flex justify-between items-center pl-4 pr-8 h-[60px]">
         <NavigationMenu>
 
             <NavigationMenuList class="gap-8">
@@ -28,7 +28,7 @@
                 <NavigationMenuItem>
                     <RouterLink to="/" @click="mostrarCuentaAtras = true">
                             <NavigationMenuLink>
-                                <LogoEsclatNoSubs class="h-8 fill-white stroke-white hover:fill-amarillo transition-all duration-200 animation-ease-in-out"/> <!-- TODO - Cambiar por el logo de ESCLAT-->
+                                <LogoEsclatNoSubs class="h-6 ml-4 fill-white stroke-white hover:fill-amarillo transition-all duration-200 animation-ease-in-out"/> <!-- TODO - Cambiar por el logo de ESCLAT-->
                             </NavigationMenuLink>
                     </RouterLink>
                 </NavigationMenuItem>

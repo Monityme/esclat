@@ -4,8 +4,7 @@
     import { useSound } from '@vueuse/sound';
     import { ref, onUnmounted } from 'vue';
     
-    import { playMusica } from './Carruselinvitades.vue';
-    import { musicBus } from '@/composables/EventoMusica'
+    import { playMusica } from './CarruselArtistas.vue';
     
     const props = defineProps<{
         cancion: string;
@@ -16,35 +15,50 @@
 
     const { play, pause, stop } = useSound(props.cancion)
 
+    const giroDisco = ref(false);
     const discoKey = ref(0);
 
-
     function isPlay() {
-        play()
-        playMusica.value = true;
+        if(!playMusica.value) {
+            play()
+            playMusica.value = true;
+            giroDisco.value = true;
+        }
+        
     }
 
     function isPause() {
-        pause()
-        playMusica.value = false;
+        if(playMusica.value) {
+            pause()
+            playMusica.value = false;
+        }
     }
 
     function isStop() {
         stop()
         playMusica.value = false;
+        giroDisco.value = false;
         discoKey.value++;
     }
 
-    onUnmounted(() => {
-        stop()
-    })
-
-    musicBus.on(() => {
+    function stopMusica() {
         stop()
         playMusica.value = false;
+        giroDisco.value = false;
         discoKey.value++;
+    }
+
+    defineExpose({
+        stopMusica
+    })
+
+    onUnmounted(() => {
+        playMusica.value = false;
+        giroDisco.value = false;
+        stop()
     })
     
+
 </script>
 
 <template>
@@ -64,20 +78,31 @@
                 </div>
             </div>
 
-            <div class="player" :style="{rotate: playMusica ? '-45deg' : '0deg'}">
+            <div class="player" :style="{ transform: `rotate(${giroDisco ? -45 : 0}deg)` }">
                 <div class="rect"></div>
                 <div class="circ"></div>
             </div>
 
         </div>
-        <Play class="text-white fill-white hover:text-amarillo hover:fill-amarillo cursor-pointer"
+        <Play
+            class="text-white fill-white"
+            :class="{
+                'hover:text-amarillo hover:fill-amarillo cursor-pointer' : !playMusica,
+                'opacity-50': playMusica
+            }"
             @click="isPlay"
         />
-        <Pause class="text-white fill-white hover:text-amarillo hover:fill-amarillo cursor-pointer"
+        <Pause
+            class="text-white fill-white"
+            :class="{
+                'hover:text-amarillo hover:fill-amarillo cursor-pointer' : playMusica,
+                'opacity-50': !playMusica
+            }"
             @click="isPause"
         />
         <Square class="text-white fill-white hover:text-amarillo hover:fill-amarillo cursor-pointer"
-            @click="isStop"/>
+            @click="isStop"
+        />
         
     </div>
 </template>
@@ -164,7 +189,6 @@
         right: 0;
         margin-bottom: 0.3rem;
         margin-right: 0.3rem;
-        rotate: -45deg;
     }
 
     .player .circ {
@@ -183,4 +207,5 @@
         bottom: 0;
         margin-bottom: 0.2rem;
     }
+
 </style>

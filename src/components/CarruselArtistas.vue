@@ -1,12 +1,15 @@
+<script lang="ts">
+    export const playMusica = ref<boolean>(false);
+    export const pararMusica = ref<boolean>(true);
+</script>
 <script setup lang="ts">
 
-    import { mostrarGaleria } from '@/pages/Layout.vue';
+    import { mostrarGaleriaArtistas } from '@/pages/Layout.vue';
     import { X } from '@lucide/vue';
-    import { ref } from 'vue';
+    import { ref, onMounted } from 'vue';
+    import ReproductorMusica from './ReproductorMusica.vue'
     import RRSS from './RRSS.vue';
-
-    import type { CarouselApi } from '@/components/ui/carousel'
-    import { musicBus } from '@/composables/EventoMusica'
+    import { artistas } from '@/pages/invitades/invitades';
 
     import {
         Carousel,
@@ -25,24 +28,30 @@
     /**
     ** Coge el número de imagen seleccionada del grid de Invitades.vue */
     const props = defineProps<{
-        invitades: any
         inicio: number
     }>()
 
     /**
      **Para parar la música al cambiar de item     */
     
-    const api = ref<CarouselApi>()
+    const api = ref<any>(null)
+    const reproductores = ref<any[]>([])
 
-    function setApi(val: CarouselApi) {
+    function setApi(val: any) {
         api.value = val
-
-        if (!api.value) return // **Sino se queja de que el valor puede ser undefined
-
-        api.value.on('select', () => {
-            musicBus.emit()
-        })
     }
+
+    function stopAllMusic() {
+        reproductores.value.forEach(r => r?.stopMusica?.())
+    }
+
+    onMounted(() => {
+        if (!api.value) return
+
+            api.value.on('select', () => {
+                stopAllMusic();
+        })
+    })
 
 </script>
 
@@ -51,7 +60,7 @@
         <div class="w-[70%] h-[90%] fixed">
 
             <div class=" z-100 botonCerrar absolute top-2 right-2 w-8 h-8 bg-black flex items-center justify-center text-amarillo hover:text-black hover:bg-amarillo cursor-pointer"
-                @click="mostrarGaleria = false"
+                @click="mostrarGaleriaArtistas = false"
             >
                 <X/>
             </div>
@@ -59,31 +68,40 @@
             <div class="min-w-full h-full flex">
 
                 <Carousel class="w-full h-full flex"
-                    :set-api="setApi"
                     :opts="{ loop: true,
                         startIndex: props.inicio
                     }"
+                    @init-api="setApi"
                 >
 
                     <CarouselContent class="h-full">
 
-                        <CarouselItem v-for="invitade in invitades" class="gridGeneral w-full h-full grid">
+                        <CarouselItem v-for="artista in artistas"
+                            class="gridGeneral w-full h-full grid"
+                        >
 
-                            <div style="grid-area: img1" class="bg-cover bg-center" :style="{backgroundImage:`url(${invitade.icono})`}" ></div>
-                            <div style="grid-area: img2" class="bg-cover bg-center" :style="{backgroundImage:`url(${invitade.fotos[0]})`}"></div>
-                            <div style="grid-area: img3" class="bg-cover bg-center" :style="{backgroundImage:`url(${invitade.fotos[1]})`}"></div>
+                            <div style="grid-area: img1" class="bg-cover bg-center" :style="{backgroundImage:`url(${artista.icono})`}" ></div>
+                            <div style="grid-area: img2" class="bg-cover bg-center" :style="{backgroundImage:`url(${artista.fotos[0]})`}"></div>
+                            <div style="grid-area: img3" class="bg-cover bg-center" :style="{backgroundImage:`url(${artista.fotos[1]})`}"></div>
 
                             <div style="grid-area: caja1" class="bg-rojo"></div>
                             <div style="grid-area: caja2" class="bg-amarillo"></div>
 
                             <div style="grid-area: titulo" class="bg-azuloscuro text-amarillo font-bold text-5xl flex flex-row py-3 px-8 w-fill h-fill">
-                                <span class="flex-1 flex overflow-visible items-center text-nowrap">{{ invitade.nombre }}</span>
-                                <span class="flex-1 flex text-nowrap items-end justify-end text-2xl">{{ t(invitade.diaSemana) }} {{ invitade.dia }} a las {{ invitade.horaI }} </span>
+                                <span class="flex-1 flex overflow-visible items-center text-nowrap">{{ artista.nombre }}</span>
+                                <span class="flex-1 flex text-nowrap items-end justify-end text-2xl">{{ t(artista.diaSemana) }} {{ artista.dia }} a las {{ artista.horaI }} </span>
                             </div>
-                            <div style="grid-area: texto" class="descripcion bg-azulclaro px-6 pb-4 flex items-end text-md">{{ t(invitade.descripcion) }}</div>
-                            <div style="grid-area: musica" class="bg-black flex items-center justify-center">
+                            <div style="grid-area: texto" class="descripcion bg-azulclaro px-6 pb-4 flex items-end text-md">{{ t(artista.descripcion) }}</div>
+                            <div style="grid-area: musica" class="bg-black flex items-center justify-center flex-row w-full">
 
-                                <!-- ** Aquí van las RRSS -->
+                                <ReproductorMusica
+                                    ref="reproductores"
+                                    :cancion="`${artista.cancion}`"
+                                    :artista="`${artista.nombre}`"
+                                    :titulo="`${artista.titulo}`"
+                                    :foto="`${artista.fotos[1]}`"
+                                />
+
                                 <RRSS />
 
                             </div>

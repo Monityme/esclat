@@ -3,6 +3,7 @@
 /**
 ** Componentes */
     import Carruselinvitades from '@/components/Carruselinvitades.vue';
+    import CarruselArtistas from '@/components/CarruselArtistas.vue';
     import { ScrollArea } from '@/components/ui/scroll-area'
     import {
         Tabs,
@@ -20,6 +21,7 @@
 ** Variables y funciones */
 
     import { mostrarGaleria } from '@/pages/Layout.vue';
+    import { mostrarGaleriaArtistas } from '@/pages/Layout.vue';
 
     import { mostrarCuentaAtras } from '../Layout.vue'; 
     mostrarCuentaAtras.value = false;
@@ -36,6 +38,11 @@
     function abrirGaleria(indice: number) {
         invitadeSelect.value = indice;
         mostrarGaleria.value = true;
+    }
+
+    function abrirGaleriaArtistas(indice: number) {
+        invitadeSelect.value = indice;
+        mostrarGaleriaArtistas.value = true;
     }
 
     /**
@@ -55,6 +62,11 @@
             <Carruselinvitades
                 v-if="mostrarGaleria"
                 :invitades="tipoInvitades"
+                :inicio="invitadeSelect"
+            />
+
+            <CarruselArtistas
+                v-if="mostrarGaleriaArtistas"
                 :inicio="invitadeSelect"
             />
 
@@ -99,7 +111,7 @@
                                 <div v-for="(artista, index) in artistas"
                                     class="tarjeta bg-cover bg-center flex"
                                     :style="{backgroundImage:`url(${artista.icono})`}"
-                                    @click="abrirGaleria(index)"
+                                    @click="abrirGaleriaArtistas(index)"
                                 >
                                     <div class="tarjeta_texto flex flex-col overflow-y-hidden text-xl gap-1">
                                         <span class="tarjeta_nombre text-white">{{ artista.nombre }}</span>

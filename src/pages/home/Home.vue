@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-    import LogoEsclat from '@/components/logos/organiza/LogoEsclat.vue';
+    //import LogoEsclat from '@/components/logos/organiza/LogoEsclat.vue';
+    import LogoEsclat from '@/components/logos/LogoEsclat.vue';
+    import Fechas from '@/components/logos/Fechas.vue';
 
 /**
     ** Para poder usar el plugin de cambio de idioma */
@@ -19,8 +21,8 @@
     <div class="fondo w-full max-w-screen">
         <div class="seccion1 h-full">
         
-            <div class="pl-10 pt-5 text-amarillo font-bold text-3xl" style="grid-area: logo">
-                <LogoEsclat class="fill-amarillo h-60" />
+            <div class="pl-14 pt-10 text-amarillo font-bold text-3xl" style="grid-area: logo">
+                <LogoEsclat class="h-60" />
             </div>
             <div style="grid-area: vacio1"></div>
             <div style="grid-area: vacio2"></div>
@@ -31,8 +33,7 @@
             <div style="grid-area: caja2" class="bg-[url('/texturas/color/azuloscuro03.jpg')] bg-center"></div>
 
             <div style="grid-area: texto1" class="fecha bg-[url('/texturas/color/amarillo01.jpg')] inset-shadow-black text-4xl flex flex-col gap-2 justify-center items-center">
-                <span class=" font-bold text-5xl">23, 24 y 25</span>
-                <span>Octubre 2026</span>
+                <Fechas class="max-h-[70%] max-w-[70%]"/>
             </div>
             <div style="grid-area: texto2" class="bg-[url('/texturas/color/azulclaro01.jpg')] bg-center flex flex-wrap text-xl items-center px-5">
                 <span>{{ t('home.texto1[0]') }}<span class="font-bold">{{ t('home.texto1[1]') }}</span>{{ t('home.texto1[2]') }}<span class="font-bold">{{ t('home.texto1[3]') }}</span></span>
