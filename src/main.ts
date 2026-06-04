@@ -29,6 +29,14 @@ const i18n = createI18n({
             navegacion: ['Quienes somos','Programa','Invitades','Info','Entradas'],
             cuentaAtras: ['Días','Horas','Minutos','Segundos'],
 
+            about: ['Romper con la norma es necesario para el progreso de una comunidad, cuestionándose y mejorándose.','Este es el objetivo de ESCLAT.',
+                'ESCLAT es un festival de música, cultura y pensamiento que quiere',' romper las normas de lo preconcebido',', dando un espacio a artistas emergentes que quieren romper en el mundo de la música.',
+                'Queremos construir un espacio seguro para gente fuera de la norma, donde seamos','representados y escuchados',', creando una comunidad para iniciar un','movimiento de cuestionamiento y ruptura',
+                'Trabajamos en pos de un espacio libre y diverso, donde la identidad de género y/o la orientación sexual de las personas no sean cuestionadas ni criminalizadas, ofreciendo un espacio amigable con la comunidad LGTBIQ+. Nuestro compromiso con el medio ambiente es otro de los valores cruciales del festival, haciendo todo lo que está en nuestra mano para que el festival sea lo más sostenible posible. ',
+                'TÍTULO :D'
+
+            ],
+
             invitades: {
                 tabs: ['ARTISTAS','TALLERES','CHARLAS'],
                 descripcion: [
@@ -116,6 +124,11 @@ const i18n = createI18n({
             navegacion: ['Qui som','Programa','Convidats','Info','Entrades'],
             cuentaAtras: ['Dies','Hores','Minuts','Segons'],
             
+            about: ["Trencar amb la norma és necessari per al progrés d'una comunitat, qüestionant-se i millorant-se.","Este és l'objectiu d'ESCLAT.",
+                'ESCLAT és un festival de música, cultura i pensament que vol ','trencar les normes del preconcebut',', donant un espai a artistes emergents que volen trencar en el món de la música. ',
+                'Volem construir un espai segur per a gent fora de la norma, on siguem ','representats i escoltats',', creant una comunitat per a iniciar un','moviment de qüestionament i ruptura',
+                "Treballem darrere d'un espai lliure i divers, on la identitat de gènere i/o l'orientació sexual de les persones no siguen qüestionades ni criminalitzades, oferint un espai amigable amb la comunitat LGTBIQ+. El nostre compromís amb el medi ambient és un altre dels valors crucials del festival, fent tot el que és a la nostra mà perquè el festival siga el més sostenible possible. "
+            ],
             
             invitades: {
                 tabs: ['ARTISTES','TALLERS','CONFERÈNCIES'],
