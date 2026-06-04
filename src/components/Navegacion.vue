@@ -79,7 +79,7 @@ onUnmounted ( () => {
                 <NavigationMenuList class="gap-8 max-[700px]:pt-8">
                     <NavigationMenuItem>
                         <RouterLink to="/about" @click="mostrarCuentaAtras = false; if (chiquitin) {menuDrop = !menuDrop}" class="enlace-underline3" active-class="enlace-underline3-selected">
-                            <NavigationMenuLink id="textosNav">
+                            <NavigationMenuLink class="textosNav">
                                 {{ t('navegacion[0]') }}
                             </NavigationMenuLink>
                         </RouterLink>
@@ -87,7 +87,7 @@ onUnmounted ( () => {
 
                     <NavigationMenuItem>
                         <RouterLink to="/programa" @click="mostrarCuentaAtras = false; if (chiquitin) {menuDrop = !menuDrop}" class="enlace-underline3" active-class="enlace-underline3-selected">
-                            <NavigationMenuLink id="textosNav">
+                            <NavigationMenuLink class="textosNav">
                                 {{ t('navegacion[1]') }}
                             </NavigationMenuLink>
                         </RouterLink>
@@ -95,7 +95,7 @@ onUnmounted ( () => {
                     
                     <NavigationMenuItem>
                         <RouterLink to="/invitades" @click="mostrarCuentaAtras = false; if (chiquitin) {menuDrop = !menuDrop}" class="enlace-underline3" active-class="enlace-underline3-selected">
-                            <NavigationMenuLink id="textosNav">
+                            <NavigationMenuLink class="textosNav">
                                 {{ t('navegacion[2]') }}
                             </NavigationMenuLink>
                         </RouterLink>
@@ -103,7 +103,7 @@ onUnmounted ( () => {
 
                     <NavigationMenuItem>
                         <RouterLink to="/info" @click="mostrarCuentaAtras = false; if (chiquitin) {menuDrop = !menuDrop}" class="enlace-underline3" active-class="enlace-underline3-selected">
-                            <NavigationMenuLink id="textosNav">
+                            <NavigationMenuLink class="textosNav">
                                 {{ t('navegacion[3]') }}
                             </NavigationMenuLink>
                         </RouterLink>
@@ -111,7 +111,7 @@ onUnmounted ( () => {
 
                     <NavigationMenuItem>
                         <RouterLink to="/entradas" @click="mostrarCuentaAtras = false; if (chiquitin) {menuDrop = !menuDrop}" class="enlace-underline3" active-class="enlace-underline3-selected">
-                            <NavigationMenuLink id="textosNav">
+                            <NavigationMenuLink class="textosNav">
                                 {{ t('navegacion[4]') }}
                             </NavigationMenuLink>
                         </RouterLink>
@@ -197,7 +197,7 @@ onUnmounted ( () => {
             }
         }
 
-        #textosNav{
+        .textosNav{
             font-size: var(--text-3xl) /* 1.5rem = 24px */;
             
             --tw-font-weight: var(--font-weight-black) /* 900 */;
