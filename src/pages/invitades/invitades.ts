@@ -540,7 +540,7 @@ export const charlas: Charla[] = [
     {
         id: 0,
         nombre: "invitades.charlas.nombres[0]",
-        personas: ["Mikel Herrán @putoMikel"],
+        personas: ["Mikel Herrán (putoMikel)"],
         dia: 24,
         diaSemana: "Sábado",
         horaI: "10:00",
@@ -560,7 +560,7 @@ export const charlas: Charla[] = [
     {
         id: 1,
         nombre: "invitades.charlas.nombres[1]",
-        personas: ["Iria G. Parente y Selene M. Pascual", "Myriam M. Lejardi", "Clara Cortés","Esther López Vera"],
+        personas: ["Iria G. Parente y Selene M. Pascual", "Myriam M. Lejardi", "Clara Cortés","Esther López Vera","Virginia Petro de León","Alana S. Portero"],
         dia: 24,
         diaSemana: "Sábado",
         horaI: "12:15",

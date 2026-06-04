@@ -164,7 +164,7 @@
                                     @click="abrirGaleria(index)"
                                 >
                                     <div class="tarjeta_texto flex flex-col overflow-y-hidden text-xl gap-1">
-                                        <span class="tarjeta_nombre text-white">{{ t(charla.nombre) }}</span>
+                                        <span class="tarjeta_nombre text-white px-4">{{ t(charla.nombre) }}</span>
                                         <span class="oculto hidden text-white text-sm">
                                             {{ t(charla.diaSemana) }} {{ charla.dia }} a las {{ charla.horaI }}h
                                         </span>
@@ -212,7 +212,7 @@
 
     .tarjeta_texto {
         width: 100%;
-        height: 20%;
+        height: 25%;
         background: rgba(0,0,0,0.8);
         color: white;
         display: flex;
@@ -231,9 +231,11 @@
 
     .tarjeta_nombre {
         color: white;
+        text-align: center;
         transition-timing-function: var(--ease-in-out);
         transition-duration: 600ms;
         transition-property: all;
+        white-space: pre-line;
     }
 
     .tarjeta:hover .tarjeta_nombre {
@@ -246,7 +248,6 @@
         transition-timing-function: var(--ease-in-out);
         transition-duration: 600ms;
         transition: all;
-        
     }
 
     .tarjeta:hover .oculto {

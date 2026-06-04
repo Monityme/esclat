@@ -58,8 +58,8 @@
                             <div style="grid-area: caja2" class="bg-[url('/texturas/color/amarillo02.jpg')] bg-size-[500%]"></div>
 
                             <div style="grid-area: titulo" class="bg-[url('/texturas/color/azuloscuro03.jpg')] bg-bottom-left text-amarillo font-bold text-5xl flex flex-row py-3 px-8 w-fill h-fill">
-                                <span class="flex-1 flex overflow-visible items-center text-nowrap">{{ t(invitade.nombre) }}</span>
-                                <span class="flex-1 flex text-nowrap items-end justify-end text-2xl">{{ t(invitade.diaSemana) }} {{ invitade.dia }} a las {{ invitade.horaI }} </span>
+                                <span class="flex-1 flex overflow-visible items-center text-wrap">{{ t(invitade.nombre) }}</span>
+                                <span class="flex-1 flex text-nowrap items-end justify-end text-xl text-right">{{ t(invitade.diaSemana) }} {{ invitade.dia }}<br>{{ invitade.horaI }} - {{ invitade.horaF }}</span>
                             </div>
                             <div style="grid-area: texto" class="descripcion bg-[url('/texturas/color/azulclaro04.jpg')] px-6 pb-4 flex items-end text-md">{{ t(invitade.descripcion) }}</div>
                             <div style="grid-area: musica" class="bg-black flex items-center justify-center">

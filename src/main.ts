@@ -19,6 +19,8 @@ const i18n = createI18n({
     locale: 'CAS',
     fallbackLocale: 'CAS', //? Si algo no existe en el idioma escogido, se pondrá por defecto el valor en castellano
     messages: {
+    /** 
+    ** CASTELLANO */
         CAS: {
             home: {
                 texto1: ['Tu festival ','gratuito ','de música y cultura en Valencia donde ','rompemos la norma'],
@@ -26,9 +28,15 @@ const i18n = createI18n({
                 texto3: ['Reserva tus', 'ENTRADAS'],
             },
             dias: ['Viernes','Sábado','Domingo'],
+            tipos: ['Conciertos','Talleres','Charlas'],
             navegacion: ['Quienes somos','Programa','Invitades','Info','Entradas'],
             cuentaAtras: ['Días','Horas','Minutos','Segundos'],
-
+            about: [
+                'Romper con la norma es necesario para el progreso de una comunidad, cuestionándose y mejorándose.\nEste es el objetivo de ESCLAT.',
+                'ESCLAT es un festival de música, cultura y pensamiento que quiere romper las normas de lo preconcebido, dando un espacio a artistas emergentes que quieren romper en el mundo de la música.',
+                'Queremos construir un espacio seguro para gente fuera de la norma, donde seamos representados y escuchados, creando una comunidad para iniciar un movimiento de cuestionamiento y ruptura.',
+                'Trabajamos en pos de un espacio libre y diverso, donde la identidad de género y/o la orientación sexual de las personas no sean cuestionadas ni criminalizadas, ofreciendo un espacio amigable con la comunidad LGTBIQ+. Nuestro compromiso con el medio ambiente es otro de los valores cruciales del festival, haciendo todo lo que está en nuestra mano para que el festival sea lo más sostenible posible.'
+            ],
             invitades: {
                 tabs: ['ARTISTAS','TALLERES','CHARLAS'],
                 descripcion: [
@@ -50,11 +58,11 @@ const i18n = createI18n({
                 ],
                 talleres: {
                     nombres: [
-                        'Taller DIY: Crea tu propio binder',
+                        'DIY: Crea tu propio binder',
                         'Jornada de Ilustración con Ojo Garabato',
                         'Zero Waste: Haz tu propio jabón natural',
                         'Taller Creativo de Grabado',
-                        'Cuidados de Huerto y Plantas de Interior'
+                        'Cuidado de Huerto y Plantas de Interior'
                     ],
                     descripciones: [
                         'Un taller de la mano de la marca Híbride para crear y decorar tu binder que quiere que jóvenes trans se expresen con total libertad en un sitio seguro. Mario, creadore de la marca, confecciona binders a medida altamente personalizables con licra reciclada.',
@@ -66,10 +74,10 @@ const i18n = createI18n({
                 },
                 charlas: {
                     nombres: [
-                        '',
-                        'Mesa Redonda: la Comunidad LGTBIQ+ en la Lectura',
-                        '',
-                        '',
+                        'Parecen ser muy buenos amigos: Historia LGTB',
+                        'Mesa Redonda: la Comunidad LGTB en la Lectura',
+                        'Contar historias a través del cómic',
+                        'Diseño y Descubrimiento',
                         'Redes Sociales y Creatividad',
                     ],
                     descripciones: [
@@ -105,17 +113,25 @@ const i18n = createI18n({
                 'Enviar'],
             }   
         },
+
+    /** 
+    ** VALENCIANO */
         VAL: {
             home: {
                 texto1: ['El teu festival ','gratuït ','de música i cultura a València on ','esclatem la norma'],
                 texto2: ['I si un festival fora més que música?\nConcerts, tallers, converses i noves maneres d\'experimentar la creativitat.\n Tres dies de diversitat, cultura i noves mirades per a escoltar, pensar i crear.\nVeuen com ets.\nParticipa com vulguis.\nEsclata la norma.'],
                 texto3: ['Reserva les', 'ENTRADES'],
             },
-            
             dias: ['Divendres','Dissabte','Diumenge'],
+            tipos: ['Concerts','Tallers','Conferències'],
             navegacion: ['Qui som','Programa','Convidats','Info','Entrades'],
             cuentaAtras: ['Dies','Hores','Minuts','Segons'],
-            
+            about: [
+                'Trencar amb la norma és necessari per al progrés d\'una comunitat, qüestionant-se i millorant-se.\nEste és l\'objectiu d\'ESCLAT.',
+                'ESCLAT és un festival de música, cultura i pensament que vol trencar les normes del preconcebut, donant un espai a artistes emergents que volen trencar en el món de la música.',
+                'Volem construir un espai segur per a gent fora de la norma, on siguem representats i escoltats, creant una comunitat per a iniciar un moviment de qüestionament i ruptura.',
+                'Treballem darrere d\'un espai lliure i divers, on la identitat de gènere i/o l\'orientació sexual de les persones no siguen qüestionades ni criminalitzades, oferint un espai amigable amb la comunitat LGTBIQ+. El nostre compromís amb el medi ambient és un altre dels valors crucials del festival, fent tot el que és a la nostra mà perquè el festival siga el més sostenible possible.'
+            ],
             
             invitades: {
                 tabs: ['ARTISTES','TALLERS','CONFERÈNCIES'],
@@ -139,11 +155,11 @@ const i18n = createI18n({
                 
                 talleres: {
                     nombres: [
-                        'Taller DIY: Crea tu propio binder',
-                        'Jornada de Ilustración con Ojo Garabato',
-                        'Zero Waste: Haz tu propio jabón natural',
-                        'Taller Creativo de Grabado',
-                        'Cuidados de Huerto y Plantas de Interior'
+                        'DIY: Crea el teu propi binder',
+                        'Jornada d\'il·lustració amb Ojo Garabato',
+                        'Zero Waste: Fes el teu propi sabó natural',
+                        'Taller Creatiu de Gravat',
+                        'Cuidats d\'Hort i Plantes d\'Interior'
                     ],
                     descripciones: [
                         'Un taller de la mà de la marca Híbride per a crear i decorar el teu binder, que vol que jóvens trans s\'expressen amb total llibertat en un lloc segur. Mario, creador de la marca, confecciona binders a mesura altament personalitzables amb licra reciclada.',
@@ -155,14 +171,14 @@ const i18n = createI18n({
                 },
                 charlas: {
                     nombres: [
-                        'L\'Arquitectura del Còmic',
-                        'Taula Redona: la Comunitat LGTBIQ+ a la Lectura',
-                        '',
-                        '',
+                        'Semblen ser molt bons amics: Història LGTB',
+                        'Taula Redona: la Comunitat LGTB a la Lectura',
+                        'Contar històries a través del còmic',
+                        'Disseny i Descobriment',
                         'Xarxes Socials y Creativitat',
                     ],
                     descripciones: [
-                        'Mikel Herrán és doctor en Arqueologia i divulgador d\'història en xarxes socials a través del seu perfil @putomikel. Durant més de quatre anys ha treballat en mitjans de radi com a Carn crua o RNE, i en YouTube compta amb centenars de milers de subscriptors. El seu és un canal de divulgació amb un toc millennial, rigorós, provocador i atent a la inclusió de veus diverses en el discurs històric.',
+                        'Mikel Herrán és doctor en Arqueologia i divulgador d\'història en xarxes socials a través del seu perfil putomikel. Durant més de quatre anys ha treballat en mitjans de radi com a Carn crua o RNE, i en YouTube compta amb centenars de milers de subscriptors. El seu és un canal de divulgació amb un toc millennial, rigorós, provocador i atent a la inclusió de veus diverses en el discurs històric.',
                         'Iria G. Parente, Selene M. Pascual, Myriam M. Lejardi, Clara Cortes, Esther López Vera, Virginia Petro De León y Alana S. Portero són autores de la comunitat LGBT que ens parlaren sobre com van trencar en la indústria i van portar el seu punt de vista i vivències als llibres en les nostres llibreries.',
                         'Llicenciada per la Facultat de Belles Arts de la Universitat de Barcelona, compagina l\'ofici de dibuixant de còmics amb el seu treball com a professora d\'un Grau Superior d\'Animació i 3D en i en els cursos i tallers de còmic i il·lustració que impartix al costat del poeta i il·lustrador Josema Carrasco. Donarà una xarrada sobre com és el treball de la indústria del comic americà i europeu i com es pot començar en estes. ',
                         'Una xarrada de Víctor Palau i Ana Gea, fundadors de Gràffica, un mitjà dedicat en exclusiva al món del disseny, i especialment a l\'àmbit del disseny gràfic, la creativitat i la cultura visual. La seua vocació és crear un espai on els professionals tinguen un punt d\'informació i referència del que esdevé en el seu sector. Així mateix, el seu interés és crear una plataforma que genere activitats complementàries, tant en l\'àmbit de la informació i divulgació, com en l\'àmbit de la formació, per a ajudar els professionals a millorar i reforçar la seua activitat.',

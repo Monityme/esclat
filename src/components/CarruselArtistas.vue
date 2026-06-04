@@ -89,7 +89,7 @@
 
                             <div style="grid-area: titulo" class="bg-[url('/texturas/color/azuloscuro03.jpg')] bg-bottom-left text-amarillo font-bold text-5xl flex flex-row py-3 px-8 w-fill h-fill">
                                 <span class="flex-1 flex overflow-visible items-center text-nowrap">{{ artista.nombre }}</span>
-                                <span class="flex-1 flex text-nowrap items-end justify-end text-2xl">{{ t(artista.diaSemana) }} {{ artista.dia }} a las {{ artista.horaI }} </span>
+                                <span class="flex-1 flex text-nowrap items-end justify-end text-xl text-right">{{ t(artista.diaSemana) }} {{ artista.dia }}<br>{{ artista.horaI }} - {{ artista.horaF }}</span>
                             </div>
                             <div style="grid-area: texto" class="descripcion bg-[url('/texturas/color/azulclaro04.jpg')] px-6 pb-4 flex items-end text-md">{{ t(artista.descripcion) }}</div>
                             <div style="grid-area: musica" class="bg-black flex items-center justify-center flex-row w-full">

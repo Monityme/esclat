@@ -3,6 +3,13 @@
     import { mostrarCuentaAtras } from '../Layout.vue';
     mostrarCuentaAtras.value = false;
 
+    import LogoEsclatNoSubs from '@/components/logos/organiza/LogoEsclatNoSubs.vue';
+
+    /**
+    ** Para poder usar el plugin de cambio de idioma */
+    import { useI18n } from 'vue-i18n';
+    const { t } = useI18n({useScope: 'global'});
+
 </script>
 
 <template>
@@ -19,8 +26,14 @@
             <div style="grid-area: caja2" class="bg-[url('/texturas/color/azulclaro01.jpg')]"></div>
 
             <div style="grid-area: contenido"
-                class="bg-[url('/texturas/color/amarillo03.jpg')] pb-5 px-5 h-full flex flex-row gap-5">
-
+                class="bg-[url('/texturas/color/amarillo03.jpg')] px-5 h-full w-full flex flex-col gap-15 items-center justify-center">
+                <LogoEsclatNoSubs class="w-[40%]"/>
+                <div class="flex w-full flex-col gap-5 text-xl px-5">
+                    <span>{{ t('about[0]') }}</span>
+                    <span>{{ t('about[1]') }}</span>
+                    <span>{{ t('about[2]') }}</span>
+                    <span>{{ t('about[3]') }}</span>
+                </div>
             </div>
         
         </div>
@@ -32,6 +45,7 @@
 
     .principal {
         height: calc(100vh - 60px);
+        white-space: pre-line;
     }
     
     .main {
@@ -47,4 +61,5 @@
             "vacio2 caja2 vacio3"    
             "contenido vacio1 caja1";
     }
+
 </style>
