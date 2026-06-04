@@ -32,20 +32,22 @@
         <div style="grid-area: caja3" class="bg-amarillo"></div>
 
         <div style="grid-area: contenido"
-            class="bg-azulclaro py-5 px-8 h-full flex gap-5 flex-row">
+            class="bg-azulclaro py-5 px-8 h-full
+            max-[700px]:px-5">
             
-                <!-- 
+            <div class="flex gap-5
+            max-[700px]:flex-col">
+<!-- 
                 ?LADO IZQUIERDO    
                 -->
                 <div class="flex flex-col gap-3">
                     
-                    <h1 class="text-3xl font-bold">1. {{ t('entradas.seleccion[0]') }}:</h1>
-
-                    <div class="w-full flex flex-col">
+                    <h1 class="font-bold min-[700px]:text-3xl max-[700px]:text-xl">1. {{ t('entradas.seleccion[0]') }}:</h1>
                         
                         <!-- ** DIV SELECCIÓN CONCIERTOS-->
 
-                        <div class="bg-white/35 w-full h-50 border-3 border-black mt-2">
+                        <div class="bg-white/35 w-102 h-50 border-3 border-black mt-2
+                        max-[700px]:w-full max-[700px]:h-full max-[700px]:text-sm max-[700px]:border-2">
                             <ScrollArea type="always">
                                 <div class="pt-2 pl-3 pb-2 flex border-b-2 border-black/20">
                                     <div class="w-[20%]">
@@ -94,46 +96,54 @@
 
                         <!-- ** FIN div conciertos -->
 
-                    </div>
+                        <div class="w-102 max-[700px]:w-60">
+                            <h1 class=" font-black text-xs">{{ t('entradas.menores[0]') }}:</h1>
+                            <div class="text-[11px]/3 pt-1">
+                                <p>{{ t('entradas.menores[1]') }} <span class="font-black">{{ t('entradas.menores[2]') }}</span> {{ t('entradas.menores[3]') }} <span class="font-black">{{ t('entradas.menores[4]') }}</span> {{ t('entradas.menores[5]') }}.</p>
+                            
+                                <p class="underline underline-offset-3 pl-5 py-2 cursor-pointer">Autorizacion_Menores16.pdf</p>
+                            
+                                <p>{{ t('entradas.menores[6]') }} <span class="font-black">{{ t('entradas.menores[7]') }}</span> {{ t('entradas.menores[8]') }} <span class="font-black">{{ t('entradas.menores[9]') }}</span> {{ t('entradas.menores[10]') }}.</p>
+                                
+                                <p class="pt-2"><span class="font-black">{{ t('entradas.menores[11]') }}</span> {{ t('entradas.menores[12]') }} <span class="font-black">{{ t('entradas.menores[13]') }}</span> {{ t('entradas.menores[14]') }} <span class="underline underline-offset-2 font-black cursor-pointer" @click="$router.push('/info')">{{ t('entradas.menores[15]') }}</span>.</p>
+                            </div>
+                        </div>
 
-                    <div class="flex flex-col gap-2">
-                        <p>{{ t('entradas.aviso[0]') }} <span class="font-black">{{ t('entradas.aviso[1]') }}</span>.</p>
-                        <p class="text-sm/4">{{ t('entradas.aviso[2]')}}</p>
-                    </div>
-                    
                 </div>
 
                 <!-- 
                 ?LADO DERECHO    
                 -->
-                <form class="flex flex-col">
-                    <h1 class="text-3xl font-bold">2. {{ t('entradas.datos[0]') }}:</h1>
+                <form class="flex flex-col pl-5
+                max-[700px]:pl-0">
+                    <h1 class="font-bold min-[700px]:text-3xl max-[700px]:text-xl">2. {{ t('entradas.datos[0]') }}:</h1>
 
-                    <div class="text-sm pl-5">
+                    <div class="text-sm pl-5
+                    max-[700px]:pl-0">
                         <div class="datos flex-1">
-                            <div class="textInputWrapper mt-1">
+                            <div class="textInputWrapper mt-3">
                                 <label for="nombre"></label>
                                 <input id="nombre" :placeholder="$t('entradas.datos[1]')" type="text" class="textInput" required> </input>
                             </div>
                         </div>
                         
                         <div class="datos flex-3">
-                            <div class="textInputWrapper mt-1">
+                            <div class="textInputWrapper mt-3">
                                 <label for="email"></label>
                                 <input id="email" :placeholder="$t('entradas.datos[2]')" type="text" class="textInput" required>
                             </div>
                         </div>
 
-                        <div class="flex flex-row justify-between">
+                        <div class="flex flex-row justify-between mt-3 max-[700px]:flex-col">
                             <div class="datos flex-2 ">
-                                <div class="textInputWrapper mr-5 mt-1">
+                                <div class="textInputWrapper">
                                     <label for="fechaNacimiento"></label>
                                     <input id="fechaNacimiento" :placeholder="$t('entradas.datos[3]')" type="text" class="textInput" required>
                                 </div>
                             </div>
 
-                            <div class="datos flex-1">
-                                <div class="textInputWrapper w-30 mt-1">
+                            <div class="datos flex-1 max-[700px]:mt-3">
+                                <div class="textInputWrapper w-30 max-[700px]:w-full">
                                     <label for="dni"></label>
                                     <input id="dni" placeholder="DNI" type="text" class="textInput" required>
                                 </div>
@@ -141,38 +151,27 @@
                         </div>  
                     </div>
 
-                    <div class="pl-5 pt-3 pb-5">
-                        <h1 class=" font-black text-lg">{{ t('entradas.menores[0]') }}:</h1>
-                        <div class="text-xs/4 pt-1">
-                            <p>{{ t('entradas.menores[1]') }} <span class="font-black">{{ t('entradas.menores[2]') }}</span> {{ t('entradas.menores[3]') }} <span class="font-black">{{ t('entradas.menores[4]') }}</span> {{ t('entradas.menores[5]') }}.</p>
-                        
-                            <p class="underline underline-offset-3 pl-5 py-2 cursor-pointer">Autorizacion_Menores16.pdf</p>
-                        
-                            <p>{{ t('entradas.menores[6]') }} <span class="font-black">{{ t('entradas.menores[7]') }}</span> {{ t('entradas.menores[8]') }} <span class="font-black">{{ t('entradas.menores[9]') }}</span> {{ t('entradas.menores[10]') }}.</p>
-                            
-                            <p class="pt-2"><span class="font-black">{{ t('entradas.menores[11]') }}</span> {{ t('entradas.menores[12]') }} <span class="font-black">{{ t('entradas.menores[13]') }}</span> {{ t('entradas.menores[14]') }} <span class="underline underline-offset-2 font-black cursor-pointer" @click="$router.push('/info')">{{ t('entradas.menores[15]') }}</span>.</p>
-                        </div>
-                    </div>
-
-                    <h1 class="text-3xl font-bold">3. {{ t('entradas.confirma[0]') }}:</h1>
-
-                    <label class="cyberpunk-checkbox-label">
+                    <h1 class="font-bold mt-15
+                    max-[700px]:mt-5
+                    min-[700px]:text-3xl max-[700px]:text-xl">3. {{ t('entradas.confirma[0]') }}:</h1>
+                    
+                    <label class="cyberpunk-checkbox-label mt-2 ">
                         <input type="checkbox" class="cyberpunk-checkbox" required>
                         <p class="text-sm">{{ t('entradas.confirma[1]') }}.</p>
                     </label>
 
 
-                    <label class="cyberpunk-checkbox-label">
+                    <label class="cyberpunk-checkbox-label mt-2">
                         <input type="checkbox" class="cyberpunk-checkbox" required>
                         <p class="text-sm">{{ t('entradas.confirma[2]') }} <span class="underline underline-offset-2 cursor-pointer" @click="$router.push('/info')">{{ t('entradas.confirma[3]') }}</span>.</p>
                     </label>
 
-                    <label class="cyberpunk-checkbox-label">
+                    <label class="cyberpunk-checkbox-label mt-2">
                         <input type="checkbox" class="cyberpunk-checkbox" required>
                         <p class="text-sm">{{ t('entradas.confirma[4]') }} <span class="underline underline-offset-2 cursor-pointer" @click="$router.push('/info')">{{ t('entradas.confirma[5]') }}</span>.</p>
                     </label>
                 
-                    <div class="flex justify-end mt-3">
+                    <div class="flex justify-end mt-6">
                         <Button class="bg-(--color-negro) rounded-none text-md text-(--color-azulclaro) font-black w-30 cursor-pointer active:scale-90">
                             {{ t('entradas.confirma[6]') }}
                         </Button>
@@ -180,8 +179,13 @@
 
 
                 </form>
+            </div>
                 
-            
+                
+            <div class="flex flex-col text-sm mt-9 max-[700px]:gap-1">
+                <p>{{ t('entradas.aviso[0]') }} <span class="font-black">{{ t('entradas.aviso[1]') }}</span>.</p>
+                <p class="text-xs/3">{{ t('entradas.aviso[2]')}}</p>
+            </div>
 
         </div>
 
@@ -191,19 +195,39 @@
 
 <style scoped>
 
-    .main {
-        background-image: url("/home/fondoHome01.jpg");
+    @media (max-width: 700px){
+        .main {
+        background-image: url("/fondos/fondo04.jpg");
+        background-size: 100%;
         background-position: cover;
         background-position: no-repeat;
-        height: calc(100vh - 60px);
         display: grid;
-        grid-template-columns: 66% 24% 10%;
-        grid-template-rows: 4% 92% 4%;
+        grid-template-columns: 80% 20%;
+        grid-auto-rows: 9% height 14%;
         grid-template-areas:
-            "vacio1 caja1 vacio2"
-            "contenido vacio3 caja2"
-            "vacio4 caja3 vacio5";
+            "vacio1 caja1"
+            "contenido vacio3"
+            "vacio4 caja3";
+        }
     }
+
+    @media (min-width: 700px){
+        .main {
+            background-image: url("/home/fondoHome01.jpg");
+            background-position: cover;
+            background-position: no-repeat;
+            height: calc(100vh - 60px);
+            display: grid;
+            grid-template-columns: 66% 24% 10%;
+            grid-template-rows: 4% 92% 4%;
+            grid-template-areas:
+                "vacio1 caja1 vacio2"
+                "contenido vacio3 caja2"
+                "vacio4 caja3 vacio5";
+        } 
+    }
+
+    
 
     .form__group {
         position: relative;

@@ -87,15 +87,21 @@
 
                     <TabsList>
 
-                        <TabsTrigger value="artistas" class="text-amarillo">
+                        <TabsTrigger value="artistas" class="text-amarillo
+                        min-[700px]:text-3xl
+                        max-[700px]:text-[1.2rem]">
                             <span @click="selectTipo(artistas)">{{ t('invitades.tabs[0]') }}</span>
                         </TabsTrigger>
 
-                        <TabsTrigger value="talleres" class="text-amarillo">
+                        <TabsTrigger value="talleres" class="text-amarillo
+                        min-[700px]:text-3xl
+                        max-[700px]:text-[1.2rem] max-[700px]:-ml-6">
                             <span @click="selectTipo(talleres)">{{ t('invitades.tabs[1]') }}</span>
                         </TabsTrigger>
 
-                        <TabsTrigger value="charlas" class="text-amarillo">
+                        <TabsTrigger value="charlas" class="text-amarillo
+                        min-[700px]:text-3xl
+                        max-[700px]:text-[1.2rem] max-[700px]:-ml-6">
                             <span @click="selectTipo(charlas)">{{ t('invitades.tabs[2]') }}</span>
                         </TabsTrigger>
 
@@ -107,15 +113,22 @@
                         
                         <ScrollArea type="always">
 
-                            <div class="gap-5 w-full h-full grid grid-cols-3">
+                            <div class="gap-5 w-full h-full grid
+                            min-[700px]:grid-cols-3
+                            max-[700px]:grid-cols-2">
                                 <div v-for="(artista, index) in artistas"
                                     class="tarjeta bg-cover bg-center flex"
                                     :style="{backgroundImage:`url(${artista.icono})`}"
                                     @click="abrirGaleriaArtistas(index)"
                                 >
-                                    <div class="tarjeta_texto flex flex-col overflow-y-hidden text-xl gap-1">
+                                    <div class="tarjeta_texto flex flex-col overflow-y-hidden gap-1
+                                    min-[900px]:text-xl
+                                    min-[600px]:text-l 
+                                    max-[600px]:text-md">
                                         <span class="tarjeta_nombre text-white">{{ artista.nombre }}</span>
-                                        <span class="oculto hidden text-white text-sm">
+                                        <span class="oculto hidden text-white
+                                        min-[700px]:text-sm
+                                        max-[600px]:text-xs">
                                             {{ t(artista.diaSemana) }} {{ artista.dia }} a las {{ artista.horaI }}h
                                         </span>
                                     </div>
@@ -132,7 +145,7 @@
 
                         <ScrollArea>
 
-                            <div class="gap-5 w-full h-full grid grid-cols-3">
+                            <div class="gap-5 w-full h-full grid min-[800px]:grid-cols-3 max-[800px]:grid-cols-2">
                                 <div v-for="(taller, index) in talleres"
                                     class="tarjeta bg-cover bg-center flex"
                                     :style="{backgroundImage:`url(${taller.icono})`}"
@@ -186,7 +199,26 @@
 
 <style scoped>
 
-    .main {
+    @media (max-width: 700px) {
+        .main {
+        background-image: url("/fondos/fondo04.jpg");
+        background-size: 100%;
+        background-position: cover;
+        background-position: no-repeat;
+        height: calc(100vh - 60px);
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 9% 77% 14%;
+        grid-template-areas:
+            "vacio1 caja1"
+            "contenido vacio3"
+            "vacio4 caja3";
+        }
+    
+    }
+
+    @media (min-width: 700px) {
+        .main {
         background-image: url("/fondos/fondo02.jpg");
         background-size: 100%;
         background-position: cover;
@@ -200,7 +232,11 @@
             "vacio1 caja1 vacio2"
             "contenido vacio3 caja2"
             "vacio4 caja3 vacio5";
+        }
+
     }
+
+    
 
     .tarjeta {
         cursor: pointer;

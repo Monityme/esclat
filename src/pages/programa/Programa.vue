@@ -39,7 +39,7 @@
         height: calc(100vh - 60px);
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 700px) {
         .main {
         background-image: url("/fondos/fondo04.jpg");
         background-size: 100%;
@@ -57,7 +57,7 @@
     
     }
 
-    @media (min-width: 800px) {
+    @media (min-width: 700px) {
         .main {
         background-image: url("/fondos/fondo04.jpg");
         background-size: 100%;

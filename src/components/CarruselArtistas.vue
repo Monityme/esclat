@@ -57,7 +57,8 @@
 
 <template>
     <div class="galeriaInvitades absolute flex opacity-100 top-0 justify-center items-center w-full h-screen z-99 bg-black/75">
-        <div class="w-[70%] h-[90%] fixed">
+        <div class="w-[70%] h-[90%] fixed
+        max-[700px]:w-[85%] max-[700px]:h-[93%]">
 
             <div class=" z-100 botonCerrar absolute top-2 right-2 w-8 h-8 bg-black flex items-center justify-center text-amarillo hover:text-black hover:bg-amarillo cursor-pointer"
                 @click="mostrarGaleriaArtistas = false"
@@ -87,11 +88,18 @@
                             <div style="grid-area: caja1" class="bg-rojo"></div>
                             <div style="grid-area: caja2" class="bg-amarillo"></div>
 
-                            <div style="grid-area: titulo" class="bg-azuloscuro text-amarillo font-bold text-5xl flex flex-row py-3 px-8 w-fill h-fill">
-                                <span class="flex-1 flex overflow-visible items-center text-nowrap">{{ artista.nombre }}</span>
-                                <span class="flex-1 flex text-nowrap items-end justify-end text-2xl">{{ t(artista.diaSemana) }} {{ artista.dia }} a las {{ artista.horaI }} </span>
+                            <div style="grid-area: titulo" class="bg-azuloscuro text-amarillo font-bold flex flex-row py-3 w-fill h-fill
+                            min-[700px]:text-5xl min-[700px]:px-8
+                            max-[700px]:text-xl max-[700px]:px-6">
+                                <span class="flex-1 flex overflow-visible items-center text-nowrap
+                                ">{{ artista.nombre }}</span>
+                                <span class="flex-1 flex text-nowrap items-end justify-end
+                                min-[700px]:text-2xl
+                                max-[700px]:text-sm">{{ t(artista.diaSemana) }} {{ artista.dia }} a las {{ artista.horaI }} </span>
                             </div>
-                            <div style="grid-area: texto" class="descripcion bg-azulclaro px-6 pb-4 flex items-end text-md">{{ t(artista.descripcion) }}</div>
+                            <div style="grid-area: texto" class="descripcion bg-azulclaro px-6 pb-4 flex items-end
+                            min-[700px]:text-md
+                            max-[700px]:text-xs">{{ t(artista.descripcion) }}</div>
                             <div style="grid-area: musica" class="bg-black flex items-center justify-center flex-row w-full">
 
                                 <ReproductorMusica
@@ -102,7 +110,7 @@
                                     :foto="`${artista.fotos[1]}`"
                                 />
 
-                                <RRSS />
+                                <!-- <RRSS /> -->
 
                             </div>
 
@@ -121,14 +129,30 @@
 
 <style scoped>
 
-    .gridGeneral {
+    @media (max-width: 700px) {
+        .gridGeneral {
         display: grid;
-        grid-template-columns: 15% 20% 65%;
-        grid-template-rows: 25% 50% 25%;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 11% 65% 20%;
         grid-template-areas:
-            "img1 titulo titulo"
-            "caja1 img2 texto"
-            "img3 caja2 musica"
+            "img1 titulo"
+            "caja1 texto"
+            "img3 musica"
+        }
+
+    }
+
+
+    @media (min-width: 700px){
+        .gridGeneral {
+            display: grid;
+            grid-template-columns: 15% 20% 65%;
+            grid-template-rows: 25% 50% 25%;
+            grid-template-areas:
+                "img1 titulo titulo"
+                "caja1 img2 texto"
+                "img3 caja2 musica"
+        }
     }
 
     .descripcion {

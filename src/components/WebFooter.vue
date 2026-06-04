@@ -9,7 +9,7 @@
 </script>
 
 <template>
-    <footer class="bg-black bottom-0 flex flex-col w-fill py-5 justify-center text-white text-xs gap-5">
+    <footer class="bg-black relative bottom-0 flex flex-col w-fill py-5 justify-center text-white text-xs gap-5">
         <div class="flex w-full justify-center px-5">
             <div class="flex-1 flex flex-col gap-3 items-baseline">
                 <LogoEsclat class="h-20 fill-white stroke-white"/>
