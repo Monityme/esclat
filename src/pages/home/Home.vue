@@ -32,7 +32,7 @@
             <div style="grid-area: caja1" class="bg-[url('/texturas/color/rojo04.jpg')]"></div>
             <div style="grid-area: caja2" class="bg-[url('/texturas/color/azuloscuro03.jpg')] bg-center"></div>
 
-            <div style="grid-area: texto1" class="fecha bg-[url('/texturas/color/amarillo01.jpg')] inset-shadow-black text-4xl flex flex-col gap-2 justify-center items-center">
+            <div style="grid-area: texto1" class="fecha bg-[url('/texturas/color/amarillo01.jpg')] text-4xl flex flex-col gap-2 justify-center items-center">
                 <Fechas class="max-h-[70%] max-w-[70%]"/>
             </div>
             <div style="grid-area: texto2" class="bg-[url('/texturas/color/azulclaro01.jpg')] bg-center flex flex-wrap text-xl items-center px-5">

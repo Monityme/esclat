@@ -40,11 +40,11 @@
             <div style="grid-area: vacio2"></div>
             <div style="grid-area: vacio3"></div>
 
-            <div style="grid-area: caja1" class="bg-azulclaro"></div>
-            <div style="grid-area: caja2" class="bg-rojo"></div>
+            <div style="grid-area: caja1" class="bg-[url('/texturas/color/azulclaro02.jpg')] bg-bottom-right"></div>
+            <div style="grid-area: caja2" class="bg-[url('/texturas/color/rojo04.jpg')]"></div>
 
             <div style="grid-area: contenido"
-                class="bg-amarillo pb-5 px-5 h-full flex flex-row gap-5">
+                class="bg-[url('/texturas/color/amarillo03.jpg')] bg-bottom-left pb-5 px-5 h-full flex flex-row gap-5">
                 <!-- 
                  TODO: Ponerle la textura en el bg y luego en las areas de texto sin textura olee
                  -->
@@ -167,7 +167,7 @@
 
 <style scoped>
     .main {
-        background-image: url("/fondos/fondo03.jpg");
+        background-image: url("/fondos/fondo05.jpg");
         background-size: 100%;
         background-position: cover;
         background-position: no-repeat;

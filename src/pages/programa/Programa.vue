@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-    import WebFooter from '@/components/WebFooter.vue';
 
     import { mostrarCuentaAtras } from '../Layout.vue';
     mostrarCuentaAtras.value = false;
@@ -17,12 +16,12 @@
             <div style="grid-area: vacio4"></div>
             <div style="grid-area: vacio5"></div>
 
-            <div style="grid-area: caja1" class="bg-amarillo"></div>
-            <div style="grid-area: caja2" class="bg-azuloscuro"></div>
-            <div style="grid-area: caja3" class="bg-rojo"></div>
+            <div style="grid-area: caja1" class="bg-[url('/texturas/color/amarillo03.jpg')] bg-bottom"></div>
+            <div style="grid-area: caja2" class="bg-[url('/texturas/color/azuloscuro01.jpg')] bg-left"></div>
+            <div style="grid-area: caja3" class="bg-[url('/texturas/color/rojo02.jpg')] bg-size-[200%]"></div>
 
             <div style="grid-area: contenido"
-                class="bg-azulclaro pb-5 px-5 h-full flex flex-col">
+                class="bg-[url('/texturas/color/azulclaro04.jpg')] pb-5 px-5 h-full flex flex-col">
 
 
             </div> <!-- final "contenido"-->
@@ -40,7 +39,7 @@
     }
 
     .main {
-        background-image: url("/fondos/fondo04.jpg");
+        background-image: url("/fondos/fondo07.jpg");
         background-size: 100%;
         background-position: cover;
         background-position: no-repeat;

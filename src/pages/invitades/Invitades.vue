@@ -47,10 +47,10 @@
 
     /**
     **Para cambiar entre artistas-talleres-charlas */
-    let tipoInvitades = artistas;
+    const tipoInvitades = ref(talleres);
 
-    function selectTipo(tipo:any) {
-        tipoInvitades = tipo;
+    function selectTipo(tipo: any) {
+        tipoInvitades.value = tipo;
     }
 
 </script>
@@ -139,7 +139,7 @@
                                     @click="abrirGaleria(index)"
                                 >
                                     <div class="tarjeta_texto flex flex-col overflow-y-hidden text-xl gap-1">
-                                        <span class="tarjeta_nombre text-white">{{ taller.nombre }}</span>
+                                        <span class="tarjeta_nombre text-white">{{ t(taller.nombre) }}</span>
                                         <span class="oculto hidden text-white text-sm">
                                             {{ t(taller.diaSemana) }} {{ taller.dia }} a las {{ taller.horaI }}h
                                         </span>
@@ -164,7 +164,7 @@
                                     @click="abrirGaleria(index)"
                                 >
                                     <div class="tarjeta_texto flex flex-col overflow-y-hidden text-xl gap-1">
-                                        <span class="tarjeta_nombre text-white">{{ charla.nombre }}</span>
+                                        <span class="tarjeta_nombre text-white">{{ t(charla.nombre) }}</span>
                                         <span class="oculto hidden text-white text-sm">
                                             {{ t(charla.diaSemana) }} {{ charla.dia }} a las {{ charla.horaI }}h
                                         </span>

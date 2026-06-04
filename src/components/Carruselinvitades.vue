@@ -2,11 +2,7 @@
 
     import { mostrarGaleria } from '@/pages/Layout.vue';
     import { X } from '@lucide/vue';
-    import { ref } from 'vue';
     import RRSS from './RRSS.vue';
-
-    import type { CarouselApi } from '@/components/ui/carousel'
-    import { musicBus } from '@/composables/EventoMusica'
 
     import {
         Carousel,
@@ -29,20 +25,6 @@
         inicio: number
     }>()
 
-    /**
-     **Para parar la música al cambiar de item     */
-    
-    const api = ref<CarouselApi>()
-
-    function setApi(val: CarouselApi) {
-        api.value = val
-
-        if (!api.value) return // **Sino se queja de que el valor puede ser undefined
-
-        api.value.on('select', () => {
-            musicBus.emit()
-        })
-    }
 
 </script>
 
@@ -59,7 +41,6 @@
             <div class="min-w-full h-full flex">
 
                 <Carousel class="w-full h-full flex"
-                    :set-api="setApi"
                     :opts="{ loop: true,
                         startIndex: props.inicio
                     }"
@@ -73,14 +54,14 @@
                             <div style="grid-area: img2" class="bg-cover bg-center" :style="{backgroundImage:`url(${invitade.fotos[0]})`}"></div>
                             <div style="grid-area: img3" class="bg-cover bg-center" :style="{backgroundImage:`url(${invitade.fotos[1]})`}"></div>
 
-                            <div style="grid-area: caja1" class="bg-rojo"></div>
-                            <div style="grid-area: caja2" class="bg-amarillo"></div>
+                            <div style="grid-area: caja1" class="bg-[url('/texturas/color/rojo01.jpg')]"></div>
+                            <div style="grid-area: caja2" class="bg-[url('/texturas/color/amarillo02.jpg')] bg-size-[500%]"></div>
 
-                            <div style="grid-area: titulo" class="bg-azuloscuro text-amarillo font-bold text-5xl flex flex-row py-3 px-8 w-fill h-fill">
-                                <span class="flex-1 flex overflow-visible items-center text-nowrap">{{ invitade.nombre }}</span>
+                            <div style="grid-area: titulo" class="bg-[url('/texturas/color/azuloscuro03.jpg')] bg-bottom-left text-amarillo font-bold text-5xl flex flex-row py-3 px-8 w-fill h-fill">
+                                <span class="flex-1 flex overflow-visible items-center text-nowrap">{{ t(invitade.nombre) }}</span>
                                 <span class="flex-1 flex text-nowrap items-end justify-end text-2xl">{{ t(invitade.diaSemana) }} {{ invitade.dia }} a las {{ invitade.horaI }} </span>
                             </div>
-                            <div style="grid-area: texto" class="descripcion bg-azulclaro px-6 pb-4 flex items-end text-md">{{ t(invitade.descripcion) }}</div>
+                            <div style="grid-area: texto" class="descripcion bg-[url('/texturas/color/azulclaro04.jpg')] px-6 pb-4 flex items-end text-md">{{ t(invitade.descripcion) }}</div>
                             <div style="grid-area: musica" class="bg-black flex items-center justify-center">
 
                                 <!-- ** Aquí van las RRSS -->

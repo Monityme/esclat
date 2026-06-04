@@ -27,12 +27,12 @@
         <div style="grid-area: vacio4"></div>
         <div style="grid-area: vacio5"></div>
 
-        <div style="grid-area: caja1" class="bg-rojo"></div>
-        <div style="grid-area: caja2" class="bg-azuloscuro"></div>
-        <div style="grid-area: caja3" class="bg-amarillo"></div>
+        <div style="grid-area: caja1" class="bg-[url('/texturas/color/rojo01.jpg')]"></div>
+        <div style="grid-area: caja2" class="bg-[url('/texturas/color/azuloscuro03.jpg')] bg-bottom"></div>
+        <div style="grid-area: caja3" class="bg-[url('/texturas/color/amarillo03.jpg')] bg-bottom-left"></div>
 
         <div style="grid-area: contenido"
-            class="bg-azulclaro py-5 px-8 h-full flex gap-5 flex-row">
+            class="bg-[url('/texturas/color/azulclaro04.jpg')] py-5 px-8 h-full flex gap-5 flex-row">
             
                 <!-- 
                 ?LADO IZQUIERDO    
@@ -192,7 +192,8 @@
 <style scoped>
 
     .main {
-        background-image: url("/home/fondoHome01.jpg");
+        background-image: url("/fondos/fondo08.jpg");
+        background-size: 100%;
         background-position: cover;
         background-position: no-repeat;
         height: calc(100vh - 60px);

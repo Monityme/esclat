@@ -393,6 +393,7 @@ export const artistas: Invitade[] = [
 export interface Taller {
     id: number,
     nombre: string;
+    personas: string[];
     dia: number,
     diaSemana: string;
     horaI: string;
@@ -401,75 +402,115 @@ export interface Taller {
     descripcion: string;
     icono: string;
     fotos: string[];
-    web?: string;
-    instagram?: string;
-    facebook?: string;
-    tiktok?: string;
-    twitter?: string;
-    threads?: string;
-    youtube?: string;
+    web?: string[];
+    instagram?: string[];
+    facebook?: string[];
+    tiktok?: string[];
+    twitter?: string[];
+    threads?: string[];
+    youtube?: string[];
 }
 
 export const talleres: Taller[] = [
     {
         id: 0,
         nombre: "invitades.talleres.nombres[0]",
+        personas: [""],
         dia: 23,
         diaSemana: "Viernes",
         horaI: "16:45",
         horaF: "17:45",
         sala: "",
         descripcion: "invitades.talleres.descripciones[0]",
-        icono: "",
-        fotos: ["",""],
+        icono: "fotos/talleres/binders01.jpg",
+        fotos: ["fotos/talleres/binders02.jpg","fotos/talleres/binders03.jpg"],
+        web: ["https://hibride.es/"],
+        instagram: ["https://www.instagram.com/hibride.binder/"],
+        facebook: [""],
+        tiktok: [""],
+        twitter: [""],
+        threads: [""],
+        youtube: [""]
     },
     {
         id: 1,
         nombre: "invitades.talleres.nombres[1]",
+        personas: [""],
         dia: 24,
         diaSemana: "Sábado",
         horaI: "11:15",
         horaF: "12:15",
         sala: "",
         descripcion: "invitades.talleres.descripciones[1]",
-        icono: "",
-        fotos: ["",""],
+        icono: "fotos/talleres/ojogarabato01.jpg",
+        fotos: ["fotos/talleres/ojogarabato02.jpg","fotos/talleres/ojogarabato03.jpg"],
+        web: [""],
+        instagram: ["https://www.instagram.com/ojo.garabato.vlc/"],
+        facebook: [""],
+        tiktok: [""],
+        twitter: [""],
+        threads: [""],
+        youtube: [""]
     },
     {
         id: 2,
         nombre: "invitades.talleres.nombres[2]",
+        personas: [""],
         dia: 24,
         diaSemana: "Sábado",
         horaI: "13:30",
         horaF: "14:30",
         sala: "",
         descripcion: "invitades.talleres.descripciones[2]",
-        icono: "",
-        fotos: ["",""],
+        icono: "fotos/talleres/zerowaste01.jpg",
+        fotos: ["fotos/talleres/zerowaste02.jpg","fotos/talleres/zerowaste03.jpg"],
+        web: ["https://one-more-tree.org/es/"],
+        instagram: ["https://www.instagram.com/one_more_tree_en/"],
+        facebook: ["https://www.facebook.com/one.more.tree.org"],
+        tiktok: [""],
+        twitter: [""],
+        threads: [""],
+        youtube: [""]
     },
     {
         id: 3,
         nombre: "invitades.talleres.nombres[3]",
+        personas: [""],
         dia: 25,
         diaSemana: "Domingo",
         horaI: "11:00",
         horaF: "12:00",
         sala: "",
         descripcion: "invitades.talleres.descripciones[3]",
-        icono: "",
-        fotos: ["",""],
+        icono: "fotos/talleres/grabado01.jpg",
+        fotos: ["fotos/talleres/grabado02.jpg","fotos/talleres/grabado03.jpg"],
+        web: ["https://cuca-balaguer.es/ "],
+        instagram: ["https://www.instagram.com/cucabalaguer/"],
+        facebook: ["https://www.facebook.com/CucaBalaguerArtesania?fref=ts"],
+        tiktok: [""],
+        twitter: ["https://x.com/CucaBalaguer"],
+        threads: [""],
+        youtube: [""]
     },
     {
         id: 4,
         nombre: "invitades.talleres.nombres[4]",
+        personas: [""],
         dia: 25,
         diaSemana: "Domingo",
         horaI: "13:15",
         horaF: "14:15",
         sala: "",
         descripcion: "invitades.talleres.descripciones[4]",
-        icono: "",
-        fotos: ["",""],
+        icono: "fotos/talleres/plantas01.jpg",
+        fotos: ["fotos/talleres/plantas02.jpg","fotos/talleres/plantas03.jpg"],
+        web: ["https://www.planteaenverde.es/ "],
+        instagram: ["https://www.instagram.com/planteaenverde/"],
+        facebook: ["https://www.facebook.com/planteaenverde/"],
+        tiktok: [""],
+        twitter: [""],
+        threads: [""],
+        youtube: ["https://www.youtube.com/@Planteaenverde"]
     },
 ]
 
@@ -486,72 +527,114 @@ export interface Charla {
     descripcion: string;
     icono: string;
     fotos: string[];
+    web?: string[];
+    instagram?: string[];
+    facebook?: string[];
+    tiktok?: string[];
+    twitter?: string[];
+    threads?: string[];
+    youtube?: string[];
 }
 
 export const charlas: Charla[] = [
     {
         id: 0,
-        nombre: "La Arquitectura del Cómic",
-        personas: ["Paco Roca"],
+        nombre: "invitades.charlas.nombres[0]",
+        personas: ["Mikel Herrán @putoMikel"],
         dia: 24,
         diaSemana: "Sábado",
         horaI: "10:00",
         horaF: "11:00",
         sala: "La Mutant",
-        descripcion: "",
-        icono: "",
-        fotos: ["",""],
+        descripcion: "invitades.charlas.descripciones[0]",
+        icono: "fotos/charlas/mikel01.jpg",
+        fotos: ["fotos/charlas/mikel02.jpg","fotos/charlas/mikel03.jpg"],
+        web: ["https://www.putomikel.com/"],
+        instagram: ["https://www.instagram.com/PutoMikel"],
+        facebook: [""],
+        tiktok: ["https://www.tiktok.com/@putomikel"],
+        twitter: ["https://x.com/putomikel"],
+        threads: [""],
+        youtube: ["https://www.youtube.com/@PutoMikel"]
     },
     {
         id: 1,
-        nombre: "Mesa Redonda: la Comunidad LGTBIQ+ en la Lectura",
-        personas: ["Iria G. Parente","Selene M. Pascual", "Myriam M. Lejardi", "Clara Cortés","Esther López Vera"],
+        nombre: "invitades.charlas.nombres[1]",
+        personas: ["Iria G. Parente y Selene M. Pascual", "Myriam M. Lejardi", "Clara Cortés","Esther López Vera"],
         dia: 24,
         diaSemana: "Sábado",
         horaI: "12:15",
         horaF: "13:15",
         sala: "La Mutant",
-        descripcion: "",
-        icono: "",
-        fotos: ["",""],
+        descripcion: "invitades.charlas.descripciones[1]",
+        icono: "fotos/charlas/lgbt01.jpg",
+        fotos: ["fotos/charlas/lgbt02.jpg","fotos/charlas/lgbt03.jpg"],
+        web: ["","","https://clarycorts.carrd.co/","https://essiel13.carrd.co/","","https://alanaportero.es/"],
+        instagram: ["https://www.instagram.com/iriayselene/","https://www.instagram.com/myriammlejardi/","https://instagram.com/clarycorts","https://www.instagram.com/essiebooks","https://www.instagram.com/virginiapetrod/",""],
+        facebook: ["","","https://facebook.com/claracortes118","","",""],
+        tiktok: ["https://tiktok.com/@iriayselene","https://www.tiktok.com/@myriammlejardi","","","",""],
+        twitter: ["https://x.com/iriayselene","","https://x.com/clarycorts","","",""],
+        threads: ["https://www.threads.net/@iriayselene","","","","",""],
+        youtube: ["","","","","",""]
     },
     {
         id: 2,
-        nombre: "",
+        nombre: "invitades.charlas.nombres[2]",
         personas: ["Marta Martínez"],
         dia: 24,
         diaSemana: "Sábado",
         horaI: "14:30",
         horaF: "15:30",
         sala: "La Mutant",
-        descripcion: "",
-        icono: "",
-        fotos: ["",""],
+        descripcion: "invitades.charlas.descripciones[2]",
+        icono: "fotos/charlas/marta01.jpg",
+        fotos: ["fotos/charlas/marta02.jpg","fotos/charlas/marta03.jpg"],
+        web: ["https://martamartinezgarcia.blogspot.com/"],
+        instagram: ["https://www.instagram.com/the_martian_martinez/ "],
+        facebook: [""],
+        tiktok: [""],
+        twitter: [""],
+        threads: [""],
+        youtube: [""]
     },
     {
         id: 3,
-        nombre: "Estudio Graffica",
-        personas: [""],
+        nombre: "invitades.charlas.nombres[3]",
+        personas: ["Víctor Palau","Ana Gea"],
         dia: 25,
         diaSemana: "Domingo",
         horaI: "12:00",
         horaF: "13:00",
         sala: "La Mutant",
-        descripcion: "",
-        icono: "",
-        fotos: ["",""],
+        descripcion: "invitades.charlas.descripciones[3]",
+        icono: "fotos/charlas/graffica01.jpg",
+        fotos: ["fotos/charlas/graffica02.jpg","fotos/charlas/graffica03.jpg"],
+        web: ["https://graffica.info/"],
+        instagram: ["https://www.instagram.com/grafficainfo/"],
+        facebook: [""],
+        tiktok: [""],
+        twitter: [""],
+        threads: [""],
+        youtube: [""]
     },
     {
         id: 4,
-        nombre: "Redes Sociales y Creatividad",
+        nombre: "invitades.charlas.nombres[4]",
         personas: ["Elena Yuuste"],
         dia: 25,
         diaSemana: "Domingo",
         horaI: "14:30",
         horaF: "15:30",
         sala: "La Mutant",
-        descripcion: "",
-        icono: "",
-        fotos: ["",""],
+        descripcion: "invitades.charlas.descripciones[4]",
+        icono: "fotos/charlas/elena01.jpg",
+        fotos: ["fotos/charlas/elena02.jpg","fotos/charlas/elena03.jpg"],
+        web: [""],
+        instagram: ["https://www.instagram.com/elenayuuste/ "],
+        facebook: [""],
+        tiktok: ["https://www.tiktok.com/@elenayuuste"],
+        twitter: [""],
+        threads: [""],
+        youtube: ["https://www.youtube.com/@elenayuuste"]
     },
 ]

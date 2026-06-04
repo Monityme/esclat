@@ -1,5 +1,4 @@
 <script setup lang="ts">
-    import WebFooter from '@/components/WebFooter.vue';
 
     import { mostrarCuentaAtras } from '../Layout.vue';
     mostrarCuentaAtras.value = false;
@@ -16,11 +15,11 @@
             <div style="grid-area: vacio2"></div>
             <div style="grid-area: vacio3"></div>
 
-            <div style="grid-area: caja1" class="bg-azuloscuro"></div>
-            <div style="grid-area: caja2" class="bg-azulclaro"></div>
+            <div style="grid-area: caja1" class="bg-[url('/texturas/color/azuloscuro02.jpg')] bg-left"></div>
+            <div style="grid-area: caja2" class="bg-[url('/texturas/color/azulclaro01.jpg')]"></div>
 
             <div style="grid-area: contenido"
-                class="bg-amarillo pb-5 px-5 h-full flex flex-row gap-5">
+                class="bg-[url('/texturas/color/amarillo03.jpg')] pb-5 px-5 h-full flex flex-row gap-5">
 
             </div>
         
@@ -36,7 +35,8 @@
     }
     
     .main {
-        background-image: url("/home/fondoHome01.jpg");
+        background-image: url("/fondos/fondo04.jpg");
+        background-size: 100%;
         background-position: cover;
         background-position: no-repeat;
         height: calc(100vh - 60px);
@@ -44,7 +44,7 @@
         grid-template-columns: 66% 24% 10%;
         grid-template-rows: 12% 88% ;
         grid-template-areas:
-        "vacio2 caja2 vacio3"    
-        "contenido vacio1 caja1";
+            "vacio2 caja2 vacio3"    
+            "contenido vacio1 caja1";
     }
 </style>

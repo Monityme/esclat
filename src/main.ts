@@ -66,14 +66,14 @@ const i18n = createI18n({
                 },
                 charlas: {
                     nombres: [
-                        'La Arquitectura del Cómic',
+                        '',
                         'Mesa Redonda: la Comunidad LGTBIQ+ en la Lectura',
                         '',
                         '',
                         'Redes Sociales y Creatividad',
                     ],
                     descripciones: [
-                        'Mikel Herrán es doctor en Arqueología y divulgador de historia en redes sociales a través de su perfil @putoMikel. Durante más de cuatro años ha trabajado en medios de radio como Carne cruda o RNE, y en YouTube cuenta con cientos de miles de suscriptores. El suyo es un canal de divulgación con un toque millennial, riguroso, provocador y atento a la inclusión de voces diversas en el discurso histórico.',
+                        'Mikel Herrán es doctor en Arqueología y divulgador de historia en redes sociales a través de su perfil putoMikel. Durante más de cuatro años ha trabajado en medios de radio como Carne cruda o RNE, y en YouTube cuenta con cientos de miles de suscriptores. El suyo es un canal de divulgación con un toque millennial, riguroso, provocador y atento a la inclusión de voces diversas en el discurso histórico.',
                         'Iria G. Parente, Selene M. Pascual, Myriam M. Lejardi, Clara Cortes, Esther López Vera, Virginia Petro De León y Alana S. Portero son autoras de la comunidad LGBT que nos hablaran sobre como rompieron en la industria y trajeron su punto de vista y vivencias a los libros en nuestras librerías. ',
                         'Licenciada por la Facultad de Bellas Artes de la Universidad de Barcelona, compagina el oficio de dibujante de cómics con su trabajo como profesora de un Grado Superior de Animación y 3D en y en los cursos y talleres de cómic e ilustración que imparte junto al poeta e ilustrador Josema Carrasco. Dará una charla sobre como es el trabajo de la industria del comic americano y europeo y como se puede empezar en estas.',
                         'Una charla de Víctor Palau y Ana Gea, fundadores de Gràffica, un medio dedicado en exclusiva al mundo del diseño, y en especial al ámbito del diseño gráfico, la creatividad y la cultura visual. Su vocación es crear un espacio donde los profesionales tengan un punto de información y referencia de lo que acontece en su sector. Así mismo, su interés es crear una plataforma que genere actividades complementarias, tanto en el ámbito de la información y divulgación, como en el ámbito de la formación, para ayudar a los profesionales a mejorar y reforzar su actividad.',
