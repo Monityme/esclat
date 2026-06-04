@@ -39,7 +39,26 @@
         height: calc(100vh - 60px);
     }
 
-    .main {
+    @media (max-width: 800px) {
+        .main {
+        background-image: url("/fondos/fondo04.jpg");
+        background-size: 100%;
+        background-position: cover;
+        background-position: no-repeat;
+        height: calc(100vh - 60px);
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 9% 77% 14%;
+        grid-template-areas:
+            "vacio1 caja1"
+            "contenido vacio3"
+            "vacio4 caja3";
+        }
+    
+    }
+
+    @media (min-width: 800px) {
+        .main {
         background-image: url("/fondos/fondo04.jpg");
         background-size: 100%;
         background-position: cover;
@@ -52,6 +71,10 @@
             "vacio1 caja1 vacio2"
             "contenido vacio3 caja2"
             "vacio4 caja3 vacio5";
+        }
+    
     }
+
+    /*  */
 
 </style>
