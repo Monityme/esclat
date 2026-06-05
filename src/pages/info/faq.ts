@@ -65,18 +65,7 @@ export const faqs: Info[] = [
         pregunta: 'faq.preguntas[6]',
         respuesta:'faq.respuestas[6]',
     },
-    {
-        id:7,
-        value: "item-7",
-        pregunta: 'faq.preguntas[7]',
-        respuesta:'faq.respuestas[7]',
-    },
-    {
-        id:8,
-        value: "item-8",
-        pregunta: 'faq.preguntas[8]',
-        respuesta:'faq.respuestas[8]',
-    },
+   
 
     
     // {

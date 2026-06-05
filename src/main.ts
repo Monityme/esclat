@@ -37,6 +37,7 @@ const i18n = createI18n({
                 'Queremos construir un espacio seguro para gente fuera de la norma, donde seamos','representados y escuchados',', creando una comunidad para iniciar un','movimiento de cuestionamiento y ruptura',
                 'Trabajamos en pos de un espacio libre y diverso, donde la identidad de género y/o la orientación sexual de las personas no sean cuestionadas ni criminalizadas, ofreciendo un espacio amigable con la comunidad LGTBIQ+. Nuestro compromiso con el medio ambiente es otro de los valores cruciales del festival, haciendo todo lo que está en nuestra mano para que el festival sea lo más sostenible posible. ',
             ],
+
             invitades: {
                 tabs: ['ARTISTAS','TALLERES','CHARLAS'],
                 descripcion: [
@@ -91,11 +92,39 @@ const i18n = createI18n({
             },
 
             faq: {
+                titulos: ['NORMAS', 'ESPACIO', 'SERVICIOS'],
                 apartados: ['Entradas', 'Adaptaciones', 'Servicios'],
                 preguntas:['¿Cuánto cuesta la entrada al festival?','¿Cuándo podré adquirir mis entradas?','He recibido el email de confirmación pero no encuentro mi entrada',
                 '¿Pueden entrar menores de edad?','¿Está el festival adaptado para personas con movilidad reducida?','¿Hay algún lugar o plataforma para que las personas con movilidad reducida puedan ver los conciertos?',
-                '¿Habrá comida en el festival?','¿Pregunta 2?','¿Pregunta 3?'],
-                respuestas:['Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta','Respuesta'],
+                '¿Habrá comida en el festival?',],
+                respuestas:['La entrada al festival es totalmente gratuita. No obstante, es importante inscribirse para garantizar tu acceso al evento y para que nosotres podamos controlar el aforo y garantizar la mejor experiencia posible.',
+                    'Las entradas están ya disponibles para reservar desde esta misma web, ve al apartado entradas e inscríbete. El día del evento, simplemente enseña el QR que verás adjunto en tu correo electrónico al staff. No es necesaria la impresión de las entradas.',
+                    'Las entradas vienen adjuntas en un segundo email, después del correo de confirmación. Si todavía sigues sin encontrarlas, no dudes en contactar con nosotros por cualquiera de nuestras redes sociales y haremos todo lo posible para ayudarte.',
+                    'Si, pueden acceder con un permiso de su tutora o tutor legal que está disponible en el apartado de entradas de la web. Este documento se tendrá que entregar en el escaneo de las entradas. Mientras que sea menor de 14 años, tendrá que ser acompañado de una persona mayor de edad a cargo.',
+                    'Si, las instalaciones de las Naves están preparadas para usuarios de silla de ruedas y baja movilidad.',
+                    'Si, en los lados de la sala de concierto se encuentra una zona preparada para sillas de ruedas donde podrán ver el concierto cómodamente. También habrá personas de nuestro staff dispuesto a ayudarlas en cualquier momento.',
+                    'Si, habrá puestos de food trucks en los patios del recinto donde los asistentes podrán probar diferentes tipos de comidas del todo el mundo como india, mexicana, italiana, etc. Con la versión vegana de cada una de estas.',],
+                normas: ['NORMAS DE ACCESO',
+                    'Se puede acceder al recinto solo a partir de la hora de apertura: 9.30 AM. Se podrá hacer cola en la puerta 1.',
+                    'No se permitirá la entrada', 'al recinto a', 'personas intoxicadas por alcohol u otras sustancias.', 'Al igual que solo se permitirá fumar en las zonas marcadas para fumadores.',
+                    'Todo aquel que no sea respetuoso', 'con las otras personas que vienen a disfrutar del evento y/o son parte del staff, o dañe el inmobiliario del evento', 'será retirado del recinto.','Además,','las manifestaciones de discurso de odio,','como la muestra de símbolos de esta misma índole,', 'se castigarán con la restricción de entrada.',
+                    'NORMAS PARA LOS CONCIERTOS',
+                    'Los asistentes menores de entre 14 y 16 años', 'deberán presentar en la entrada de los conciertos a los que asistan la', 'siguiente autorización','rellenada por sus progenitores o tutores legales.',
+                    'Los menores de 14 años', 'deberán ir acompañades obligatoriamente por una', 'persona adulta responsable', '(progenitores o tutores legales) para poder acceder a los conciertos.',
+                    'Se prohíbe la entrada a los conciertos', 'a quien porte objetos peligrosos (punzantes, cristal, explosivos...), botellas de vidrio, drogas, armas, objetos inflamables, punteros láser, aerosoles, comida o bebida. Si portas alguno de estos objetos este será', 'confiscado.'
+                ],
+                servicio: ['Comida',
+                    'Los food trucks proveerán de alimento a los participantes del evento con diferentes menús de diferentes comidas de todo el mundo, india, mexicana, italiana o española entre otros. Habrá opción vegana, celiaca y sin lactosa. La zona de food trucks estará situada en el patio 1.',
+                    'Baños',
+                    'Los baños estarán provistos de papel higiénico, jabón de manos, elementos de higiene como tampones y un kit de primeros auxilios. Estarán disponibles todo el día.',
+                    'Taquillas',
+                    'Las taquillas serán gratuitas y se podrán guardar los bienes de los asistentes, además, estarán vigilados por el staff en todo momento. A cada persona se le dará una ficha con un número que corresponderá con la taquilla con sus pertenencias. Para que la devolución sea rápida se pedirá hacer fila a los usuarios del servicio.',
+                    'Puntos de información',
+                    'Los puntos de información se situarán al lado de las taquillas. Se darán panfletos y folletos y se podrán hacer inscripciones para los talleres, charlas y conciertos si el aforo lo permite, dando prioridad a las inscripciones online.'
+                ],
+                espacio: ['¡No te pierdas en ningún momento!',
+                    'Ir en coche está muy bien, pero te agradeceríamos que usases el transporte público. Recuerda que puedes llegar con las líneas de metro L5, L6, L7, y L8; y con las líneas de autobús 4, 19, 30, 92, 94, 95 y 99. Gracias por colaborar en hacer ESCLAT un poco más sostenible.'
+                ],
             },
 
             entradas: {
@@ -187,11 +216,38 @@ const i18n = createI18n({
             },
             
             faq: {
+                titulos: ['NORMES', 'ESPAI', 'SERVICIS'],
                 apartados: ['Entrades','Adaptacions','Servicis'],
                 preguntas:["Quant costa l'entrada al festival?",'Quan podré adquirir les meues entrades?',"He rebut l'email de confirmació però no trobe la meua entrada",
                 "Poden entrar menors d'edat?",'Està el festival adaptat per a persones amb mobilitat reduïda?','Hi ha algun lloc o plataforma perquè les persones amb mobilitat reduïda puguen veure els concerts?',
-                'Hi haurà menjada en el festival?','Pregunta 2?','Pregunta 3?'],
-                respuestas:['Resposta','Resposta','Resposta','Resposta','Resposta','Resposta','Resposta','Resposta','Resposta'],
+                'Hi haurà menjada en el festival?',],
+                respuestas:['L\'entrada al festival és totalment gratuïta. No obstant això, és important inscriure\'s per a garantir el teu accés a l\'esdeveniment i perquè nosaltres puguem controlar l\'aforament i garantir la millor experiència possible.',
+                    'Les entrades estan ja disponibles per a reservar des d\'esta mateixa web, veu a l\'apartat entrades i inscriu-te. El dia de l\'esdeveniment, simplement ensenya el QR que veuràs adjunt en el teu correu electrònic al staff. No és necessària la impressió de les entrades.',
+                    'Les entrades venen adjuntes en un segon email, després del correu de confirmació. Si encara seguixes sense trobar-les, no dubtes a contactar amb nosaltres per qualsevol de les nostres xarxes socials i farem tot el possible per a ajudar-te.',
+                    'Si, poden accedir amb un permís de la seua tutora o tutor legal que està disponible en l\'apartat d\'entrades de la web. Este document s\'haurà d\'entregar en l\'escaneig de les entrades. Mentres que siga menor de 14 anys, haurà de ser acompanyat d\'una persona major d\'edat a càrrec.',
+                    'Si, les instal·lacions de les Naus estan preparades per a usuaris de cadira de rodes i baixa mobilitat.',
+                    'Si, en els costats de la sala de concert es troba una zona preparada per a cadires de rodes on podran veure el concert còmodament. També hi haurà persones del nostre staff disposat a ajudar-les en qualsevol moment.',
+                    'Si, hi haurà posats de food trucks als patis del recinte on els assistents podran provar diferents tipus de menjars del tothom com a índia, mexicana, italiana, etc. Amb la versió vegana de cada una d\'estes.'],
+                normas: ['NORMES D\'ACCÉS',
+                    'Es pot accedir al recinte sol a partir de l\'hora d\'obertura: 9.30 AM. Es podrà fer cua a la porta 1.',
+                    'No es permetrà l\'entrada', 'al recinte a ', 'persones intoxicades per alcohol o altres substàncies.', 'Igual que només es permetrà fumar en les zones marcades per a fumadors.',
+                    'Tot aquell que no siga respectuós', 'amb les altres persones que venen a gaudir de l\'esdeveniment i/o són part del staff, o danye l\'immobiliari de l\'esdeveniment', 'serà retirat del recinte.','A més,','les manifestacions de discurs d\'odi,','com la mostra de símbols d\'esta mateixa índole,', 'es castigaran amb la restricció d\'entrada.',
+                    'NORMES PER ALS CONCERTS',
+                    'Els assistents menors d\'entre 14 i 16 anys', 'hauran de presentar en l\'entrada dels concerts als quals assistisquen la', 'següent autorització','emplenada pels seus progenitors o tutors legals.',
+                    'Els menors de 14 anys', 'hauran d\'anar acompanyats obligatòriament per una', 'persona adulta responsable', '(progenitors o tutors legals) per a poder accedir als concerts.',
+                    'Es prohibix l\'entrada als concerts', 'a qui porte objectes perillosos (punxants, cristall, explosius...), botelles de vidre, drogues, armes, objectes inflamables, capdavanters làser, aerosols, menjar o beguda. Si portes algun d\'estos objectes este serà', 'confiscat.'],
+                servicio: ['Menjar',
+                    'Els food trucks proveiran d\'aliment als participants de l\'esdeveniment amb diferents menús de diferents menjades de tot el món, índia, mexicana, italiana o espanyola entre altres. Hi haurà opció vegana, celíaca i sense lactosa. La zona de food trucks estarà situada al pati 1.',
+                    'Banys',
+                    'Els banys estaran proveïts de paper higiènic, sabó de mans, elements d\'higiene com a tampons i un kit de primers auxilis. Estaran disponibles tot el dia.',
+                    'Taquilles',
+                    'Les taquilles seran gratuïtes i es podran guardar els béns dels assistents, a més, estaran vigilats pel staff en tot moment. A cada persona se li donarà una fitxa amb un número que correspondrà amb la taquilla amb les seues pertinences. Perquè la devolució siga ràpida es demanarà fer fila als usuaris del servici.',
+                    'Punts d\'informació',
+                    'Els punts d\'informació se situaran al costat de les taquilles. Es donaran pamflets i fullets i es podran fer inscripcions per als tallers, xarrades i concerts si l\'aforament ho permet, donant prioritat a les inscripcions en línia.'
+                ],    
+                espacio: ['No et perdes en cap moment!',
+                    'Anar amb cotxe està molt bé, però t\'agrairíem que usares el transport públic. Recorda que pots arribar amb les línies de metro L5, L6, L7, i L8; i amb les línies d\'autobús 4, 19, 30, 92, 94, 95 i 99. Gràcies per col·laborar a fer ESCLAT un poc més sostenible.'
+                ],
             },
 
             entradas: {

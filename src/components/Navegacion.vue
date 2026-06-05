@@ -58,13 +58,13 @@
 
         <NavigationMenu>
 
-            <NavigationMenuList class="gap-8">
+            <!-- <NavigationMenuList class="gap-8">
 
                 <NavigationMenuItem>
                     <RouterLink to="/" @click="mostrarCuentaAtras = true">
                             <NavigationMenuLink>
-                                <LogoEsclatNoSubs class="h-6 ml-4 fill-white stroke-white hover:fill-amarillo transition-all duration-200 animation-ease-in-out"/> <!-- TODO - Cambiar por el logo de ESCLAT-->
-                            </NavigationMenuLink>
+                                <LogoEsclatNoSubs class="h-6 ml-4 fill-white stroke-white hover:fill-amarillo transition-all duration-200 animation-ease-in-out"/> 
+                                                        </NavigationMenuLink>
                     </RouterLink>
                 </NavigationMenuItem>
 
@@ -108,7 +108,7 @@
                     </RouterLink>
                 </NavigationMenuItem>
 
-            </NavigationMenuList>
+            </NavigationMenuList> -->
 
         </NavigationMenu>
 
