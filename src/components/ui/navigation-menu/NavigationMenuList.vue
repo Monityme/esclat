@@ -18,7 +18,7 @@ const forwardedProps = useForwardProps(delegatedProps)
     v-bind="forwardedProps"
     :class="
       cn(
-        'group flex flex-1 list-none items-center justify-center gap-1',
+        'group flex flex-1 list-none items-center justify-center gap-1 max-[700px]:flex-col max-[700px]:items-start',
         props.class,
       )
     "

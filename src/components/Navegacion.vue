@@ -1,5 +1,7 @@
 <script setup lang="ts">
     import LogoEsclatNoSubs from './logos/organiza/LogoEsclatNoSubs.vue';
+    import { onMounted, onUnmounted, ref } from 'vue';
+    import { Menu, X } from '@lucide/vue';
 
     import {
         NavigationMenu,
@@ -15,12 +17,45 @@
     import { useI18n } from 'vue-i18n';
     const { t } = useI18n({useScope: 'global'});
     
-    import { mostrarCuentaAtras } from '@/pages/Layout.vue';   
+    import { mostrarCuentaAtras } from '@/pages/Layout.vue';
+
+    const menuDrop = ref<boolean>(false)
+    const chiquitin = ref<boolean>(false)
+
+    const handleResize = () => {
+        if(window.innerWidth <= 700){
+            menuDrop.value = false;
+            chiquitin.value = true;
+        } else if (window.innerWidth >  700){
+            menuDrop.value = true;
+            chiquitin.value = false;
+        }
+    }
+
+    onMounted( () => {
+        handleResize()
+        window.addEventListener('resize', handleResize)
+    } )
+
+    onUnmounted ( () => {
+        window.removeEventListener('resize', handleResize)
+    } )
 
 </script>
 
 <template>
-    <div id="contenedor" class="fixed top-0 z-50 w-screen flex justify-between items-center pl-4 pr-8 h-[60px]">
+    <div id="contenedor"
+        class="fixed top-0 z-50 w-screen flex justify-between items-center pl-4 pr-8 h-[60px]
+            max-[700px]:flex-col max-[700px]:justify-center"
+    >
+        <Toggle
+            class="fixed left-4 min-[700px]:hidden"
+            @click="menuDrop = !menuDrop"
+        >
+            <Menu v-if="!menuDrop" class="iconoMenu"/>
+            <X v-if="menuDrop" class="iconoX"/>
+        </Toggle>
+
         <NavigationMenu>
 
             <NavigationMenuList class="gap-8">

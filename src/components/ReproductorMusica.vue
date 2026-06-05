@@ -24,7 +24,6 @@
             playMusica.value = true;
             giroDisco.value = true;
         }
-        
     }
 
     function isPause() {
@@ -62,7 +61,8 @@
 </script>
 
 <template>
-    <div class="w-full h-full flex justify-center items-center gap-3">
+    <div class="w-full h-full flex justify-center items-center gap-6">
+
         <div class="container">
             <div class="plate">
                 <div
@@ -84,30 +84,59 @@
             </div>
 
         </div>
-        <Play
-            class="text-white fill-white"
-            :class="{
-                'hover:text-amarillo hover:fill-amarillo cursor-pointer' : !playMusica,
-                'opacity-50': playMusica
-            }"
-            @click="isPlay"
-        />
-        <Pause
-            class="text-white fill-white"
-            :class="{
-                'hover:text-amarillo hover:fill-amarillo cursor-pointer' : playMusica,
-                'opacity-50': !playMusica
-            }"
-            @click="isPause"
-        />
-        <Square class="text-white fill-white hover:text-amarillo hover:fill-amarillo cursor-pointer"
-            @click="isStop"
-        />
+
+        <div class="grid_control w-full h-28 mt-2 grid grid-rows-2 gap-3">
+
+            <ul class="wave-menu h-full">
+                <li :style="{animationPlayState: playMusica ? 'running' : 'paused', height: giroDisco? '3rem' : '0.3rem', marginTop: giroDisco? '1rem' : '2.5rem'}"></li>
+                <li :style="{animationPlayState: playMusica ? 'running' : 'paused', height: giroDisco? '3rem' : '0.3rem', marginTop: giroDisco? '1rem' : '2.5rem'}"></li>
+                <li :style="{animationPlayState: playMusica ? 'running' : 'paused', height: giroDisco? '3rem' : '0.3rem', marginTop: giroDisco? '1rem' : '2.5rem'}"></li>
+                <li :style="{animationPlayState: playMusica ? 'running' : 'paused', height: giroDisco? '3rem' : '0.3rem', marginTop: giroDisco? '1rem' : '2.5rem'}"></li>
+                <li :style="{animationPlayState: playMusica ? 'running' : 'paused', height: giroDisco? '3rem' : '0.3rem', marginTop: giroDisco? '1rem' : '2.5rem'}"></li>
+                <li :style="{animationPlayState: playMusica ? 'running' : 'paused', height: giroDisco? '3rem' : '0.3rem', marginTop: giroDisco? '1rem' : '2.5rem'}"></li>
+                <li :style="{animationPlayState: playMusica ? 'running' : 'paused', height: giroDisco? '3rem' : '0.3rem', marginTop: giroDisco? '1rem' : '2.5rem'}"></li>
+                <li :style="{animationPlayState: playMusica ? 'running' : 'paused', height: giroDisco? '3rem' : '0.3rem', marginTop: giroDisco? '1rem' : '2.5rem'}"></li>
+                <li :style="{animationPlayState: playMusica ? 'running' : 'paused', height: giroDisco? '3rem' : '0.3rem', marginTop: giroDisco? '1rem' : '2.5rem'}"></li>
+                <li :style="{animationPlayState: playMusica ? 'running' : 'paused', height: giroDisco? '3rem' : '0.3rem', marginTop: giroDisco? '1rem' : '2.5rem'}"></li>
+            </ul>
+
+            <div class="w-full h-full flex justify-center items-center gap-4">
+        
+                <Play
+                    class="text-white fill-white"
+                    :class="{
+                        'hover:text-amarillo hover:fill-amarillo cursor-pointer' : !playMusica,
+                        'opacity-50': playMusica
+                    }"
+                    @click="isPlay"
+                />
+                <Pause
+                    class="text-white fill-white"
+                    :class="{
+                        'hover:text-amarillo hover:fill-amarillo cursor-pointer' : playMusica,
+                        'opacity-50': !playMusica
+                    }"
+                    @click="isPause"
+                />
+                <Square class="text-white fill-white hover:text-amarillo hover:fill-amarillo cursor-pointer"
+                    @click="isStop"
+                />
+                
+            </div>
+
+        </div>
         
     </div>
 </template>
 
 <style scoped>
+
+    .grid-control {
+        grid-template-rows: 70% 30%;
+    }
+
+/**
+** TOCADISCOS */
 
     .container {
         width: 7rem;
@@ -206,6 +235,106 @@
         position: absolute;
         bottom: 0;
         margin-bottom: 0.2rem;
+    }
+
+/** 
+** ONDAS DE SONIDO */
+
+    .wave-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.7rem;
+        transition: ease 0.2s;
+    }
+
+    .wave-menu li {
+        list-style: none;
+        height: 3rem;
+        width: 0.2rem;
+        background: var(--color-amarillo);
+        animation-name: wave1;
+        animation-duration: 0.3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        transition: ease 0.2s;
+    }
+
+    .wave-menu li:nth-child(2) {
+        animation-name: wave2;
+        animation-delay: 0.2s;
+    }
+
+    .wave-menu li:nth-child(3) {
+        animation-name: wave3;
+        animation-delay: 0.23s;
+        animation-duration: 0.4s;
+    }
+
+    .wave-menu li:nth-child(4) {
+        animation-name: wave4;
+        animation-delay: 0.1s;
+        animation-duration: 0.3s;
+    }
+
+    .wave-menu li:nth-child(5) {
+        animation-delay: 0.5s;
+    }
+
+    .wave-menu li:nth-child(6) {
+        animation-name: wave2;
+        animation-duration: 0.5s;
+    }
+
+    .wave-menu li:nth-child(8) {
+        animation-name: wave4;
+        animation-delay: 0.4s;
+        animation-duration: 0.25s;
+    }
+
+    .wave-menu li:nth-child(9) {
+        animation-name: wave3;
+        animation-delay: 0.15s;
+    }
+
+    @keyframes wave1 {
+        from {
+        transform: scaleY(1);
+        }
+
+        to {
+        transform: scaleY(0.5);
+        }
+    }
+
+    @keyframes wave2 {
+        from {
+        transform: scaleY(0.3);
+        }
+
+        to {
+        transform: scaleY(0.6);
+        }
+    }
+
+    @keyframes wave3 {
+        from {
+        transform: scaleY(0.6);
+        }
+
+        to {
+        transform: scaleY(0.8);
+        }
+    }
+
+    @keyframes wave4 {
+        from {
+        transform: scaleY(0.2);
+        }
+
+        to {
+        transform: scaleY(0.5);
+        }
     }
 
 </style>

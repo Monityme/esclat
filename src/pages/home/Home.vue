@@ -21,8 +21,11 @@
     <div class="fondo w-full max-w-screen">
         <div class="seccion1 h-full">
         
-            <div class="pl-14 pt-10 text-amarillo font-bold text-3xl" style="grid-area: logo">
-                <LogoEsclat class="h-60" />
+            <div style="grid-area: logo"
+                class="pl-14 pt-10 text-amarillo font-bold text-3xl
+                    max-[700px]:pl-6 max-[700px]:pt-8"
+            >
+                <LogoEsclat class="h-60 max-[700px]:h-30" />
             </div>
             <div style="grid-area: vacio1"></div>
             <div style="grid-area: vacio2"></div>
@@ -33,7 +36,9 @@
             <div style="grid-area: caja2" class="bg-[url('/texturas/color/azuloscuro03.jpg')] bg-center"></div>
 
             <div style="grid-area: texto1" class="fecha bg-[url('/texturas/color/amarillo01.jpg')] text-4xl flex flex-col gap-2 justify-center items-center">
-                <Fechas class="max-h-[70%] max-w-[70%]"/>
+                <Fechas class="text-azuloscuro fill-azuloscuro max-h-[70%] max-w-[70%]
+                    max-[700px]:h-[55%] max-[700px]:-ml-25 max-[700px]:-mb-5"
+                />
             </div>
             <div style="grid-area: texto2" class="bg-[url('/texturas/color/azulclaro01.jpg')] bg-center flex flex-wrap text-xl items-center px-5">
                 <span>{{ t('home.texto1[0]') }}<span class="font-bold">{{ t('home.texto1[1]') }}</span>{{ t('home.texto1[2]') }}<span class="font-bold">{{ t('home.texto1[3]') }}</span></span>
@@ -46,14 +51,20 @@
     
     <div class="seccion2 h-full w-full max-w-screen">
 
-        <div style="grid-area: video" class="bg-gray-800 flex justify-center items-center"><CirclePlay class="text-white h-30 w-auto"/></div>
-        <div style="grid-area: texto" class="bg-[url('/texturas/color/amarillo03.jpg')] flex flex-col justify-center items-start gap-5 p-5 text-xl ">
+        <div style="grid-area: video"
+            class="bg-gray-800 flex justify-center items-center aspect-video">
+            <CirclePlay class="text-white h-30 w-auto"/>
+        </div>
+        <div style="grid-area: texto"
+            class="bg-[url('/texturas/color/amarillo03.jpg')] flex flex-col justify-center items-start gap-5 p-5 text-xl
+            max-[700px]:hidden"
+        >
             <span class="font-bold">{{ t('home.texto2[0]') }}</span><span>{{ t('home.texto2[1]') }}</span><span class="font-bold flex flex-col w-full">{{ t('home.texto2[2]') }} <span class="self-end font-bold">{{ t('home.texto2[3]') }}</span></span>
         </div>
 
     </div>
 
-    <div class="seccion3">
+    <div class="seccion3 h-50">
         
         <Carrusel/>
 
@@ -71,13 +82,16 @@
         <div style="grid-area: caja3_4" class="bg-[url('/texturas/color/azuloscuro03.jpg')] bg-bottom-right"></div>
 
         
-        <div style="grid-area: texto3_1" class="botonEntradas text-black flex flex-row items-center font-bold text-4xl">
+        <div style="grid-area: texto3_1"
+            class="botonEntradas text-black flex flex-row items-center font-bold text-4xl
+                max-[700px]:text-2xl max-[700px]:justify-start"
+        >
             <RouterLink to="/entradas" class="flex flex-row items-center max-w-full">
-                <div class="pl-12">
+                <div class="pl-12 max-[700px]:pl-5">
                     <span class="">{{ t('home.texto3[0]') }}</span>
-                    <span class="flex text-5xl">{{ t('home.texto3[1]') }}</span>
+                    <span class="flex text-5xl max-[700px]:text-3xl">{{ t('home.texto3[1]') }}</span>
                 </div>
-                <Flecha class="h-20 -ml-10"/>
+                <Flecha class="h-20 -ml-10 max-[700px]:h-15 max-[700px]:-ml-5"/>
             </RouterLink>
         </div>
         
@@ -87,74 +101,133 @@
 
 <style scoped>
 
-    .fondo {
-        background-image: url("/home/fondoHome01.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: calc(100vh - 120px);
+    @media (max-width: 700px){
+        .fondo {
+            background-image: url("/home/fondoHome01.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: calc(100vh - 120px);
+        }
+        .seccion1 {
+            margin-top: 120px;
+            display: grid;
+            grid-template-columns: 80% 20%;
+            grid-template-rows: 32% 25% 15% 20% 8%;
+            grid-template-areas:
+                "logo vacio1"
+                "texto1 vacio2"
+                "vacio3 caja1"
+                "texto2 vacio4 "
+                "vacio5 caja2";
+        }
+        .seccion2 {
+        
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-areas: "video";
+        }
+        .seccion3 {
+            display: grid;
+            grid-template-columns: 80% 20%;
+            grid-template-rows: 20% 20% 60%;
+            grid-template-areas:
+                "caja3_1 vacio3_1"
+                "vacio3_2 caja3_2"
+                "texto3_1 vacio3_3"
+        }
+        .botonEntradas {
+            cursor: pointer;
+            background-color: black;
+            background-image: url("/texturas/color/amarillo01.jpg");
+            transition-timing-function: var(--ease-in-out);
+            transition-duration: 400ms;
+            transition-property: all;
+        }
+        .botonEntradas:hover {
+            background-image: none;
+            color: var(--color-amarillo);
+        }
+        
+        .botonEntradas svg {
+            transition-timing-function: var(--ease-in-out);
+            transition-duration: 400ms;
+            transition-property: all;
+        }
+        .botonEntradas:hover svg {
+            margin-left: 0rem;
+        }
     }
 
-    .seccion1 {
-        margin-top: 120px;
-        display: grid;
-        grid-template-columns: 66% 24% 10%;
-        grid-template-rows: 24% 42% 22% 12%;
-        grid-template-areas:
-            "logo texto1 vacio1"
-            "logo vacio2 caja1"
-            "logo texto2 vacio3"
-            "caja2 vacio4 vacio4";
-    }
+    @media (min-width: 700px){
+        .fondo {
+            background-image: url("/home/fondoHome01.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: calc(100vh - 120px);
+        }
 
-    .seccion2 {
-        height: calc(100vh - 120px);
-        display: grid;
-        grid-template-columns: 66% 34%;
-        grid-template-areas: "video texto";
-        white-space: pre-line;
-    }
+        .seccion1 {
+            margin-top: 120px;
+            display: grid;
+            grid-template-columns: 66% 24% 10%;
+            grid-template-rows: 24% 42% 22% 12%;
+            grid-template-areas:
+                "logo texto1 vacio1"
+                "logo vacio2 caja1"
+                "logo texto2 vacio3"
+                "caja2 vacio4 vacio4";
+        }
 
-    .seccion3 {
-        height: calc(100vh - 120px);
-        display: grid;
-        grid-template-columns: 33% 33% 24% 10%;
-        grid-template-rows: 12% 30% 28% 30%;
-        grid-template-areas:
-            "caja3_1 caja3_1 vacio3_1 vacio3_1"
-            "vacio3_2 vacio3_3 caja3_2 vacio3_4"
-            "vacio3_2 texto3_1 vacio3_5 caja3_3"
-            "vacio3_2 vacio3_6 caja3_4 vacio3_7"
-    }
+        .seccion2 {
+            height: calc(100vh - 120px);
+            display: grid;
+            grid-template-columns: 66% 34%;
+            grid-template-areas: "video texto";
+            white-space: pre-line;
+        }
 
-    .botonEntradas {
-        cursor: pointer;
-        background-color: black;
-        background-image: url("/texturas/color/amarillo01.jpg");
-        transition-timing-function: var(--ease-in-out);
-        transition-duration: 400ms;
-        transition-property: all;
-    }
+        .seccion3 {
+            height: calc(100vh - 120px);
+            display: grid;
+            grid-template-columns: 33% 33% 24% 10%;
+            grid-template-rows: 12% 30% 28% 30%;
+            grid-template-areas:
+                "caja3_1 caja3_1 vacio3_1 vacio3_1"
+                "vacio3_2 vacio3_3 caja3_2 vacio3_4"
+                "vacio3_2 texto3_1 vacio3_5 caja3_3"
+                "vacio3_2 vacio3_6 caja3_4 vacio3_7"
+        }
 
-    .botonEntradas:hover {
-        background-image: none;
-        color: var(--color-amarillo);
+        .botonEntradas {
+            cursor: pointer;
+            background-color: black;
+            background-image: url("/texturas/color/amarillo01.jpg");
+            transition-timing-function: var(--ease-in-out);
+            transition-duration: 400ms;
+            transition-property: all;
+        }
+
+        .botonEntradas:hover {
+            background-image: none;
+            color: var(--color-amarillo);
+        }
+        
+        .botonEntradas svg {
+            transition-timing-function: var(--ease-in-out);
+            transition-duration: 400ms;
+            transition-property: all;
+        }
+
+        .botonEntradas:hover svg {
+            margin-left: 0rem;
+        }
+
+        .seccion3 {
+            background-image: url("/fotos/fondoHome01.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
     }
     
-    .botonEntradas svg {
-        transition-timing-function: var(--ease-in-out);
-        transition-duration: 400ms;
-        transition-property: all;
-    }
-
-    .botonEntradas:hover svg {
-        margin-left: 0rem;
-    }
-
-    .seccion3 {
-        background-image: url("/fotos/fondoHome01.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
 </style>
 

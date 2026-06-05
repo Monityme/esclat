@@ -213,19 +213,39 @@
         height: calc(100vh - 60px);
     }
 
-    .main {
-        background-image: url("/fondos/fondo07.jpg");
+    @media (max-width: 700px) {
+        .main {
+        background-image: url("/fondos/fondo04.jpg");
         background-size: 100%;
         background-position: cover;
         background-position: no-repeat;
         height: calc(100vh - 60px);
         display: grid;
-        grid-template-columns: 66% 24% 10%;
+        grid-template-columns: 80% 20%;
         grid-template-rows: 9% 77% 14%;
         grid-template-areas:
-            "vacio1 caja1 vacio2"
-            "contenido vacio3 caja2"
-            "vacio4 caja3 vacio5";
+            "vacio1 caja1"
+            "contenido vacio3"
+            "vacio4 caja3";
+        }
+    
+    }
+
+    @media (min-width: 700px) {
+        .main {
+            background-image: url("/fondos/fondo07.jpg");
+            background-size: 100%;
+            background-position: cover;
+            background-position: no-repeat;
+            height: calc(100vh - 60px);
+            display: grid;
+            grid-template-columns: 66% 24% 10%;
+            grid-template-rows: 9% 77% 14%;
+            grid-template-areas:
+                "vacio1 caja1 vacio2"
+                "contenido vacio3 caja2"
+                "vacio4 caja3 vacio5";
+        }
     }
     
     .tabla {

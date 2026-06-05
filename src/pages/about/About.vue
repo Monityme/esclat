@@ -29,10 +29,21 @@
                 class="bg-[url('/texturas/color/amarillo03.jpg')] px-5 h-full w-full flex flex-col gap-15 items-center justify-center">
                 <LogoEsclatNoSubs class="w-[40%]"/>
                 <div class="flex w-full flex-col gap-5 text-xl px-5">
-                    <span>{{ t('about[0]') }}</span>
-                    <span>{{ t('about[1]') }}</span>
-                    <span>{{ t('about[2]') }}</span>
-                    <span>{{ t('about[3]') }}</span>
+                    <p>
+                        {{ t('about[0]') }}
+                        <span class="font-black">{{ t('about[1]') }}</span>
+                    </p>
+                    <p>
+                        {{ t('about[2]') }}
+                        <span class="font-black">{{ t('about[3]') }}</span>
+                        {{ t('about[4]') }}
+                    </p>
+                    <p>
+                        {{ t('about[5]') }} 
+                        <span class="font-black">{{ t('about[6]') }}</span>
+                        {{ t('about[7]') }} 
+                        <span class="font-black">{{ t('about[8]') }}</span>
+                    </p>
                 </div>
             </div>
         
@@ -43,23 +54,43 @@
 
 <style scoped>
 
+    
     .principal {
         height: calc(100vh - 60px);
         white-space: pre-line;
     }
+
+    @media (max-width: 700px) {
+        .main {
+            background-image: url("/home/fondoHome01.jpg");
+            background-position: cover;
+            background-position: no-repeat;
+            height: calc(100vh - 60px);
+            display: grid;
+            grid-template-columns: 80% 20%;
+            grid-template-rows: 12% 76% 12% ;
+            grid-template-areas:
+                "vacio2 caja2"    
+                "contenido vacio1"
+                "vacio3 caja1";
+        }
     
-    .main {
-        background-image: url("/fondos/fondo04.jpg");
-        background-size: 100%;
-        background-position: cover;
-        background-position: no-repeat;
-        height: calc(100vh - 60px);
-        display: grid;
-        grid-template-columns: 66% 24% 10%;
-        grid-template-rows: 12% 88% ;
-        grid-template-areas:
-            "vacio2 caja2 vacio3"    
-            "contenido vacio1 caja1";
+    }
+
+    @media (min-width: 700px) {
+        .main {
+            background-image: url("/fondos/fondo04.jpg");
+            background-size: 100%;
+            background-position: cover;
+            background-position: no-repeat;
+            height: calc(100vh - 60px);
+            display: grid;
+            grid-template-columns: 66% 24% 10%;
+            grid-template-rows: 12% 88% ;
+            grid-template-areas:
+                "vacio2 caja2 vacio3"    
+                "contenido vacio1 caja1";
+        }
     }
 
 </style>
