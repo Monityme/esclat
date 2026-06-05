@@ -57,9 +57,10 @@
 
 <template>
     <div class="galeriaInvitades absolute flex opacity-100 top-0 justify-center items-center w-full h-screen z-99 bg-black/75">
-        <div class="w-[70%] h-[90%] fixed max-[700px]:w-[85%] max-[700px]:h-[93%]">
+        <div class="w-[70%] h-[90%] fixed max-[768px]:w-[85%] max-[768px]:h-[93%]">
 
-            <div class=" z-100 botonCerrar absolute top-2 right-2 w-8 h-8 bg-black flex items-center justify-center text-amarillo hover:text-black hover:bg-amarillo cursor-pointer"
+            <div class=" z-100 botonCerrar absolute top-2 right-2 w-8 h-8 bg-black flex items-center justify-center text-amarillo hover:text-black hover:bg-amarillo cursor-pointer
+            max-[768px]:h-5 max-[768px]:w-5"
                 @click="mostrarGaleriaArtistas = false"
             >
                 <X/>
@@ -88,19 +89,19 @@
                             <div style="grid-area: caja2" class="bg-[url('/texturas/color/amarillo02.jpg')] bg-size-[500%]"></div>
 
                             <div style="grid-area: titulo" class="bg-[url('/texturas/color/azuloscuro03.jpg')] bg-bottom-left text-amarillo font-bold text-5xl flex flex-row py-3 px-8 w-fill h-fill
-                                min-[700px]:text-5xl min-[700px]:px-8 max-[700px]:text-xl max-[700px]:px-6"
+                                min-[768px]:text-5xl min-[768px]:px-8 max-[768px]:text-lg/5 max-[768px]:px-6"
                             >
-                                <span class="flex-1 flex overflow-visible items-center text-nowrap">
+                                <span class="flex-1 flex overflow-visible items-center text-nowrap max-[768px]:text-wrap">
                                     {{ artista.nombre }}
                                 </span>
                                 <span class="flex-1 flex text-nowrap items-end justify-end text-xl text-right
-                                    min-[700px]:text-2xl max-[700px]:text-sm"
+                                    min-[768px]:text-2xl max-[768px]:text-xs"
                                 >
-                                    {{ t(artista.diaSemana) }} {{ artista.dia }}<br>{{ artista.horaI }} - {{ artista.horaF }}
+                                    {{ artista.dia }}.10.26<br>{{ artista.horaI }}
                                 </span>
                             </div>
                             <div style="grid-area: texto" class="descripcion bg-[url('/texturas/color/azulclaro04.jpg')] px-6 pb-4 flex items-end
-                                min-[700px]:text-md max-[700px]:text-xs"
+                                max-[1000px]:text-xs"
                             >
                                 {{ t(artista.descripcion) }}
                             </div>
@@ -135,7 +136,7 @@
 
 <style scoped>
 
-     @media (max-width: 700px) {
+     @media (max-width: 768px) {
         .gridGeneral {
         display: grid;
         grid-template-columns: 25% 75%;
@@ -146,7 +147,8 @@
             "img3 musica"
         }
     }
-    @media (min-width: 700px){
+
+    @media (min-width: 768px){
         .gridGeneral {
             display: grid;
             grid-template-columns: 15% 20% 65%;

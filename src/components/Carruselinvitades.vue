@@ -57,11 +57,13 @@
                             <div style="grid-area: caja1" class="bg-[url('/texturas/color/rojo01.jpg')]"></div>
                             <div style="grid-area: caja2" class="bg-[url('/texturas/color/amarillo02.jpg')] bg-size-[500%]"></div>
 
-                            <div style="grid-area: titulo" class="bg-[url('/texturas/color/azuloscuro03.jpg')] bg-bottom-left text-amarillo font-bold text-5xl flex flex-row py-3 px-8 w-fill h-fill">
-                                <span class="flex-1 flex overflow-visible items-center text-wrap">{{ t(invitade.nombre) }}</span>
-                                <span class="flex-1 flex text-nowrap items-end justify-end text-2xl text-right">{{ invitade.dia }}.10.26<br>{{ invitade.horaI }}</span>
+                            <div style="grid-area: titulo" class="bg-[url('/texturas/color/azuloscuro03.jpg')] bg-bottom-left text-amarillo font-bold text-5xl flex flex-row py-3 px-8 w-fill h-fill
+                                min-[768px]:text-5xl min-[768px]:px-8 max-[768px]:text-base/4 max-[768px]:px-6">
+                                <span class="flex-1 flex overflow-visible items-center max-[768px]:text-wrap">{{ t(invitade.nombre) }}</span>
+                                
                             </div>
-                            <div style="grid-area: texto" class="descripcion bg-[url('/texturas/color/azulclaro04.jpg')] px-6 pb-4 flex items-end text-md">{{ t(invitade.descripcion) }}</div>
+                            <div style="grid-area: texto" class="descripcion bg-[url('/texturas/color/azulclaro04.jpg')] px-6 pb-4 flex items-end
+                                max-[1000px]:text-xs">{{ t(invitade.descripcion) }}</div>
                             <div style="grid-area: musica" class="bg-black flex items-center justify-center">
 
                                 <!-- ** Aquí van las RRSS -->
@@ -84,14 +86,28 @@
 
 <style scoped>
 
-    .gridGeneral {
+    @media (max-width: 768px) {
+        .gridGeneral {
         display: grid;
-        grid-template-columns: 15% 20% 65%;
-        grid-template-rows: 25% 50% 25%;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 11% 65% 20%;
         grid-template-areas:
-            "img1 titulo titulo"
-            "caja1 img2 texto"
-            "img3 caja2 musica"
+            "img1 titulo"
+            "caja1 texto"
+            "img3 musica"
+        }
+    }
+
+    @media (min-width: 768px){
+        .gridGeneral {
+            display: grid;
+            grid-template-columns: 15% 20% 65%;
+            grid-template-rows: 25% 50% 25%;
+            grid-template-areas:
+                "img1 titulo titulo"
+                "caja1 img2 texto"
+                "img3 caja2 musica"
+        }
     }
 
     .descripcion {
