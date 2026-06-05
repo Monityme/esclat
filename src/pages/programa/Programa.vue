@@ -2,6 +2,8 @@
 
     import { MicVocal, MessagesSquare, PencilRuler } from 'lucide-vue-next';
     import { mostrarCuentaAtras } from '../Layout.vue';
+    import ScrollArea from '@/components/ui/scroll-area/ScrollArea.vue';
+
     mostrarCuentaAtras.value = false;
 
     import {
@@ -22,7 +24,6 @@
         Ptalleres24, Pcharlas24, Pconciertos24,
         Ptalleres25, Pcharlas25, Pconciertos25,
     } from '../programacion.ts';
-
 
 
 </script>
@@ -64,34 +65,59 @@
 
                 <!-- ** VIERNES -->
 
-                    <TabsContent value="viernes" class="tabla w-full h-full grid grid-cols-3 gap-5">
+                    <TabsContent value="viernes" class="tabla w-full h-full grid grid-cols-3 gap-5 pt-2">
                         
                         <div style="grid-area: conciertos" class="flex flex-col h-full">
-                            <div class="text-2xl font-bold w-full h-fit flex flex-row gap-3 items-center py-3"><MicVocal /> {{ t('tipos[0]') }}</div>
-                            <div class="w-full h-full flex flex-col gap-2">
+                            <div class="text-2xl font-bold w-full h-fit flex flex-row gap-3 items-center">
+                                <div class="bg-amarillo flex justify-center items-center h-10 w-9 mt-2 absolute">
+                                    <MicVocal class="text-azuloscuro"/>
+                                </div>
+                                <span class="ml-12 uppercase">{{ t('tipos[0]') }}</span>
+                            </div>
+                            <hr class="mt-1 mb-3 border-amarillo border-2">
+                            <div class="w-full h-full flex flex-col gap-2 px-2">
                                 <div v-for="elemento in Pconciertos23" class="flex gap-5 bg-azuloscuro text-amarillo p-3 px-4">
-                                    <div class="text-sm">{{ elemento.horaI }}<br>{{ elemento.horaF }}</div>
-                                    <div class="text-xl font-bold">{{ elemento.titulo }}</div>
+                                    <div class="text-xs min-w-[15%]">{{ elemento.horaI }}<br>{{ elemento.horaF }}</div>
+                                    <div class="text-base font-bold">{{ elemento.titulo }}</div>
                                 </div>
                             </div>
                         </div>
 
                         <div style="grid-area: talleres" class="flex flex-col h-full">
-                            <div class="text-2xl font-bold w-full h-fit flex flex-row gap-3 items-center py-3"><PencilRuler /> {{ t('tipos[1]') }}</div>
-                            <div class="w-full h-full flex flex-col gap-2">
+                            <div class="text-2xl font-bold w-full h-fit flex flex-row gap-3 items-center">
+                                <div class="bg-amarillo flex justify-center items-center h-10 w-9 mt-2 absolute">
+                                    <PencilRuler class="text-azuloscuro"/>
+                                </div>
+                                <span class="ml-12 uppercase">{{ t('tipos[1]') }}</span>
+                            </div>
+                            <hr class="mt-1 mb-3 border-amarillo border-2">
+                            <div class="w-full h-full flex flex-col gap-2 px-2">
                                 <div v-for="elemento in Ptalleres23" class="flex gap-5 bg-azuloscuro text-amarillo p-3 px-4">
-                                    <div class="text-sm">{{ elemento.horaI }}<br>{{ elemento.horaF }}</div>
-                                    <div class="text-xl font-bold">{{ t(elemento.titulo) }}</div>
+                                    <div class="text-xs min-w-[15%]">{{ elemento.horaI }}<br>{{ elemento.horaF }}</div>
+                                    <div class="text-base font-bold -mt-1">{{ t(elemento.titulo) }}</div>
                                 </div>
                             </div>
                         </div>
 
                         <div style="grid-area: charlas" class="flex flex-col h-full">
-                            <div class="text-2xl font-bold w-full h-fit flex flex-row gap-3 items-center py-3"><MessagesSquare /> {{ t('tipos[2]') }}</div>
-                            <div class="w-full h-full flex flex-col gap-2">
+                            <div class="text-2xl font-bold w-full h-fit flex flex-row gap-3 items-center">
+                                <div class="bg-amarillo flex justify-center items-center h-10 w-9 mt-2 absolute">
+                                    <MessagesSquare class="text-azuloscuro"/>
+                                </div>
+                                <span class="ml-12 uppercase">{{ t('tipos[2]') }}</span>
+                            </div>
+                            <hr class="mt-1 mb-3 border-amarillo border-2">
+                            <div class="w-full h-full flex flex-col gap-2 px-2">
+                                
                                 <div v-for="elemento in Pcharlas23" class="flex gap-5 bg-azuloscuro text-amarillo p-3 px-4">
-                                    <div class="text-sm">{{ elemento.horaI }}<br>{{ elemento.horaF }}</div>
-                                    <div class="text-xl font-bold">{{ t(elemento.titulo) }}</div>
+                                    <div class="text-xs min-w-[15%]">{{ elemento.horaI }}<br>{{ elemento.horaF }}</div>
+                                    <div>
+                                        <div class="text-base font-bold -mt-1">{{ t(elemento.titulo) }}</div>
+                                        <hr v-if="elemento.personas?.length" class="border-amarillo mt-2 mb-1">
+                                        <div v-if="elemento.personas?.length" class="text-xs">
+                                            {{ elemento.personas.join(', ') }}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -100,36 +126,58 @@
 
                 <!-- ** SÁBADO -->
 
-                    <TabsContent value="sabado" class="tabla w-full h-full grid grid-cols-3 gap-5">
+                    <TabsContent value="sabado" class="tabla w-full h-full grid grid-cols-3 gap-5 pt-2">
                         
                         <div style="grid-area: conciertos" class="flex flex-col h-full">
-                            <div class="text-2xl font-bold w-full h-fit flex flex-row gap-3 items-center py-3"><MicVocal /> {{ t('tipos[0]') }}</div>
-                            <div class="w-full h-full flex flex-col gap-2">
+                            <div class="text-2xl font-bold w-full h-fit flex flex-row gap-3 items-center">
+                                <div class="bg-amarillo flex justify-center items-center h-10 w-9 mt-2 absolute">
+                                    <MicVocal class="text-azuloscuro"/>
+                                </div>
+                                <span class="ml-12 uppercase">{{ t('tipos[0]') }}</span>
+                            </div>
+                            <hr class="mt-1 mb-3 border-amarillo border-2">
+                            <div class="w-full h-full flex flex-col gap-2 px-2">
                                 <div v-for="elemento in Pconciertos24" class="flex gap-5 bg-azuloscuro text-amarillo p-3 px-4">
-                                    <div class="text-sm min-w-[12%]">{{ elemento.horaI }}<br>{{ elemento.horaF }}</div>
-                                    <div class="text-xl font-bold w-full">{{ elemento.titulo }}</div>
+                                    <div class="text-xs min-w-[15%]">{{ elemento.horaI }}<br>{{ elemento.horaF }}</div>
+                                    <div class="text-base font-bold">{{ elemento.titulo }}</div>
                                 </div>
                             </div>
                         </div>
 
                         <div style="grid-area: talleres" class="flex flex-col h-full">
-                            <div class="text-2xl font-bold w-full h-fit flex flex-row gap-3 items-center py-3"><PencilRuler /> {{ t('tipos[1]') }}</div>
-                            <div class="w-full h-full flex flex-col gap-2">
+                            <div class="text-2xl font-bold w-full h-fit flex flex-row gap-3 items-center">
+                                <div class="bg-amarillo flex justify-center items-center h-10 w-9 mt-2 absolute">
+                                    <PencilRuler class="text-azuloscuro"/>
+                                </div>
+                                <span class="ml-12 uppercase">{{ t('tipos[1]') }}</span>
+                            </div>
+                            <hr class="mt-1 mb-3 border-amarillo border-2">
+                            <div class="w-full h-full flex flex-col gap-2 px-2">
                                 <div v-for="elemento in Ptalleres24" class="flex gap-5 bg-azuloscuro text-amarillo p-3 px-4">
-                                    <div class="text-sm min-w-[12%]">{{ elemento.horaI }}<br>{{ elemento.horaF }}</div>
-                                    <div class="text-xl font-bold w-full -mt-1">{{ t(elemento.titulo) }}</div>
+                                    <div class="text-xs min-w-[15%]">{{ elemento.horaI }}<br>{{ elemento.horaF }}</div>
+                                    <div class="text-base font-bold -mt-1">{{ t(elemento.titulo) }}</div>
                                 </div>
                             </div>
                         </div>
 
                         <div style="grid-area: charlas" class="flex flex-col h-full">
-                            <div class="text-2xl font-bold w-full h-fit flex flex-row gap-3 items-center py-3"><MessagesSquare /> {{ t('tipos[2]') }}</div>
+                            <div class="text-2xl font-bold w-full h-fit flex flex-row gap-3 items-center">
+                                <div class="bg-amarillo flex justify-center items-center h-10 w-9 mt-2 absolute">
+                                    <MessagesSquare class="text-azuloscuro"/>
+                                </div>
+                                <span class="ml-12 uppercase">{{ t('tipos[2]') }}</span>
+                            </div>
+                            <hr class="mt-1 mb-3 border-amarillo border-2">
                             <div class="w-full h-full flex flex-col gap-2 px-2">
+                                
                                 <div v-for="elemento in Pcharlas24" class="flex gap-5 bg-azuloscuro text-amarillo p-3 px-4">
-                                    <div class="text-sm min-w-[12%]">{{ elemento.horaI }}<br>{{ elemento.horaF }}</div>
-                                    <div class="flex flex-col w-full -mt-1">
-                                        <div class="text-xl font-bold">{{ t(elemento.titulo) }}</div>
-                                        <div></div>
+                                    <div class="text-xs min-w-[15%]">{{ elemento.horaI }}<br>{{ elemento.horaF }}</div>
+                                    <div>
+                                        <div class="text-base font-bold -mt-1">{{ t(elemento.titulo) }}</div>
+                                        <hr v-if="elemento.personas?.length" class="border-amarillo mt-2 mb-1">
+                                        <div v-if="elemento.personas?.length" class="text-xs">
+                                            {{ elemento.personas.join(', ') }}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -144,15 +192,15 @@
                         <div style="grid-area: conciertos" class="flex flex-col h-full">
                             <div class="text-2xl font-bold w-full h-fit flex flex-row gap-3 items-center">
                                 <div class="bg-amarillo flex justify-center items-center h-10 w-9 mt-2 absolute">
-                                    <MicVocal/>
+                                    <MicVocal class="text-azuloscuro"/>
                                 </div>
                                 <span class="ml-12 uppercase">{{ t('tipos[0]') }}</span>
                             </div>
                             <hr class="mt-1 mb-3 border-amarillo border-2">
                             <div class="w-full h-full flex flex-col gap-2 px-2">
                                 <div v-for="elemento in Pconciertos25" class="flex gap-5 bg-azuloscuro text-amarillo p-3 px-4">
-                                    <div class="text-sm min-w-[15%]">{{ elemento.horaI }}<br>{{ elemento.horaF }}</div>
-                                    <div class="text-lg font-bold">{{ elemento.titulo }}</div>
+                                    <div class="text-xs min-w-[15%]">{{ elemento.horaI }}<br>{{ elemento.horaF }}</div>
+                                    <div class="text-base font-bold">{{ elemento.titulo }}</div>
                                 </div>
                             </div>
                         </div>
@@ -160,15 +208,15 @@
                         <div style="grid-area: talleres" class="flex flex-col h-full">
                             <div class="text-2xl font-bold w-full h-fit flex flex-row gap-3 items-center">
                                 <div class="bg-amarillo flex justify-center items-center h-10 w-9 mt-2 absolute">
-                                    <PencilRuler/>
+                                    <PencilRuler class="text-azuloscuro"/>
                                 </div>
                                 <span class="ml-12 uppercase">{{ t('tipos[1]') }}</span>
                             </div>
                             <hr class="mt-1 mb-3 border-amarillo border-2">
                             <div class="w-full h-full flex flex-col gap-2 px-2">
                                 <div v-for="elemento in Ptalleres25" class="flex gap-5 bg-azuloscuro text-amarillo p-3 px-4">
-                                    <div class="text-sm min-w-[15%]">{{ elemento.horaI }}<br>{{ elemento.horaF }}</div>
-                                    <div class="text-lg font-bold -mt-1">{{ t(elemento.titulo) }}</div>
+                                    <div class="text-xs min-w-[15%]">{{ elemento.horaI }}<br>{{ elemento.horaF }}</div>
+                                    <div class="text-base font-bold -mt-1">{{ t(elemento.titulo) }}</div>
                                 </div>
                             </div>
                         </div>
@@ -176,18 +224,19 @@
                         <div style="grid-area: charlas" class="flex flex-col h-full">
                             <div class="text-2xl font-bold w-full h-fit flex flex-row gap-3 items-center">
                                 <div class="bg-amarillo flex justify-center items-center h-10 w-9 mt-2 absolute">
-                                    <MessagesSquare/>
+                                    <MessagesSquare class="text-azuloscuro"/>
                                 </div>
                                 <span class="ml-12 uppercase">{{ t('tipos[2]') }}</span>
                             </div>
                             <hr class="mt-1 mb-3 border-amarillo border-2">
                             <div class="w-full h-full flex flex-col gap-2 px-2">
+                                
                                 <div v-for="elemento in Pcharlas25" class="flex gap-5 bg-azuloscuro text-amarillo p-3 px-4">
-                                    <div class="text-sm min-w-[15%]">{{ elemento.horaI }}<br>{{ elemento.horaF }}</div>
+                                    <div class="text-xs min-w-[15%]">{{ elemento.horaI }}<br>{{ elemento.horaF }}</div>
                                     <div>
-                                        <div class="text-lg font-bold -mt-1">{{ t(elemento.titulo) }}</div>
+                                        <div class="text-base font-bold -mt-1">{{ t(elemento.titulo) }}</div>
                                         <hr v-if="elemento.personas?.length" class="border-amarillo mt-2 mb-1">
-                                        <div v-if="elemento.personas?.length" class="text-sm">
+                                        <div v-if="elemento.personas?.length" class="text-xs">
                                             {{ elemento.personas.join(', ') }}
                                         </div>
                                     </div>

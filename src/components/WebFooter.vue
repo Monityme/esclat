@@ -14,21 +14,24 @@
 </script>
 
 <template>
-    <footer class="bg-black bottom-0 flex flex-col w-fill py-5 justify-center text-white text-xs gap-5">
+    <footer class="bg-black bottom-0 flex flex-col w-full max-w-full py-5 justify-center text-white text-xs gap-5">
 
-        <div class="flex w-full ph-full px-15 gap-15 items-center">
+        <div class="contenedor grid w-full h-full px-10 gap-15 items-center justify-center text-md">
 
-            <div class="w-fit flex flex-col gap-4">
-                <LogoEsclat class="h-20 fill-white stroke-white"/>
-                <span class="text-center">2026 © ESCLAT Festival</span>
+            <div style="grid-area: esclat" class="esclat w-fit flex flex-col gap-7">
+                <div class="flex flex-col gap-4">
+                    <LogoEsclat class="h-20 fill-white stroke-white"/>
+                    <span class=" text-amarillo">2026 © ESCLAT Festival</span>
+                </div>
+                <div class="privacidad w-fit flex flex-col gap-2 justify-center">
+                    <span class="w-fit hover:cursor-pointer flex items-center underline hover:text-amarillo"><ChevronRight class="h-4"/>Política de Privacidad</span>
+                    <span class="w-fit hover:cursor-pointer flex items-center underline hover:text-amarillo"><ChevronRight class="h-4"/>Aviso Legal</span>
+                    <span class="w-fit hover:cursor-pointer flex items-center underline hover:text-amarillo"><ChevronRight class="h-4"/>Política de Cookies</span>
             </div>
-            <div class="w-fit flex flex-col gap-2 justify-center">
-                <span class="w-fit hover:cursor-pointer flex items-center underline hover:text-amarillo"><ChevronRight class="h-4"/>Política de Privacidad</span>
-                <span class="w-fit hover:cursor-pointer flex items-center underline hover:text-amarillo"><ChevronRight class="h-4"/>Aviso Legal</span>
-                <span class="w-fit hover:cursor-pointer flex items-center underline hover:text-amarillo"><ChevronRight class="h-4"/>Política de Cookies</span>
             </div>
+            
 
-            <div class="flex-1 flex flex-col gap-2 self-start">
+            <div style="grid-area: contacto" class="contacto flex flex-col gap-2 self-start">
                 <div class="w-full h-full flex flex-col">
                     <span class="text-amarillo">CONTACTO</span>
                     <hr class="border-gray-500 mt-2 mb-4 w-[110%] ml-[-3%]">
@@ -46,7 +49,7 @@
                 </div>
             </div>
 
-            <div class="w-fit flex flex-col self-start gap-6 flex-nowrap">
+            <div style="grid-area: logos" class="logos w-fit flex flex-col self-start gap-6 flex-nowrap">
                 <div class="w-full h-[50%] flex flex-col">
                     <span class="text-amarillo">ORGANIZA</span>
                     <hr class="border-gray-500 mt-2 mb-4 w-[110%] ml-[-3%]">
@@ -69,62 +72,57 @@
 
         </div>
 
-        <div class="text-amarillo opacity-80 flex justify-center o">
+        <div class="text-amarillo opacity-80 flex justify-center mt-[2rem]">
             Web Created by © Miopía
         </div>
     </footer>
-    <!--
-    <footer class="bg-black flex-col flex w-full py-2 justify-center items-center text-white text-xs">
-        <div class="flex w-full justify-around my-5 gap-10 no-wrap">
-            <div class="w-full flex flex-col gap-5">
-                <LogoEsclat class=" fill-white stroke-white"/>
-                <span class="">2026 © ESCLAT 2026</span>
-            </div>
-            
-            <div class="w-full underline flex flex-col gap-1">
-                <span class="hover:cursor-pointer">Política de Privacidad</span>
-                <span class="hover:cursor-pointer">Aviso Legal</span>
-                <span class="hover:cursor-pointer">Política de Cookies</span>
-            </div>
-
-            <div class="w-full flex flex-col gap-3">
-                <div>
-                    <span>LAS NAVES</span><hr class="border-gray-500 mt-2 mb-4 w-[70%] ml-[-3%]">
-                </div>
-                <div class="flex flex-row gap-3 pl-5 w-fit flex-nowrap">
-                    <MapPin class="w-5"/> <span>Calle de Joan Verdeguer, 22-24 <br> 46024 Valencia </span>
-                </div>
-                <div class="flex flex-row gap-3 items-center pl-5 flex-nowrap">
-                    <Phone class="w-5"/> <span>963 013 401 / 962 085 691</span>
-                </div>
-            </div>
-
-            <div class="flex flex-col w-fit gap-8">
-                <div class="flex flex-col">
-                    <span>ORGANIZA</span><hr class="border-gray-500 mt-2 mb-4 w-[106%] ml-[-3%]">
-                    <div class="flex flex-row gap-3 pl-5">
-                        <LogoMiopia class="h-7"/>
-                    </div>
-                </div>
-                <div class="flex flex-col">
-                    <span>COLABORA</span><hr class="border-gray-500 mt-2 mb-4 w-[106%] ml-[-3%]">
-                    <div class="flex flex-row gap-5 pl-5 no-wrap items-center">
-                        <LogoDiputacioValencia class="h-8"/>
-                        <LogoIvaj class="h-6"/>
-                        <LogoCocaCola class="h-7"/>
-                        <LogoTuria class="h-8" />
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="text-gray-400">
-            Web Created by © Miopía
-        </div>
-    </footer>
-    -->
+    
 </template>
 
 <style scoped>
+    .contenedor {
+        grid-template-columns: 20% 20% 30%;
+        grid-template-areas:
+                "esclat contacto logos";
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
 
+    @media (max-width: 1200px){
+        .contenedor {
+            grid-template-columns: 45% 35%;
+            grid-template-rows: 50% 50%;
+            grid-template-areas:
+                    "esclat contacto"
+                    "logos logos";
+            gap: 1rem;
+        }
+        .esclat {
+            flex-direction: row;
+        }
+        .esclat .privacidad {
+            flex-wrap: nowrap;
+        }
+        .contacto, .logos {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 1200px){
+        
+    }
+    @media (max-width: 780px){
+        .contenedor {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+            gap: 2rem;
+        }
+        .esclat {
+            flex-direction: column;
+        }
+        .contacto, .logos {
+            width: 90%;
+        }
+    }
 </style>

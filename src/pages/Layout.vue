@@ -14,7 +14,7 @@
 <script setup lang="ts">
 
     import Navegacion from '@/components/Navegacion.vue';
-import WebFooter from '@/components/WebFooter.vue';
+    import WebFooter from '@/components/WebFooter.vue';
     import cuentaAtras from '@/components/cuentaAtras.vue';
     import { ref } from 'vue';
 
@@ -30,7 +30,7 @@ import WebFooter from '@/components/WebFooter.vue';
         <RouterView class="min-h-full grow mt-[60px]"/>
     </main>
 
-    <WebFooter class="m-w-[100%]" />
+    <WebFooter class="max-w-full" />
 
 </template>
 

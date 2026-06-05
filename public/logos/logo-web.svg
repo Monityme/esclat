@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_4" data-name="Capa 4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.74 23.54">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f2e730;
+      }
+
+      .cls-2 {
+        fill: #14438d;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="2.29" y="2.18" width="19.17" height="19.17"/>
+  <path class="cls-2" d="M8.37,16.62V6.92h2.17v9.7h-2.17ZM10.04,8.79v-1.87h5.25v1.87h-5.25ZM10.04,12.58v-1.83h4.84v1.83h-4.84ZM10.04,16.62v-1.87h5.33v1.87h-5.33Z"/>
+</svg>

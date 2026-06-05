@@ -7,8 +7,7 @@
     ** Para poder usar el plugin de cambio de idioma */
     import { useI18n } from 'vue-i18n';
     const { t } = useI18n({useScope: 'global'});
-
-    import { CirclePlay } from '@lucide/vue';
+    
     import Flecha from '@/components/iconos/Flecha.vue';
     import Carrusel from '@/components/Carrusel.vue';
 
@@ -23,9 +22,9 @@
         
             <div style="grid-area: logo"
                 class="pl-14 pt-10 text-amarillo font-bold text-3xl
-                    max-[700px]:pl-6 max-[700px]:pt-8"
+                    max-sm:pl-10 max-sm:pt-8"
             >
-                <LogoEsclat class="h-60 max-[700px]:h-30" />
+                <LogoEsclat class="h-60 max-[970px]:h-50 max-[900px]:h-40 max-sm:h-30" />
             </div>
             <div style="grid-area: vacio1"></div>
             <div style="grid-area: vacio2"></div>
@@ -36,11 +35,11 @@
             <div style="grid-area: caja2" class="bg-[url('/texturas/color/azuloscuro03.jpg')] bg-center"></div>
 
             <div style="grid-area: texto1" class="fecha bg-[url('/texturas/color/amarillo01.jpg')] text-4xl flex flex-col gap-2 justify-center items-center">
-                <Fechas class="text-azuloscuro fill-azuloscuro max-h-[70%] max-w-[70%]
-                    max-[700px]:h-[55%] max-[700px]:-ml-25 max-[700px]:-mb-5"
+                <Fechas class=" max-h-[70%] max-w-[70%]
+                    max-[900px]:h-[55%] "
                 />
             </div>
-            <div style="grid-area: texto2" class="bg-[url('/texturas/color/azulclaro01.jpg')] bg-center flex flex-wrap text-xl items-center px-5">
+            <div style="grid-area: texto2" class="bg-[url('/texturas/color/azulclaro01.jpg')] bg-center flex flex-wrap text-xl items-center px-5 max-[950px]:text-lg">
                 <span>{{ t('home.texto1[0]') }}<span class="font-bold">{{ t('home.texto1[1]') }}</span>{{ t('home.texto1[2]') }}<span class="font-bold">{{ t('home.texto1[3]') }}</span></span>
             </div>
             
@@ -49,15 +48,22 @@
 
     </div>
     
-    <div class="seccion2 h-full w-full max-w-screen">
+    <div class="seccion2 h-full w-full max-w-screen flex flex-row max-[900px]:flex-col">
 
         <div style="grid-area: video"
-            class="bg-gray-800 flex justify-center items-center aspect-video">
-            <CirclePlay class="text-white h-30 w-auto"/>
+            class="video bg-gray-800 flex justify-center items-center w-full h-full"
+        >
+            <iframe class="h-full w-full"
+                src="https://www.youtube.com/embed/R0UtTho8z8c?si=hU65QN1v5tMUjCWW"
+                title="Video Spot" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+            >
+            </iframe>
         </div>
         <div style="grid-area: texto"
-            class="bg-[url('/texturas/color/amarillo03.jpg')] flex flex-col justify-center items-start gap-5 p-5 text-xl
-            max-[700px]:hidden"
+            class="bg-[url('/texturas/color/amarillo03.jpg')] max-[900px]:bg-bottom-left flex flex-col w-full h-full justify-center items-start gap-5 p-5 text-xl
+                max-[950px]:text-[1rem]"
         >
             <span class="font-bold">{{ t('home.texto2[0]') }}</span><span>{{ t('home.texto2[1]') }}</span><span class="font-bold flex flex-col w-full">{{ t('home.texto2[2]') }} <span class="self-end font-bold">{{ t('home.texto2[3]') }}</span></span>
         </div>
@@ -66,7 +72,7 @@
 
     <div class="seccion3 h-50">
         
-        <Carrusel/>
+        <Carrusel class="absolute h-full max-w-full overflow-hidden"/>
 
         <div style="grid-area: vacio3_1"></div>
         <div style="grid-area: vacio3_2"></div>
@@ -84,14 +90,14 @@
         
         <div style="grid-area: texto3_1"
             class="botonEntradas text-black flex flex-row items-center font-bold text-4xl
-                max-[700px]:text-2xl max-[700px]:justify-start"
+                justify-center"
         >
-            <RouterLink to="/entradas" class="flex flex-row items-center max-w-full">
-                <div class="pl-12 max-[700px]:pl-5">
-                    <span class="">{{ t('home.texto3[0]') }}</span>
-                    <span class="flex text-5xl max-[700px]:text-3xl">{{ t('home.texto3[1]') }}</span>
+            <RouterLink to="/entradas" class="flex flex-row items-center max-w-full gap-4 max-[900px]:gap-7">
+                <div class=" pl-12 max-[1300px]:pl-5">
+                    <span class="text-4xl max-[900px]:text-3xl">{{ t('home.texto3[0]') }}</span>
+                    <span class="flex text-5xl max-[900px]:text-4xl">{{ t('home.texto3[1]') }}</span>
                 </div>
-                <Flecha class="h-20 -ml-10 max-[700px]:h-15 max-[700px]:-ml-5"/>
+                <Flecha class="h-20 -ml-15 max-[900px]:-ml-5"/>
             </RouterLink>
         </div>
         
@@ -101,7 +107,7 @@
 
 <style scoped>
 
-    @media (max-width: 700px){
+    @media (max-width: 900px){
         .fondo {
             background-image: url("/home/fondoHome01.jpg");
             background-size: cover;
@@ -112,7 +118,7 @@
             margin-top: 120px;
             display: grid;
             grid-template-columns: 80% 20%;
-            grid-template-rows: 32% 25% 15% 20% 8%;
+            grid-template-rows: 35% 22% 15% 20% 8%;
             grid-template-areas:
                 "logo vacio1"
                 "texto1 vacio2"
@@ -121,19 +127,21 @@
                 "vacio5 caja2";
         }
         .seccion2 {
-        
-            display: grid;
-            grid-template-columns: 100%;
-            grid-template-areas: "video";
+            .video {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+            }
         }
         .seccion3 {
+            height: 100vh;
             display: grid;
             grid-template-columns: 80% 20%;
-            grid-template-rows: 20% 20% 60%;
+            grid-template-rows: 12% 30% 28% 30%;
             grid-template-areas:
                 "caja3_1 vacio3_1"
                 "vacio3_2 caja3_2"
                 "texto3_1 vacio3_3"
+                "vacio3_6 caja3_4"
         }
         .botonEntradas {
             cursor: pointer;
@@ -158,7 +166,7 @@
         }
     }
 
-    @media (min-width: 700px){
+    @media (min-width: 900px){
         .fondo {
             background-image: url("/home/fondoHome01.jpg");
             background-size: cover;
