@@ -99,8 +99,8 @@
                     </TabsContent>
 
                     <TabsContent value="espacio">
-                        <div class="flex justify-between items-end max-[900px]:flex-col max-[768px]:items-start">
-                            <img class="mapa -ml-3 max-[640px]:hidden max-[768px]:-ml-15" src="/mapa/originales/mapa-completo-azulosc.png" alt="">
+                        <div class="flex justify-between items-end max-[900px]:flex-col max-[900px]:items-start">
+                            <img class="mapa -ml-3 max-[640px]:hidden max-[768px]:-ml-15 max-[900px]:-ml-33" src="/mapa/originales/mapa-completo-azulosc.png" alt="">
                             
                             <div class="min-[640px]:hidden ">
                                 <img src="/mapa/originales/mapa-sin-ley-azulosc.png" alt="" class="mapa1 -mt-2">
@@ -108,9 +108,9 @@
                             </div>
                             
 
-                            <div class="flex flex-col w-80 pl-5 max-[640px]:pl-0 max-[640px]:w-full max-[640px]:pt-3">
+                            <div class="flex flex-col w-80 pl-5 max-[900px]:pl-0 max-[640px]:w-full max-[900px]:pt-3 max-[900px]:pt-17">
                                 <p class="text-md font-black">{{ t('faq.espacio[0]') }}</p>
-                                <p class="text-sm max-[640px]:text-sm/5">{{ t('faq.espacio[1]') }}</p>
+                                <p class="text-sm max-[900px]:text-sm/5">{{ t('faq.espacio[1]') }}</p>
                             </div>
                         </div>
                     </TabsContent>
@@ -254,46 +254,13 @@
         }
 
         .mapa{
-        width:300px;
-        height:100%;
-        object-fit:contain;
-        }
-    }
-
-    @media (max-width: 900px){
-        .main {
-        background-image: url("/fondos/fondo05.jpg");
-        background-size: 100%;
-        background-position: cover;
-        background-position: no-repeat;
-        height: calc(100vh - 60px);
-        display: grid;
-        grid-template-columns: 66% 24% 10%;
-        grid-template-rows: 88% 12%;
-        grid-template-areas:
-            "contenido vacio1 caja1"
-            "vacio2 caja2 vacio3";
-        }
-
-        .mapa{
-        width:100%;
+        width:100px;
         height:200px;
         object-fit:contain;
         }
-
-        .mapa1{
-        width:100%;
-        height:250px;
-        object-fit:contain;
-        }
-
-
-        .mapa3{
-        width:100%;
-        height:350px;
-        object-fit:contain;
-        }
     }
+
+    
     
 
     @media (min-width: 900px){
