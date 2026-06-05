@@ -263,7 +263,7 @@
     
     
 
-    @media (min-width: 900px){
+    @media (min-width: 768px){
         .main {
         background-image: url("/fondos/fondo05.jpg");
         background-size: 100%;
