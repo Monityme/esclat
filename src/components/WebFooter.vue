@@ -31,7 +31,7 @@
             </div>
             
 
-            <div style="grid-area: contacto" class="contacto flex flex-col gap-2 self-start">
+            <div style="grid-area: contacto" class="contacto flex flex-col gap-2 self-start ">
                 <div class="w-full h-full flex flex-col">
                     <span class="text-amarillo">CONTACTO</span>
                     <hr class="border-gray-500 mt-2 mb-4 w-[110%] ml-[-3%]">
@@ -46,7 +46,19 @@
                             <Mail class="w-4"/> <span>info@esclatfestival.com</span>
                         </div>
                     </div>
+                    <RRSS
+                        :spotify="undefined"
+                        youtube="LINK"
+                        :web="undefined"
+                        instagram="LINK"
+                        tiktok="LINK"
+                        twitter="LINK"
+                        :facebook="undefined"
+                        threads="LINK"
+                        :footer="true"
+                    /> <!--No existen las RRSS de esclat, por eso no hay ninguna lololol-->
                 </div>
+                
             </div>
 
             <div style="grid-area: logos" class="logos w-fit flex flex-col self-start gap-6 flex-nowrap">

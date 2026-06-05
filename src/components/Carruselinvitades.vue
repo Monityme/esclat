@@ -65,7 +65,17 @@
                             <div style="grid-area: musica" class="bg-black flex items-center justify-center">
 
                                 <!-- ** Aquí van las RRSS -->
-                                <RRSS />
+                                <RRSS class="self-start"
+                                    :spotify="invitade.spotify"
+                                    :youtube="invitade.youtube"
+                                    :web="invitade.web"
+                                    :instagram="invitade.instagram"
+                                    :tiktok="invitade.tiktok"
+                                    :twitter="invitade.twitter"
+                                    :facebook="invitade.facebook"
+                                    :threads="invitade.threads"
+                                    :footer="false"
+                                />
 
                             </div>
 
