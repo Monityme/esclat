@@ -14,11 +14,11 @@
 </script>
 
 <template>
-    <footer class="bg-black bottom-0 flex flex-col w-full max-w-full py-5 justify-center text-white text-xs gap-5">
+    <footer class="bg-black bottom-0 flex flex-col w-full max-w-full py-5 items-center justify-center text-white text-xs gap-5 z-50">
 
         <div class="contenedor grid w-full h-full px-10 gap-15 items-center justify-center text-md">
 
-            <div style="grid-area: esclat" class="esclat w-fit flex flex-col gap-7">
+            <div style="grid-area: esclat" class="esclat w-fit flex flex-row gap-7">
                 <div class="flex flex-col gap-4">
                     <LogoEsclat class="h-20 fill-white stroke-white"/>
                     <span class=" text-amarillo">2026 © ESCLAT Festival</span>
@@ -46,7 +46,7 @@
                             <Mail class="w-4"/> <span>info@esclatfestival.com</span>
                         </div>
                     </div>
-                    <RRSS
+                    <RRSS class="mt-5 ml-3"
                         :spotify="undefined"
                         youtube="LINK"
                         :web="undefined"
@@ -56,6 +56,7 @@
                         :facebook="undefined"
                         threads="LINK"
                         :footer="true"
+                        :artista="false"
                     /> <!--No existen las RRSS de esclat, por eso no hay ninguna lololol-->
                 </div>
             </div>
@@ -83,7 +84,7 @@
 
         </div>
 
-        <div class="text-amarillo opacity-80 flex justify-center mt-[2rem]">
+        <div class="text-amarillo opacity-80 flex justify-center mt-8">
             Web Created by © Miopía
         </div>
     </footer>
@@ -92,7 +93,7 @@
 
 <style scoped>
     .contenedor {
-        grid-template-columns: 20% 20% 30%;
+        grid-template-columns: 25% 20% 30%;
         grid-template-areas:
                 "esclat contacto logos";
         margin-bottom: 1rem;
@@ -119,18 +120,15 @@
         }
     }
 
-    @media (max-width: 1200px){
-        
-    }
     @media (max-width: 780px){
         .contenedor {
             display: flex;
             flex-direction: column;
             margin-bottom: 2rem;
-            gap: 2rem;
+            gap: 3rem;
         }
         .esclat {
-            flex-direction: column;
+            flex-direction: row;
         }
         .contacto, .logos {
             width: 90%;
