@@ -18,20 +18,20 @@
 </script>
   
 <template>
-  <div class="w-full h-full flex flex-col justify-center gap-3 m-10">
+  <div class="w-full h-full flex flex-col justify-center gap-3">
     <div class="flex gap-3 text-white"  v-if="web !== undefined">
-      <Globe/>
-      <a :href="web" target="_blank" class="hover:text-amarillo underline flex items-center">Página Web <ExternalLink class="h-3" /></a>
+      <Globe class="max-sm:hidden"/>
+      <a :href="web" target="_blank" class="hover:text-amarillo underline flex items-center max-sm:text-sm">Página Web <ExternalLink class="h-3" /></a>
       
     </div>
-    <hr class="w-full mb-2" v-if="web !== undefined">
-    <div class="text-amarillo text-xl font-bold" v-if="footer == false">REDES SOCIALES</div>
+    <hr class="w-full mb-2 max-sm:hidden" v-if="web !== undefined">
+    <div class="text-amarillo text-xl font-bold max-sm:hidden" v-if="footer == false">REDES SOCIALES</div>
 
-    <div class="flex gap-3 wrap">
+    <div class="flex gap-3 flex-wrap max-sm:gap-2">
 
       <a :href="spotify" target="_blank" v-if="spotify !== undefined">
         <div class="icono w-10 h-10 rounded-full border-2 border-gray-500 hover:border-[#25d865] hover:bg-[#25d865] flex items-center justify-center cursor-pointer">
-          <svg
+          <svg class="max-sm:h-[1.7rem]"
               id="SPOTIFY"
               height="1.9em"
               fill="#FFF"
@@ -44,7 +44,7 @@
       
       <a :href="youtube" target="_blank" v-if="youtube !== undefined">
         <div class="icono w-10 h-10 rounded-full border-2 border-gray-500 hover:border-red-700 hover:bg-red-700 flex items-center justify-center cursor-pointer">
-          <svg
+          <svg class="max-sm:h-[1.6rem]"
               id="YOUTUBE"
               height="1.7em"
               style="fill: #FFF;"
@@ -113,7 +113,7 @@
 
       <a :href="threads" target="_blank" v-if="threads !== undefined">
         <div class="icono w-10 h-10 rounded-full border-2 border-gray-500 hover:border-gray-700 hover:bg-gray-700 flex items-center justify-center cursor-pointer">
-          <svg 
+          <svg class="max-sm:h-[1.6rem]"
               id="THREADS"
               height="1.7em"
               style="fill: #FFF;"
@@ -136,6 +136,13 @@
 
   .icono {
     transition: all 0.3s ease-in-out;
+  }
+
+  @media (max-width: 640px) {
+    .icono {
+      width: 7;
+      height: 7;
+    }
   }
 
 </style>

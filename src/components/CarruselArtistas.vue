@@ -56,17 +56,17 @@
 </script>
 
 <template>
-    <div class="galeriaInvitades absolute flex opacity-100 top-0 justify-center items-center w-full h-screen z-99 bg-black/75">
-        <div class="w-[70%] h-[90%] fixed max-[768px]:w-[85%] max-[768px]:h-[93%]">
+    <div class="absolute flex opacity-100 top-0 justify-center items-center w-full h-screen z-999 bg-black/75">
+        <div class="galeriaArtistas w-[70%] h-[90%] fixed">
 
-            <div class=" z-100 botonCerrar absolute top-2 right-2 w-8 h-8 bg-black flex items-center justify-center text-amarillo hover:text-black hover:bg-amarillo cursor-pointer
-            max-[768px]:h-5 max-[768px]:w-5"
+            <div class=" z-1000 botonCerrar absolute top-2 right-2 w-8 h-8 bg-black flex items-center justify-center text-amarillo hover:text-black hover:bg-amarillo cursor-pointer
+            max-sm:h-7 max-sm:w-7 max-sm:right-4"
                 @click="mostrarGaleriaArtistas = false"
             >
                 <X/>
             </div>
 
-            <div class="min-w-full h-full flex">
+            <div class=" min-w-full h-full flex">
 
                 <Carousel class="w-full h-full flex"
                     :opts="{ loop: true,
@@ -89,25 +89,25 @@
                             <div style="grid-area: caja2" class="bg-[url('/texturas/color/amarillo02.jpg')] bg-size-[500%]"></div>
 
                             <div style="grid-area: titulo" class="bg-[url('/texturas/color/azuloscuro03.jpg')] bg-bottom-left text-amarillo font-bold text-5xl flex flex-row py-3 px-8 w-fill h-fill
-                                min-[768px]:text-5xl min-[768px]:px-8 max-[768px]:text-lg/5 max-[768px]:px-6"
+                                max-sm:text-xl min-[900px]:px-8 max-[900px]:text-3xl max-[900px]:px-6"
                             >
-                                <span class="flex-1 flex overflow-visible items-center text-nowrap max-[768px]:text-wrap">
+                                <span class="flex-1 flex overflow-visible items-center text-nowrap max-[900px]:text-wrap">
                                     {{ artista.nombre }}
                                 </span>
-                                <span class="flex-1 flex text-nowrap items-end justify-end text-xl text-right
-                                    min-[768px]:text-2xl max-[768px]:text-xs"
+                                <span class="absolute flex text-nowrap ml-[60%] self-end items-end justify-end text-xl text-right
+                                    min-[900px]:text-2xl max-sm:text-xs max-[900px]:ml-[50%]"
                                 >
                                     {{ artista.dia }}.10.26<br>{{ artista.horaI }}
                                 </span>
                             </div>
                             <div style="grid-area: texto" class="descripcion bg-[url('/texturas/color/azulclaro04.jpg')] px-6 pb-4 flex items-end
-                                max-[1000px]:text-xs"
+                                max-sm:text-xs"
                             >
                                 {{ t(artista.descripcion) }}
                             </div>
-                            <div style="grid-area: musica" class="bg-black flex items-center flex-row w-full">
+                            <div style="grid-area: musica" class="bg-black flex items-center justify-center flex-row w-full px-5 gap-8 max-sm:gap-5">
 
-                                <div class="mx-10 h-full">
+                                <div class="h-full flex items-center justify-center flex-1">
                                     <ReproductorMusica
                                         ref="reproductores"
                                         :cancion="`${artista.cancion}`"
@@ -116,18 +116,19 @@
                                         :foto="`${artista.fotos[1]}`"
                                     />
                                 </div>
-
-                                <RRSS
-                                    :spotify="artista.spotify"
-                                    :youtube="artista.youtube"
-                                    :web="artista.web"
-                                    :instagram="artista.instagram"
-                                    :tiktok="artista.tiktok"
-                                    :twitter="artista.twitter"
-                                    :facebook="artista.facebook"
-                                    :threads="artista.threads"
-                                    :footer="false"
-                                />
+                                <div class="flex-10">
+                                    <RRSS class="w-full"
+                                        :spotify="artista.spotify"
+                                        :youtube="artista.youtube"
+                                        :web="artista.web"
+                                        :instagram="artista.instagram"
+                                        :tiktok="artista.tiktok"
+                                        :twitter="artista.twitter"
+                                        :facebook="artista.facebook"
+                                        :threads="artista.threads"
+                                        :footer="false"
+                                    />
+                                </div>
 
                             </div>
 
@@ -146,11 +147,16 @@
 
 <style scoped>
 
-     @media (max-width: 768px) {
+     @media (max-width: 900px) {
+        .galeriaArtistas {
+            width: 100vw;
+            height: 100vh;
+        }
+
         .gridGeneral {
         display: grid;
         grid-template-columns: 25% 75%;
-        grid-template-rows: 11% 65% 20%;
+        grid-template-rows: 15% 60% 25%;
         grid-template-areas:
             "img1 titulo"
             "caja1 texto"
@@ -158,7 +164,7 @@
         }
     }
 
-    @media (min-width: 768px){
+    @media (min-width: 900px){
         .gridGeneral {
             display: grid;
             grid-template-columns: 15% 20% 65%;

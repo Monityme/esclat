@@ -61,11 +61,10 @@
 </script>
 
 <template>
-    <div class="w-full h-full flex justify-center items-center gap-6
-    
-    max-[700px]:flex-col max-[700px]:items-start max-[700px]:-ml-5">
+    <div class="todo w-full h-full flex justify-center items-center gap-6
+        max-[1200px]:flex-col max-[900px]:gap-1">
 
-        <div class="container ">
+        <div class="container w-full h-full">
             <div class="plate">
                 <div
                     :key="discoKey"
@@ -87,9 +86,9 @@
 
         </div>
 
-        <div class="grid_control w-full h-28 mt-2 grid grid-rows-2 gap-3 max-[768px]:-mt-2">
+        <div class="grid_control w-full h-28 mt-2 grid grid-rows-2 gap-3 max-[1200px]:flex max-[1200px]:h-[20%]">
 
-            <ul class="wave-menu h-full max-[768px]:h-1">
+            <ul class="wave-menu h-full">
                 <li :style="{animationPlayState: playMusica ? 'running' : 'paused', height: giroDisco? '2rem' : '0.3rem', marginTop: giroDisco? '1rem' : '2.5rem'}"></li>
                 <li :style="{animationPlayState: playMusica ? 'running' : 'paused', height: giroDisco? '2rem' : '0.3rem', marginTop: giroDisco? '1rem' : '2.5rem'}"></li>
                 <li :style="{animationPlayState: playMusica ? 'running' : 'paused', height: giroDisco? '2rem' : '0.3rem', marginTop: giroDisco? '1rem' : '2.5rem'}"></li>
@@ -102,11 +101,11 @@
                 <li :style="{animationPlayState: playMusica ? 'running' : 'paused', height: giroDisco? '2rem' : '0.3rem', marginTop: giroDisco? '1rem' : '2.5rem'}"></li>
             </ul>
 
-            <div class="w-full h-full flex justify-center items-center gap-4 max-[768px]:gap-2 max-[700px]:justify-start max-[700px]:-ml-2
+            <div class="w-full h-full flex justify-center items-center gap-4 max-[900px]:gap-2
             ">
         
                 <Play
-                    class="text-white fill-white max-[768px]:h-4"
+                    class="text-white fill-white max-[1200px]:h-4"
                     :class="{
                         'hover:text-amarillo hover:fill-amarillo cursor-pointer' : !playMusica,
                         'opacity-50': playMusica
@@ -114,14 +113,14 @@
                     @click="isPlay"
                 />
                 <Pause
-                    class="text-white fill-white max-[768px]:h-4"
+                    class="text-white fill-white max-[1200px]:h-4"
                     :class="{
                         'hover:text-amarillo hover:fill-amarillo cursor-pointer' : playMusica,
                         'opacity-50': !playMusica
                     }"
                     @click="isPause"
                 />
-                <Square class="text-white fill-white hover:text-amarillo hover:fill-amarillo cursor-pointer max-[768px]:h-4"
+                <Square class="text-white fill-white hover:text-amarillo hover:fill-amarillo cursor-pointer max-[1200px]:h-4"
                     @click="isStop"
                 />
                 
@@ -138,47 +137,48 @@
         grid-template-rows: 70% 30%;
     }
 
-@media (max-width: 700px){
+    @media (max-width: 1200px){
+        .todo {
+            display: flex;
+        }
+
         .container {
-            margin-top: 15px;
-            width: 4rem;
-            height: 4rem;
-            aspect-ratio: 1/1;
+            width: 5rem;
+            height: 5rem;
             background-color: var(--color-azulclaro);
-            border-radius: 10px;
+            border-radius: 7px;
             position: relative;
-            box-shadow: 5px 5px 0 0 var(--color-azuloscuro);
+            box-shadow: 3px 3px 0 0 var(--color-azuloscuro);
         }
 
         .plate .black {
-            width: 3.5rem;
-            height: 3.5rem;
+            width: 4.5rem;
+            height: 4.5rem;
             background-color: black;
             animation: rotation 2s infinite linear;
             animation-play-state: paused;
         }
 
         .plate .white {
-        width: 1rem;
-        height: 1rem;
+        width: 1.5rem;
+        height: 1.5rem;
         background-color: var(--color-rojo);
         }
 
         .plate .center {
-            width: 0.4rem;
-            height: 0.4rem;
+            width: 0.5rem;
+            height: 0.5rem;
             background-color: black;
         }
         
         .plate .border {
-            width: 4rem;
-            height: 4rem;
+            width: 3rem;
+            height: 3rem;
             border-top: 3px solid rgba(255,255,255,0);
             border-bottom: 3px solid rgba(255,255,255,0);
             border-left: 3px solid rgba(0,0,0,0);
             border-right: 3px solid rgba(0,0,0,0);
         }
-        
 
         .player {
             display: flex;
@@ -189,20 +189,20 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            margin-bottom: 0.3rem;
-            margin-right: 0.3rem;
+            margin-bottom: 0.2rem;
+            margin-right: 0.2rem;
         }
 
         .player .circ {
-            width: 0.5rem;
-            height: 0.5rem;
+            width: 0.8rem;
+            height: 0.8rem;
             background-color: var(--color-amarillo);
             border-radius: 100%;
             z-index: 1;
         }
 
         .player .rect {
-            width: 0.2rem;
+            width: 0.3rem;
             height: 1.5rem;
             background-color: var(--color-amarillo);
             position: absolute;
@@ -212,7 +212,7 @@
     }
 
 
-    @media (min-width: 700px){
+    @media (min-width: 1200px){
         .container {
             width: 7rem;
             height: 7rem;
@@ -250,7 +250,6 @@
             border-left: 3px solid rgba(0,0,0,0);
             border-right: 3px solid rgba(0,0,0,0);
         }
-        
 
         .player {
             display: flex;
@@ -316,32 +315,15 @@
 /** 
 ** ONDAS DE SONIDO */
 
-@media (max-width: 700px){
+@media (max-width: 1200px){
     .wave-menu {
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        gap: 0.7rem;
-        transition: ease 0.2s;
-    }
-
-    .wave-menu li {
-        list-style: none;
-        height: 3rem;
-        width: 0.2rem;
-        background: var(--color-amarillo);
-        animation-name: wave1;
-        animation-duration: 0.3s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        transition: ease 0.2s;
+        opacity: 0;
+        display: none;
     }
 }
 
-@media (min-width: 700px){
-.wave-menu {
+@media (min-width: 1200px){
+    .wave-menu {
         display: flex;
         justify-content: center;
         align-items: center;

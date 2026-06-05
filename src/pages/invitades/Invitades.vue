@@ -116,7 +116,7 @@
                                     <div class="tarjeta_texto flex flex-col overflow-y-hidden text-lg gap-1 max-[640px]:text-sm/4">
                                         <span class="tarjeta_nombre text-white">{{ artista.nombre }}</span>
                                         <span class="oculto hidden text-white text-sm px-2">
-                                            {{ t(artista.diaSemana) }} {{ artista.dia }} a las {{ artista.horaI }}h
+                                            {{ artista.dia }} - {{ artista.horaI }}h
                                         </span>
                                     </div>
                                 </div>
@@ -132,16 +132,16 @@
 
                         <ScrollArea>
 
-                            <div class="gap-5 w-full h-full grid min-[800px]:grid-cols-3 max-[800px]:grid-cols-2">
+                            <div class="gap-5 w-full h-full grid grid-cols-3 max-[640px]:grid-cols-2">
                                 <div v-for="(taller, index) in talleres"
                                     class="tarjeta bg-cover bg-center flex"
                                     :style="{backgroundImage:`url(${taller.icono})`}"
                                     @click="abrirGaleria(index)"
                                 >
-                                    <div class="tarjeta_texto flex flex-col overflow-y-hidden text-lg max-[640px]:text-sm/4 gap-1">
+                                    <div class="tarjeta_texto flex flex-col overflow-y-hidden text-lg max-[900px]:text-sm/4 gap-1">
                                         <span class="tarjeta_nombre text-white">{{ t(taller.nombre) }}</span>
                                         <span class="oculto hidden text-white text-sm px-2">
-                                            {{ t(taller.diaSemana) }} {{ taller.dia }} a las {{ taller.horaI }}h
+                                            {{ taller.dia }} - {{ taller.horaI }}h
                                         </span>
                                     </div>
                                 </div>
@@ -163,10 +163,10 @@
                                     :style="{backgroundImage:`url(${charla.icono})`}"
                                     @click="abrirGaleria(index)"
                                 >
-                                    <div class="tarjeta_texto flex flex-col overflow-y-hidden text-lg max-[640px]:text-sm/4 gap-1">
+                                    <div class="tarjeta_texto flex flex-col overflow-y-hidden text-lg max-[900px]:text-sm/4 gap-1">
                                         <span class="tarjeta_nombre text-white px-2">{{ t(charla.nombre) }}</span>
                                         <span class="oculto hidden text-white text-sm px-2">
-                                            {{ t(charla.diaSemana) }} {{ charla.dia }} a las {{ charla.horaI }}h
+                                            {{ charla.dia }}.10.26 - {{ charla.horaI }}h
                                         </span>
                                     </div>
                                 </div>
@@ -186,7 +186,7 @@
 
 <style scoped>
 
-    @media (max-width: 640px) {
+    @media (max-width: 900px) {
         .main {
             background-image: url("/fondos/fondo04.jpg");
             background-size: 100%;
@@ -226,7 +226,6 @@
         .tarjeta:hover .tarjeta_texto {
             height: 70%;
             background: rgba(0,0,0,1);
-            /*border-top: 2px solid var(--color-rojo);*/
         }
 
         .tarjeta_nombre {
@@ -249,7 +248,7 @@
             transition-duration: 600ms;
             transition: all;
         }
-
+ 
         .tarjeta:hover .oculto {
             opacity: 1;
             display: inline;
@@ -258,7 +257,7 @@
     
     }
 
-    @media (min-width: 640px) {
+    @media (min-width: 900px) {
         .main {
             background-image: url("/fondos/fondo02.jpg");
             background-size: 100%;

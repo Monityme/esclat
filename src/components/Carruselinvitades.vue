@@ -29,10 +29,11 @@
 </script>
 
 <template>
-    <div class="galeriaInvitades absolute flex opacity-100 top-0 justify-center items-center w-full h-screen z-99 bg-black/75">
-        <div class="w-[70%] h-[90%] fixed">
+    <div class="absolute flex opacity-100 top-0 justify-center items-center w-full h-screen z-99 bg-black/75">
+        <div class="galeriaInvitades w-[70%] h-[90%] fixed">
 
-            <div class=" z-100 botonCerrar absolute top-2 right-2 w-8 h-8 bg-black flex items-center justify-center text-amarillo hover:text-black hover:bg-amarillo cursor-pointer"
+            <div class=" z-100 botonCerrar absolute top-2 right-2 w-8 h-8 bg-black flex items-center justify-center text-amarillo hover:text-black hover:bg-amarillo cursor-pointer
+                max-sm:h-7 max-sm:w-7 max-sm:right-4"
                 @click="mostrarGaleria = false"
             >
                 <X/>
@@ -58,16 +59,23 @@
                             <div style="grid-area: caja2" class="bg-[url('/texturas/color/amarillo02.jpg')] bg-size-[500%]"></div>
 
                             <div style="grid-area: titulo" class="bg-[url('/texturas/color/azuloscuro03.jpg')] bg-bottom-left text-amarillo font-bold text-5xl flex flex-row py-3 px-8 w-fill h-fill
-                                min-[768px]:text-5xl min-[768px]:px-8 max-[768px]:text-base/4 max-[768px]:px-6">
-                                <span class="flex-1 flex overflow-visible items-center max-[768px]:text-wrap">{{ t(invitade.nombre) }}</span>
-                                
+                                max-sm:text-xl min-[900px]:px-8 max-[900px]:text-3xl max-[900px]:px-6">
+                                <span class="flex-1 flex overflow-visible items-center max-[900px]:text-wrap max-w-[70%]">
+                                    {{ t(invitade.nombre) }}
+                                </span>
+                                <span class="absolute flex text-nowrap ml-[60%] self-end items-end justify-end text-xl text-right
+                                    min-[900px]:text-2xl max-sm:text-xs max-[900px]:ml-[50%]"
+                                >
+                                    {{ invitade.dia }}.10.26<br>{{ invitade.horaI }}
+                                </span>
                             </div>
-                            <div style="grid-area: texto" class="descripcion bg-[url('/texturas/color/azulclaro04.jpg')] px-6 pb-4 flex items-end
-                                max-[1000px]:text-xs">{{ t(invitade.descripcion) }}</div>
-                            <div style="grid-area: musica" class="bg-black flex items-center justify-center">
 
-                                <!-- ** Aquí van las RRSS -->
-                                <RRSS class="self-start"
+                            <div style="grid-area: texto" class="descripcion bg-[url('/texturas/color/azulclaro04.jpg')] px-6 pb-4 flex items-end
+                                max-sm:text-xs">{{ t(invitade.descripcion) }}
+                            </div>
+
+                            <div style="grid-area: musica" class="bg-black flex flex-col justify-center px-5">
+                                <RRSS
                                     :spotify="invitade.spotify"
                                     :youtube="invitade.youtube"
                                     :web="invitade.web"
@@ -96,11 +104,15 @@
 
 <style scoped>
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
+        .galeriaInvitades {
+            width: 100vw;
+            height: 100vh;
+        }
         .gridGeneral {
         display: grid;
         grid-template-columns: 25% 75%;
-        grid-template-rows: 11% 65% 20%;
+        grid-template-rows: 15% 60% 25%;
         grid-template-areas:
             "img1 titulo"
             "caja1 texto"
@@ -108,7 +120,7 @@
         }
     }
 
-    @media (min-width: 768px){
+    @media (min-width: 900px){
         .gridGeneral {
             display: grid;
             grid-template-columns: 15% 20% 65%;
