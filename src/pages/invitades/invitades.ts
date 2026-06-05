@@ -45,9 +45,9 @@ export const artistas: Invitade[] = [
 
         instagram: "https://www.instagram.com/ritapayesroma/",
         facebook: "https://www.facebook.com/profile.php?id=100043847183458",
-        //threads: "",
-        //twitter: "",
-        //tiktok: "",
+        /* threads: "",
+        twitter: "",
+        tiktok: "", */
     },
     {
         id:1,
@@ -69,9 +69,9 @@ export const artistas: Invitade[] = [
 
         instagram: "https://www.instagram.com/samanthamargret/",
         facebook: "https://www.facebook.com/samanthamargret",
-        //threads: "",
-        //twitter: "",
-        //tiktok: "",
+        /* threads: "",
+        twitter: "",
+        tiktok: "", */
     },
     {
         id:2,
@@ -94,8 +94,8 @@ export const artistas: Invitade[] = [
         instagram: "https://www.instagram.com/papatopo/",
         facebook: "https://www.facebook.com/papatopobanda/?fref=ts",
         threads: "https://www.threads.com/@papatopo?xmt=AQG0aWOu6Mz0Q7cgIjUy4jjPA6uZmJisfBQVwh4FzMEptD8",
-        //twitter: "",
-        //tiktok: "",
+        /* twitter: "",
+        tiktok: "", */
     },
     {
         id:3,
@@ -113,13 +113,13 @@ export const artistas: Invitade[] = [
         
         spotify: "https://open.spotify.com/intl-es/artist/3poQdkeqk19dPqWL28yj8C?si=k2NNrXw6QEWk6B-eZ_N0_Q",
         youtube: "https://www.youtube.com/@emiletil7622",
-        web: "",
+        /* web: "", */
         
         instagram: "https://www.instagram.com/emiletil_/",
         threads: "https://www.threads.com/@emiletil_?xmt=AQG038A34JPrxDqiXTBV3UWDLj8PUKU-QcPnW-qdhGECF9U",
-        //facebook: "",
-        //twitter: "",
-        //tiktok: "",
+        /* facebook: "",
+        twitter: "",
+        tiktok: "", */
     },
     {
         id:4,
@@ -142,8 +142,8 @@ export const artistas: Invitade[] = [
         instagram: "https://www.instagram.com/sandramonfortoliver/",
         facebook: "https://www.facebook.com/profile.php?id=100065446841502",
         twitter: "https://x.com/Sandramonfort__",
-        //threads: "",
-        //tiktok: "",
+        /* threads: "",
+        tiktok: "", */
     },
     {
         id:5,
@@ -164,10 +164,10 @@ export const artistas: Invitade[] = [
         web: "https://abriltotlany.com",
 
         instagram: "https://www.instagram.com/abril.totlany/",
-        //threads: "",
-        //facebook: "",
-        //twitter: "",
-        //tiktok: "",
+        /* threads: "",
+        facebook: "",
+        twitter: "",
+        tiktok: "", */
     },
     {
         id:6,
@@ -190,8 +190,8 @@ export const artistas: Invitade[] = [
         instagram: "https://www.instagram.com/lisasinsonm/",
         facebook: "https://www.facebook.com/lisasinsonm",
         twitter: "https://x.com/Lisasinsonm",
-        //threads: "",
-        //tiktok: "",
+        /* threads: "",
+        tiktok: "", */
     },
     {
         id:7,
@@ -213,9 +213,9 @@ export const artistas: Invitade[] = [
 
         instagram: "https://www.instagram.com/audasti/",
         facebook: "https://www.facebook.com/p/Au-dastí-100063484833692/",
-        //threads: "",
-        //twitter: "",
-        //tiktok: "",
+        /* threads: "",
+        twitter: "",
+        tiktok: "", */
     },
     {
         id:8,
@@ -238,8 +238,8 @@ export const artistas: Invitade[] = [
         instagram: "https://www.instagram.com/laspetuniaslalala/?hl=es",
         twitter: "https://x.com/ThePetuniasBand",
         tiktok: "https://www.tiktok.com/@laspetuniaslalala",
-        //threads: "",
-        //facebook: "",
+        /* threads: "",
+        facebook: "", */
     },
     {
         id:9,
@@ -261,9 +261,9 @@ export const artistas: Invitade[] = [
 
         instagram: "https://www.instagram.com/ixeyamusica/?hl=es",
         facebook: "https://www.facebook.com/ixeya.musica/?locale=es_ES",
-        //threads: "",
-        //twitter: "",
-        //tiktok: "",
+        /* threads: "",
+        twitter: "",
+        tiktok: "", */
     },
     {
         id:10,
@@ -286,9 +286,9 @@ export const artistas: Invitade[] = [
 
         instagram: "https://www.instagram.com/gritamemimosas/",
         tiktok: "https://www.tiktok.com/@gritamemimosas",
-        //threads: "",
-        //facebook: "",
-        //twitter: "",
+        /* threads: "",
+        facebook: "",
+        twitter: "", */
     },
     {
         id:11,
@@ -311,8 +311,8 @@ export const artistas: Invitade[] = [
         instagram: "https://www.instagram.com/tronkasybarrankas/",
         twitter: "https://x.com/tronkastetotas",
         tiktok: "https://www.tiktok.com/@tronkasybarrankas",
-        //threads: "",
-        //facebook: "",
+        /* threads: "",
+        facebook: "", */
     },
     {
         id:12,
@@ -335,8 +335,8 @@ export const artistas: Invitade[] = [
         instagram: "https://www.instagram.com/ojetecaloroficial/",
         facebook: "https://www.facebook.com/OjeteCalorGrupo",
         twitter: "https://x.com/OjeteCalorGrupo?s=20",
-        //threads: "",
-        //tiktok: "",
+        /* threads: "",
+        tiktok: "", */
     },
     {
         id:13,
@@ -359,8 +359,8 @@ export const artistas: Invitade[] = [
         instagram: "https://www.instagram.com/svetlanamarrana/",
         twitter: "https://x.com/svetlanamarrana",
         tiktok: "https://www.tiktok.com/@svetlanamarrana",
-        //threads: "",
-        //facebook: "",
+        /* threads: "",
+        facebook: "", */
     },
     {
         id:14,
@@ -383,8 +383,8 @@ export const artistas: Invitade[] = [
         instagram: "https://www.instagram.com/delilahbonofficial/",
         facebook: "https://www.facebook.com/DelilahBon/",
         tiktok: "https://www.tiktok.com/@delilahbon",
-        //threads: "",
-        //twitter: "",
+        /* threads: "",
+        twitter: "", */
     },
 
 
@@ -426,11 +426,11 @@ export const talleres: Taller[] = [
         fotos: ["fotos/talleres/binders02.jpg","fotos/talleres/binders03.jpg"],
         web: ["https://hibride.es/"],
         instagram: ["https://www.instagram.com/hibride.binder/"],
-        facebook: [""],
+        /* facebook: [""],
         tiktok: [""],
         twitter: [""],
         threads: [""],
-        youtube: [""]
+        youtube: [""] */
     },
     {
         id: 1,
@@ -444,13 +444,13 @@ export const talleres: Taller[] = [
         descripcion: "invitades.talleres.descripciones[1]",
         icono: "fotos/talleres/ojogarabato01.jpg",
         fotos: ["fotos/talleres/ojogarabato02.jpg","fotos/talleres/ojogarabato03.jpg"],
-        web: [""],
+        /* web: [""], */
         instagram: ["https://www.instagram.com/ojo.garabato.vlc/"],
-        facebook: [""],
+        /* facebook: [""],
         tiktok: [""],
         twitter: [""],
         threads: [""],
-        youtube: [""]
+        youtube: [""] */
     },
     {
         id: 2,
@@ -467,10 +467,10 @@ export const talleres: Taller[] = [
         web: ["https://one-more-tree.org/es/"],
         instagram: ["https://www.instagram.com/one_more_tree_en/"],
         facebook: ["https://www.facebook.com/one.more.tree.org"],
-        tiktok: [""],
+        /* tiktok: [""],
         twitter: [""],
         threads: [""],
-        youtube: [""]
+        youtube: [""] */
     },
     {
         id: 3,
@@ -487,10 +487,10 @@ export const talleres: Taller[] = [
         web: ["https://cuca-balaguer.es/ "],
         instagram: ["https://www.instagram.com/cucabalaguer/"],
         facebook: ["https://www.facebook.com/CucaBalaguerArtesania?fref=ts"],
-        tiktok: [""],
+        /* tiktok: [""], */
         twitter: ["https://x.com/CucaBalaguer"],
-        threads: [""],
-        youtube: [""]
+        /* threads: [""],
+        youtube: [""] */
     },
     {
         id: 4,
@@ -507,9 +507,9 @@ export const talleres: Taller[] = [
         web: ["https://www.planteaenverde.es/ "],
         instagram: ["https://www.instagram.com/planteaenverde/"],
         facebook: ["https://www.facebook.com/planteaenverde/"],
-        tiktok: [""],
+        /* tiktok: [""],
         twitter: [""],
-        threads: [""],
+        threads: [""], */
         youtube: ["https://www.youtube.com/@Planteaenverde"]
     },
 ]
@@ -551,10 +551,10 @@ export const charlas: Charla[] = [
         fotos: ["fotos/charlas/mikel02.jpg","fotos/charlas/mikel03.jpg"],
         web: ["https://www.putomikel.com/"],
         instagram: ["https://www.instagram.com/PutoMikel"],
-        facebook: [""],
+        /* facebook: [""], */
         tiktok: ["https://www.tiktok.com/@putomikel"],
         twitter: ["https://x.com/putomikel"],
-        threads: [""],
+        /* threads: [""], */
         youtube: ["https://www.youtube.com/@PutoMikel"]
     },
     {
@@ -569,13 +569,13 @@ export const charlas: Charla[] = [
         descripcion: "invitades.charlas.descripciones[1]",
         icono: "fotos/charlas/lgbt01.jpg",
         fotos: ["fotos/charlas/lgbt02.jpg","fotos/charlas/lgbt03.jpg"],
-        web: ["","","https://clarycorts.carrd.co/","https://essiel13.carrd.co/","","https://alanaportero.es/"],
+        /* web: ["","","https://clarycorts.carrd.co/","https://essiel13.carrd.co/","","https://alanaportero.es/"],
         instagram: ["https://www.instagram.com/iriayselene/","https://www.instagram.com/myriammlejardi/","https://instagram.com/clarycorts","https://www.instagram.com/essiebooks","https://www.instagram.com/virginiapetrod/",""],
         facebook: ["","","https://facebook.com/claracortes118","","",""],
         tiktok: ["https://tiktok.com/@iriayselene","https://www.tiktok.com/@myriammlejardi","","","",""],
         twitter: ["https://x.com/iriayselene","","https://x.com/clarycorts","","",""],
-        threads: ["https://www.threads.net/@iriayselene","","","","",""],
-        youtube: ["","","","","",""]
+        threads: ["https://www.threads.net/@iriayselene","","","","",""], */
+        /* youtube: ["","","","","",""] */
     },
     {
         id: 2,
@@ -591,11 +591,11 @@ export const charlas: Charla[] = [
         fotos: ["fotos/charlas/marta02.jpg","fotos/charlas/marta03.jpg"],
         web: ["https://martamartinezgarcia.blogspot.com/"],
         instagram: ["https://www.instagram.com/the_martian_martinez/ "],
-        facebook: [""],
+        /* facebook: [""],
         tiktok: [""],
         twitter: [""],
         threads: [""],
-        youtube: [""]
+        youtube: [""] */
     },
     {
         id: 3,
@@ -611,11 +611,11 @@ export const charlas: Charla[] = [
         fotos: ["fotos/charlas/graffica02.jpg","fotos/charlas/graffica03.jpg"],
         web: ["https://graffica.info/"],
         instagram: ["https://www.instagram.com/grafficainfo/"],
-        facebook: [""],
+        /* facebook: [""],
         tiktok: [""],
         twitter: [""],
         threads: [""],
-        youtube: [""]
+        youtube: [""] */
     },
     {
         id: 4,
@@ -629,12 +629,12 @@ export const charlas: Charla[] = [
         descripcion: "invitades.charlas.descripciones[4]",
         icono: "fotos/charlas/elena01.jpg",
         fotos: ["fotos/charlas/elena02.jpg","fotos/charlas/elena03.jpg"],
-        web: [""],
+        /* web: [""], */
         instagram: ["https://www.instagram.com/elenayuuste/ "],
-        facebook: [""],
+        /* facebook: [""], */
         tiktok: ["https://www.tiktok.com/@elenayuuste"],
-        twitter: [""],
-        threads: [""],
+        /* twitter: [""],
+        threads: [""], */
         youtube: ["https://www.youtube.com/@elenayuuste"]
     },
 ]

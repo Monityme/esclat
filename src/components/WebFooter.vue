@@ -46,6 +46,17 @@
                             <Mail class="w-4"/> <span>info@esclatfestival.com</span>
                         </div>
                     </div>
+                    <RRSS
+                        :spotify="undefined"
+                        youtube="LINK"
+                        :web="undefined"
+                        instagram="LINK"
+                        tiktok="LINK"
+                        twitter="LINK"
+                        :facebook="undefined"
+                        threads="LINK"
+                        :footer="true"
+                    /> <!--No existen las RRSS de esclat, por eso no hay ninguna lololol-->
                 </div>
             </div>
 

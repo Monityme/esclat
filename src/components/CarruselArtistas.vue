@@ -117,7 +117,17 @@
                                     />
                                 </div>
 
-                                <RRSS />
+                                <RRSS
+                                    :spotify="artista.spotify"
+                                    :youtube="artista.youtube"
+                                    :web="artista.web"
+                                    :instagram="artista.instagram"
+                                    :tiktok="artista.tiktok"
+                                    :twitter="artista.twitter"
+                                    :facebook="artista.facebook"
+                                    :threads="artista.threads"
+                                    :footer="false"
+                                />
 
                             </div>
 
