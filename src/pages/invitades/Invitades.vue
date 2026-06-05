@@ -155,6 +155,7 @@
 
                     <TabsContent value="charlas">
                         
+                        
                         <ScrollArea>
 
                             <div class="gap-5 w-full h-full grid grid-cols-3 max-[640px]:grid-cols-2">
