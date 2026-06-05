@@ -33,21 +33,25 @@
 
         <div style="grid-area: contenido"
             class="bg-azulclaro py-5 px-8 h-full
-            max-[700px]:px-5">
+            max-[1000px]:px-5">
             
             <div class="flex gap-5
-            max-[700px]:flex-col">
+            max-[1000px]:flex-col">
 <!-- 
                 ?LADO IZQUIERDO    
                 -->
-                <div class="flex flex-col gap-3">
+                <div class="flex flex-col gap-3 max-[1300px]:w-70 max-[1000px]:w-full">
                     
-                    <h1 class="font-bold min-[700px]:text-3xl max-[700px]:text-xl">1. {{ t('entradas.seleccion[0]') }}:</h1>
+                    <h1 class="font-bold 
+                    max-[1000px]:mt-5
+                    text-3xl max-[1000px]:text-xl
+                    max-[1300px]:text-lg max-[1300px]:mt-3">1. {{ t('entradas.seleccion[0]') }}:</h1>
                         
                         <!-- ** DIV SELECCIÓN CONCIERTOS-->
 
                         <div class="bg-white/35 w-102 h-50 border-3 border-black mt-2
-                        max-[700px]:w-full max-[700px]:h-full max-[700px]:text-sm max-[700px]:border-2">
+                        max-[1000px]:w-full max-[1000px]:h-full max-[1000px]:text-sm max-[1000px]:border-2
+                        max-[1300px]:w-full">
                             <ScrollArea type="auto">
                                 <div class="pt-2 pl-3 pb-2 flex border-b-2 border-black/20">
                                     <div class="w-[20%]">
@@ -96,7 +100,7 @@
 
                         <!-- ** FIN div conciertos -->
 
-                        <div class="w-102 max-[700px]:w-60">
+                        <div class="w-102 max-[1000px]:w-full max-[1300px]:w-70">
                             <h1 class=" font-black text-xs">{{ t('entradas.menores[0]') }}:</h1>
                             <div class="text-[11px]/3 pt-1">
                                 <p>{{ t('entradas.menores[1]') }} <span class="font-black">{{ t('entradas.menores[2]') }}</span> {{ t('entradas.menores[3]') }} <span class="font-black">{{ t('entradas.menores[4]') }}</span> {{ t('entradas.menores[5]') }}.</p>
@@ -115,11 +119,14 @@
                 ?LADO DERECHO    
                 -->
                 <form class="flex flex-col pl-5
-                max-[700px]:pl-0">
-                    <h1 class="font-bold min-[700px]:text-3xl max-[700px]:text-xl">2. {{ t('entradas.datos[0]') }}:</h1>
+                max-[1000px]:pl-0">
+                    <h1 class="font-bold mt-15
+                    max-[1000px]:mt-5
+                    text-3xl max-[1000px]:text-xl
+                    max-[1300px]:text-lg max-[1300px]:mt-3">2. {{ t('entradas.datos[0]') }}:</h1>
 
                     <div class="text-sm pl-5
-                    max-[700px]:pl-0">
+                    max-[1300px]:pl-0">
                         <div class="datos flex-1">
                             <div class="textInputWrapper mt-3">
                                 <label for="nombre"></label>
@@ -134,7 +141,7 @@
                             </div>
                         </div>
 
-                        <div class="flex flex-row justify-between mt-3 max-[700px]:flex-col">
+                        <div class="flex flex-row justify-between mt-3 max-[1300px]:flex-col">
                             <div class="datos flex-2 ">
                                 <div class="textInputWrapper">
                                     <label for="fechaNacimiento"></label>
@@ -142,8 +149,8 @@
                                 </div>
                             </div>
 
-                            <div class="datos flex-1 max-[700px]:mt-3">
-                                <div class="textInputWrapper w-30 max-[700px]:w-full">
+                            <div class="datos flex-1 max-[1000px]:mt-3 max-[1300px]:mt-3">
+                                <div class="textInputWrapper w-30 max-[1300px]:w-full">
                                     <label for="dni"></label>
                                     <input id="dni" placeholder="DNI" type="text" class="textInput" required>
                                 </div>
@@ -152,27 +159,30 @@
                     </div>
 
                     <h1 class="font-bold mt-15
-                    max-[700px]:mt-5
-                    min-[700px]:text-3xl max-[700px]:text-xl">3. {{ t('entradas.confirma[0]') }}:</h1>
+                    max-[1000px]:mt-5
+                    text-3xl max-[1000px]:text-xl
+                    max-[1300px]:text-lg max-[1300px]:mt-3">3. {{ t('entradas.confirma[0]') }}:</h1>
                     
                     <label class="cyberpunk-checkbox-label mt-2 ">
                         <input type="checkbox" class="cyberpunk-checkbox" required>
-                        <p class="text-sm">{{ t('entradas.confirma[1]') }}.</p>
+                        <p class="text-sm/4">{{ t('entradas.confirma[1]') }}.</p>
                     </label>
 
 
                     <label class="cyberpunk-checkbox-label mt-2">
                         <input type="checkbox" class="cyberpunk-checkbox" required>
-                        <p class="text-sm">{{ t('entradas.confirma[2]') }} <span class="underline underline-offset-2 cursor-pointer" @click="$router.push('/info')">{{ t('entradas.confirma[3]') }}</span>.</p>
+                        <p class="text-sm/4">{{ t('entradas.confirma[2]') }} <span class="underline underline-offset-2 cursor-pointer" @click="$router.push('/info')">{{ t('entradas.confirma[3]') }}</span>.</p>
                     </label>
 
                     <label class="cyberpunk-checkbox-label mt-2">
                         <input type="checkbox" class="cyberpunk-checkbox" required>
-                        <p class="text-sm">{{ t('entradas.confirma[4]') }} <span class="underline underline-offset-2 cursor-pointer" @click="$router.push('/info')">{{ t('entradas.confirma[5]') }}</span>.</p>
+                        <p class="text-sm/4">{{ t('entradas.confirma[4]') }} <span class="underline underline-offset-2 cursor-pointer" @click="$router.push('/info')">{{ t('entradas.confirma[5]') }}</span>.</p>
                     </label>
                 
-                    <div class="flex justify-end mt-6">
-                        <Button class="bg-(--color-negro) rounded-none text-md text-(--color-azulclaro) font-black w-30 cursor-pointer active:scale-90">
+                    <div class="flex justify-end mt-6 max-[1220px]:mt-2">
+                        <Button class="bg-(--color-negro) rounded-none text-md text-(--color-azulclaro) font-black w-30  cursor-pointer active:scale-90
+                        max-[1000px]:w-30
+                        max-[1220px]:h-7 max-[1220px]:w-20 max-[1220px]:text-sm">
                             {{ t('entradas.confirma[6]') }}
                         </Button>
                     </div>
@@ -182,7 +192,7 @@
             </div>
                 
                 
-            <div class="flex flex-col text-sm mt-9 max-[700px]:gap-1">
+            <div class="flex flex-col text-sm mt-9 max-[1000px]:gap-1 max-[1300px]:text-xs max-[1300px]:mt-3">
                 <p>{{ t('entradas.aviso[0]') }} <span class="font-black">{{ t('entradas.aviso[1]') }}</span>.</p>
                 <p class="text-xs/3">{{ t('entradas.aviso[2]')}}</p>
             </div>
@@ -194,8 +204,11 @@
 </template>
 
 <style scoped>
+html{
+    transition: all;
+}
 
-    @media (max-width: 700px){
+    @media (max-width: 1000px){
         .main {
         background-image: url("/fondos/fondo04.jpg");
         background-size: 100%;
@@ -209,27 +222,48 @@
             "contenido vacio3"
             "vacio4 caja3";
         }
-    }
 
-    @media (min-width: 700px){
-        .main {
-            background-image: url("/home/fondoHome01.jpg");
-            background-position: cover;
-            background-position: no-repeat;
-            height: calc(100vh - 60px);
-            display: grid;
-            grid-template-columns: 66% 24% 10%;
-            grid-template-rows: 4% 92% 4%;
-            grid-template-areas:
-                "vacio1 caja1 vacio2"
-                "contenido vacio3 caja2"
-                "vacio4 caja3 vacio5";
-        } 
-    }
+        .cyberpunk-checkbox {
+  appearance: none;
+  aspect-ratio: 1 / 1;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #000;
+  border-radius: 3px;
+  background-color: transparent;
+  display: inline-block;
+  position: relative;
+  margin-right: 5px;
+  cursor: pointer;
+}
 
-    
+.cyberpunk-checkbox:before {
+  content: "";
+  background-color: #000;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 5px;
+  height: 5px;
+  border-radius: 1px;
+  transition: all 0.3s ease-in-out;
+}
 
-    .form__group {
+.cyberpunk-checkbox:checked:before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.cyberpunk-checkbox-label {
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+
+.form__group {
         position: relative;
         padding: 15px 0 0;
         width: 100%;
@@ -376,7 +410,25 @@
 
 
 
-.cyberpunk-checkbox {
+
+    }
+
+    @media (min-width: 1000px){
+        .main {
+            background-image: url("/home/fondoHome01.jpg");
+            background-position: cover;
+            background-position: no-repeat;
+            height: calc(100vh - 60px);
+            display: grid;
+            grid-template-columns: 66% 24% 10%;
+            grid-template-rows: 4% 96%;
+            grid-template-areas:
+                "vacio1 caja1 vacio2"
+                "contenido vacio3 caja2"
+                ;
+        }
+        
+        .cyberpunk-checkbox {
   appearance: none;
   aspect-ratio: 1 / 1;
   width: 15px;
@@ -415,5 +467,163 @@
   display: flex;
   align-items: center;
 }
+
+
+
+.form__group {
+        position: relative;
+        padding: 15px 0 0;
+        width: 100%;
+        max-width: 180px;
+    }
+
+    .form__field {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #000;
+        outline: 0;
+        font-size: 1rem;
+        color: #000;
+        padding: 0.2rem 0;
+        background: transparent;
+        transition: border-color 400ms;
+    }
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  cursor: text;
+  top: 25px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 200ms;
+  color: rgba(0,0,0,0.5);
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 0.2rem;
+  padding-left: 6px;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  color: var(--color-);
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+
+.textInputWrapper {
+  position: relative;
+  
+  --accent-color: #000;
+}
+
+.textInputWrapper:before {
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+}
+
+.textInputWrapper:before,
+.textInputWrapper:after {
+  content: "";
+  left: 0;
+  right: 0;
+  position: absolute;
+  pointer-events: none;
+  bottom: -1px;
+  z-index: 4;
+  width: 100%;
+}
+
+.textInputWrapper:focus-within:before {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.textInputWrapper:before {
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+}
+
+.textInputWrapper:focus-within:before {
+  border-bottom: 1px solid var(--accent-color);
+  transform: scaleX(1);
+}
+
+.textInputWrapper:focus-within:after {
+  border-bottom: 2px solid var(--accent-color);
+  transform: scaleX(1);
+}
+
+.textInputWrapper:after {
+  content: "";
+  transform: scaleX(0);
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  will-change: transform;
+  border-bottom: 2px solid var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+.textInput::placeholder {
+  transition: opacity 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  opacity: 1;
+  user-select: none;
+  color: rgba(0, 0, 0, 0.582);
+}
+
+.textInputWrapper .textInput {
+ max-height: 36px;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 200ms;
+  transition-property: background-color;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  padding-left: 3px;
+  padding-top: 5px;
+
+  width: 100%;
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+}
+
+.textInputWrapper .textInput:focus,
+.textInputWrapper .textInput:active {
+  outline: none;
+}
+
+.textInputWrapper:focus-within .textInput,
+.textInputWrapper .textInput:focus,
+.textInputWrapper .textInput:active {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+.textInputWrapper:focus-within .textInput::placeholder {
+  opacity: 0;
+}
+
+
+
+
+
+
+    }
+
+    
+
+    
 
 </style>
