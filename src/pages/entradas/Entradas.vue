@@ -211,7 +211,7 @@ html{
     @media (max-width: 1000px){
         .main {
         background-image: url("/fondos/fondo04.jpg");
-        background-size: 100%;
+        background-size: auto 100%;
         background-position: cover;
         background-position: no-repeat;
         display: grid;

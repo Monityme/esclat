@@ -26,10 +26,14 @@
             <div style="grid-area: caja2" class="bg-[url('/texturas/color/azulclaro01.jpg')]"></div>
 
             <div style="grid-area: contenido"
-                class="bg-[url('/texturas/color/amarillo03.jpg')] px-5 h-full w-full flex flex-col gap-15 items-center justify-center">
-                <LogoEsclatNoSubs class="w-[40%]"/>
-                <div class="flex w-full flex-col gap-5 text-xl px-5">
-                    <p>
+                class="bg-[url('/texturas/color/amarillo03.jpg')] px-5 h-full w-full flex flex-col gap-15 items-center justify-center max-[768px]:justify-end max-[768px]:pl-2">
+                
+                <div class="flex w-full flex-col gap-5 text-xl px-5
+                max-[768px]:text-[15px] max-[768px]:px-2 max-[768px]:py-5 max-[768px]:gap-3"">
+                    
+                <LogoEsclatNoSubs class="w-[40%] max-[768px]:w-[60%]"/>
+                
+                <p>
                         {{ t('about[0]') }}
                         <span class="font-black">{{ t('about[1]') }}</span>
                     </p>
@@ -42,7 +46,7 @@
                         {{ t('about[5]') }} 
                         <span class="font-black">{{ t('about[6]') }}</span>
                         {{ t('about[7]') }} 
-                        <span class="font-black">{{ t('about[8]') }}</span>
+                        <span class="font-black">{{ t('about[8]') }}</span>.
                     </p>
                 </div>
             </div>
@@ -60,7 +64,7 @@
         white-space: pre-line;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
         .main {
             background-image: url("/home/fondoHome01.jpg");
             background-position: cover;
@@ -77,7 +81,7 @@
     
     }
 
-    @media (min-width: 700px) {
+    @media (min-width: 768px) {
         .main {
             background-image: url("/fondos/fondo04.jpg");
             background-size: 100%;

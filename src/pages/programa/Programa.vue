@@ -243,7 +243,7 @@ import ScrollArea from '@/components/ui/scroll-area/ScrollArea.vue';
     @media (max-width: 900px) {
         .main {
         background-image: url("/fondos/fondo04.jpg");
-        background-size:  100%;
+        background-size:  auto 100%;
         background-position: cover;
         background-position: no-repeat;
         height: calc(100vh - 60px);

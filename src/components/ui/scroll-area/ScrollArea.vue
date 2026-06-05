@@ -19,7 +19,7 @@ const delegatedProps = reactiveOmit(props, "class")
   <ScrollAreaRoot
     data-slot="scroll-area"
     v-bind="delegatedProps"
-    :class="cn('relative h-full flex-1 min-h-0 pr-3', props.class)"
+    :class="cn('relative h-full flex-1 min-h-0 pr-5', props.class)"
   >
     <ScrollAreaViewport
       data-slot="scroll-area-viewport"

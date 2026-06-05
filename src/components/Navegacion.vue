@@ -77,7 +77,7 @@
 
                     <NavigationMenuItem>
                         <RouterLink to="/about" @click="mostrarCuentaAtras = false; if (chiquitin) {menuDrop = !menuDrop}" class="enlace-underline3" active-class="enlace-underline3-selected">
-                            <NavigationMenuLink class="text-lg max-[900px]:text-3xl font-black">
+                            <NavigationMenuLink class="text-lg max-[900px]:text-3xl">
                                 {{ t('navegacion[0]') }}
                             </NavigationMenuLink>
                         </RouterLink>
